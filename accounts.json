@@ -1,0 +1,22 @@
+{
+    "accounts": [
+        {
+            "age": 18,
+            "e-mail": "normananton03@gmail.com",
+            "first_name": "Anton",
+            "password": "l\u00f6senord",
+            "surname": "Norman",
+            "token": "a343c2c5-d41f-4106-ace6-18794aa7024f",
+            "username": "antnor211"
+        },
+        {
+            "age": 69,
+            "e-mail": "namn.namnsson@gmail.com",
+            "first_name": "Namn",
+            "password": "l\u00f6senord",
+            "surname": "Namnsson",
+            "token": "",
+            "username": "username"
+        }
+    ]
+}
