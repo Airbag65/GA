@@ -1,14 +1,11 @@
-import secrets
 from uuid import uuid4
 import json
 
-token = uuid4()
-token1 = secrets.token_bytes(16)
 
-
-def select_account(username):
-    with open ("accounts.json") as json_file:
-        data = json.load(json_file)
+def select_account(username:str) -> dict:
+    with open ("accounts.json") as read_json:
+        data = json.load(read_json)
+        read_json.close()
     accounts = data['accounts']
     selected_account = ""
     index = 0
@@ -20,11 +17,11 @@ def select_account(username):
     return selected_account, index
 
 
-def generate_token(username):
+def generate_token(username:str) -> None:
     token = uuid4()
-    with open ("accounts.json") as json_file:
-        data = json.load(json_file)    
-        json_file.close()
+    with open ("accounts.json") as read_json:
+        data = json.load(read_json)    
+        read_json.close()
     data["accounts"][select_account(username)[1]]["token"] = str(token)
     new_data = data
     write_json = open("accounts.json", "w+")
@@ -32,7 +29,3 @@ def generate_token(username):
     write_json.close()
     print(f"In inloggningsnyckel är: {str(token)}")
         
-
-if __name__ == "__main__":
-    account_to_target = input("Ange användarnamn: ")
-    generate_token(account_to_target)
