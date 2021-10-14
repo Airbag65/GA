@@ -14,7 +14,10 @@ def select_account(username:str) -> dict:
             selected_account = account
             break
         index += 1
-    return selected_account, index
+    if selected_account != "":
+        return selected_account, index
+    else:
+        return {"no-account": "no account found"}, 0
 
 
 def generate_token(username:str) -> None:
@@ -28,4 +31,3 @@ def generate_token(username:str) -> None:
     write_json.write(json.dumps(new_data, indent=4, sort_keys=True))
     write_json.close()
     print(f"In inloggningsnyckel är: {str(token)}")
-        
