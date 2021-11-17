@@ -19,7 +19,6 @@ function selectAccount(string $username): array
     }else{
         return ["no-account" => "no account found"];
     }
-
 }
 
 
