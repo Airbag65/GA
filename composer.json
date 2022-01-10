@@ -1,0 +1,7 @@
+{
+    "name": "anton/ga",
+    "description": "GA Anton Norman, Vilgot Kihlberg, Elvira Ling",
+    "require": {
+        "twig/twig": "^3.3"
+    }
+}

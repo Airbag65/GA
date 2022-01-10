@@ -3,3 +3,4 @@ github-token.md
 backup.json
 __pycache__
 .idea
+/vendor/
