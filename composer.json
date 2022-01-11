@@ -3,5 +3,10 @@
     "description": "GA Anton Norman, Vilgot Kihlberg, Elvira Ling",
     "require": {
         "twig/twig": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        }
     }
 }
