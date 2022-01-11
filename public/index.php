@@ -1,7 +1,7 @@
 <?php
-require_once "../../vendor/autoload.php";
+require_once "../vendor/autoload.php";
 
-$filename = "/home/anton/Desktop/GA/src/database/database.db";
+$filename = "C:/code/GA/database/database.db";
 
 $dns = "sqlite:$filename";
 
@@ -12,21 +12,14 @@ $pdo->exec('PRAGMA foreign_keys = ON');
 
 
 $sql = <<<EOD
-insert into patients(firstName, lastName, personNr, age)
-values('Bengt', 'Wallgren', 20000000, 100);
-EOD;
-$stmt = $pdo->prepare($sql);
-$stmt->execute();
-
-$sqlu = <<<EOD
 select *
 from patients;
 EOD;
-$stmt = $pdo->prepare($sqlu);
+$stmt = $pdo->prepare($sql);
 $stmt->execute();
-$data = $stmt->fetchAll();
+$patientData = $stmt->fetchAll();
 
-var_dump($data)
+var_dump($patientData)
 ?>
 
 <!doctype html>
@@ -36,7 +29,7 @@ var_dump($data)
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>GA</title>
 </head>
 <body>
 
