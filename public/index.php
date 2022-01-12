@@ -19,7 +19,6 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $patientData = $stmt->fetchAll();
 
-var_dump($patientData)
 ?>
 
 <!doctype html>
@@ -32,6 +31,16 @@ var_dump($patientData)
     <title>GA</title>
 </head>
 <body>
-
+<form action="savePatient.php" method="post">
+    <label>Lägg till patient:</label><br>
+    <input name="firstname" type="text" placeholder="Förnamn"><br><br>
+    <input name="lastname" type="text" placeholder="Efternamn"><br><br>
+    <input name="personnr" type="text" placeholder="YYYYMMDDXXXX"><br><br>
+    <input name="age" type="number" placeholder="Ålder"><br><br>
+    <input type="submit" value="Lägg till">
+</form>
+<?php
+var_dump($patientData)
+?>
 </body>
 </html>
