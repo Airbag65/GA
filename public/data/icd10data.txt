@@ -1,0 +1,358 @@
+AbbreviatioExpansion
+25-OHD     25-hydroxyvitamin D
+1,25(OH)2D 1,25-Dihydroxyvitamin D
+AAAS       Achalasia addisonianism alacrima syndrome
+ABCA1      ATP-binding cassette, sub-family A (ABC1), member 1
+ABCC8      Adenosine triphosphate-binding cassette, subfamily C, member 8
+ABCD1      ATP-binding cassette, sub-family D (ALD), member 1
+ABS2       Antley-Bixler syndrome, type 2
+ACTH       Adrenocorticotropic hormone
+ADH        Antiduretic hormone
+AGPAT2     1-acylglycerol-3-phosphate O-acyltransferase 2
+AIRE       Autoimmune regulator
+AKR1C2     Aldo-keto reductase family 1, member C2
+ALADIN     Alacrima-achalasia-adrenal insufficiency neurologic disorder
+ALMS1      Alstrom syndrome protein 1
+ALS        Acid-labile subunit
+AMH        Anti-Mullerian hormone
+AMHR2      Anti-Mullerian hormone receptor type 2
+apoB       Apolipoprotein B
+APOE       Apolipoprotein E
+AQP2       Aquaporin 2
+AR         Androgen receptor
+ARL6       ADP-ribosylation factor-like 6
+ARX        Aristaless-related homeobox protein
+ATP        Adenosine triphosphate
+ATRX       X-linked helicase 2
+AVP        Arginine vasopressin
+AVPR2      Arginine vasopressin receptor 2
+BBS1       Bardet-Biedl syndrome 1
+BBS2       Bardet-Biedl syndrome 2
+BBS3       Bardet-Biedl syndrome 3
+BBS4       Bardet-Biedl syndrome 4
+BBS5       Bardet-Biedl syndrome 5
+BBS6       Bardet-Biedl syndrome 6
+BBS7       Bardet-Biedl syndrome 7
+BBS8       Bardet-Biedl syndrome 8
+BBS9       Bardet-Biedl syndrome 9
+BBS10      Bardet-Biedl syndrome 10
+BBS11      Bardet-Biedl syndrome 11
+BBS12      Bardet-Biedl syndrome 12
+BBS13      Bardet-Biedl syndrome 13
+BBS14      Bardet-Biedl syndrome 14
+BBS15      Bardet-Biedl syndrome 15
+BBS16      Bardet-Biedl syndrome 16
+BMP15      Bone morphogenetic protein 15
+BRAF       B-Raf proto-oncogene, serine/threonine kinase
+BSCL2      Berardinelli-Seip congenital lipodystrophy 2 (seipin)
+Ca         Calcium
+CAH        Congenital adrenal hyperplasia
+CASP8      Caspase 8, apoptosis-related cysteine peptidase
+CASP10     Caspase 10, apoptosis-related cysteine peptidase
+CASR       Calcium-sensing receptor
+CBX2       Chromobox homolog 2
+CD95       Cluster of differentiation 95
+CD95L      Cluster of differentiation 95 ligand
+CDKN1B     Cyclin-dependent kinase inhibitor 1B (p27, Kip1)
+CDKN1C     Cyclin-dependent kinase inhibitor 1C
+CEP290     Centrosomal protein 290kDa
+CFC        Cardiofaciocutaneous
+CHARGE     Coloboma, heart anomaly, choanal atresia, retardation, genital and ear ano
+CHD7       Chromodomain helicase DNA binding protein 7
+CISD2      CDGSH iron sulfur domain 2
+Cl         Chloride
+CNS        Central nervous system
+COH1       Cohen syndrome 1
+COL2A1     Collagen, type II, alpha 1
+CPHD       Combined pituitary hormone deficiency
+CRH        Corticotropin-releasing hormone
+CRP        C-reactive protein, pentraxin-related
+CT         Computed tomography
+CTNNB1     Beta-catenin
+CYB5A      Cytochrome B5, type A
+CYLN2      Cytoplasmic linker 2
+CYP11A1    Cytochrome P450, family 11, subfamily A, polypeptide 1
+CYP11B1    Cytochrome P450, family 11, subfamily B, polypeptide 1
+CYP11B2    Cytochrome P450, family 11, subfamily B, polypeptide 2
+CYP17A1    Cytochrome P450, family 17, subfamily A, polypeptide 1
+CYP19A1    Cytochrome P450, family 19, subfamily A, polypeptide 1
+CYP21      Cytochrome P450, family 21
+CYP21A     Cytochrome P450, family 21, subfamily A
+CYP21A2    Cytochrome P450, family 21, subfamily A, polypeptide 2
+DAX1       Dosage-sensitive sex reversal, adrenal hypoplasia congenita critical regio
+DGKK       Diacylglycerol kinase, kappa
+DHCR7      7-dehydrocholesterol reductase
+DHEA       Dehydroepiandrosterone
+DHEA(S)    Dehydroepiandrosterone (sulfate)
+DHEAS      Dehydroepiandrosterone sulfate
+DHH        Desert hedgehog
+DHT        Dihydrotestosterone
+DIAPH2     Diaphanous, drosophila, homolog of, 2
+DICER1     Dicer, drosophila, homolog of, 1
+DIT        Diiodotyrosine
+DMPK       Dystrophia myotonica-protein kinase
+DMR        differentially methylated region
+DMRT1      Doublesex and MAB3-related transcription factor 1
+E          Estradiol
+E2         Estradiol
+ECG        Electrocardiogram
+EIF2AK3    Eukaryotic translation initiation factor 2-alpha kinase 3
+ELN        Elastin
+ENPP1      Ectonucleotide pyrophosphatase/phosphodiesterase 1
+ESR        Erythrocyte sedimentation rate
+FAS        Fas cell surface death receptor
+FASL       Fas cell surface death receptor ligand
+FBN1       Fibrillin 1
+FGF8       Fibroblast growth factor 8
+FGF23      Fibroblast growth factor 23
+FGFR1      Fibroblast growth factor receptor 1
+FGFR2      Fibroblast growth factor receptor 2
+FGFR3      Fibroblast growth factor receptor 3
+FIGLA      Factor in germline alpha, mouse, homolog of
+FLCN       Folliculin
+FMR1       Fragile X mental retardation protein 1
+FOXE1      Forkhead box E1
+FOXL2      Forkhead box L2
+FOXP3      Forkhead box P3
+FSH        Follicle-stimulating hormone
+FSHB       Follicle-stimulating hormone beta
+FSHR       Follicle-stimulating hormone receptor
+FT4        Free throxine
+GAD2       Glutamic acid decarboxylase 2
+GATA4      GATA-binding protein 4
+GCK        Glucokinase
+GC-MS      Gas chromatography-mass spectrometry
+GFR        Guanine nucleotide exchange factor for RAP1
+GH         Growth hormone
+GH1        Growth hormome 1
+GHD        Growth hormone deficiency
+GHRH       Growth hormone-releasing hormone
+GHRHR      Growth hormone-releasing hormone receptor
+GHSR       Growth hormone secretagogue receptor
+GLI2       GLI family zinc finger 2
+GLI3       GLI family zinc finger 3
+GLUD1      Glutamate dehydrogenase 1
+GNAS       Guanine nucleotide-binding protein, alpha-stimulating activity
+GNAS1      GNAS complex locus
+GnRH       Gonadotropin-releasing hormone
+GNRH1      Gonadotropin releasing hormone 1
+GNRHR      Gonadotropin releasing hormone receptor
+GPR54      G protein-coupled receptor 54
+GTF2I      General transcription factor IIi
+GTF2IRD1   General transcription factor IIi repeat domain containing 1
+H6PD       Hexose-6-phosphate dehydrogenase
+HADH       3-hydroxyacyl-coenzyme A dehydrogenase
+hCG        Human chorionic gonadotropin
+HDL        High-density lipoprotein
+HESX1      Homeobox gene expressed in embryonic stem cells 1
+HFTC       Hyperphosphatemic familial tumoral calcinosis
+HLA        human leukocyte antigen
+HNF4A      Hepatocyte nuclear factor 4-alpha
+HOXA13     Homeobox A13
+HRAS       Harvey rat sarcoma viral oncogene homolog
+HSD3B2     Hydroxy-delta-5-steroid dehydrogenase, 3 beta- and steroid delta-isomerase
+HSD11B2    Hydroxysteroid (11-beta) dehydrogenase 2
+HSD17B3    17 beta-hydroxysteroid dehydrogenase 3
+HTGS       Hypertriglyceridemia, familial
+IAA        Insulin autoantibodies
+ICA        Islet cell antibodies
+IGF        Insulin-like growth factor
+IGF1R      Insulin-like growth factor I receptor
+IGF2       Insulin-like growth factor II
+IGFBP3     Insulin-like growth factor binding protein 3
+IGF-I      Insulin-like growth factor I
+IGHD       Idiopathic growth hormone deficiency
+IGSF1      Immunoglobulin superfamily, member 1
+IMAGE      Intrauterine growth restriction, metaphyseal dysplasia, adrenal hypoplasia
+INSL3      Insulin-like-3
+INSR       Insulin receptor
+K          Potassium
+KAL        Kallmann syndrome
+KAL1       Kallmann 1
+KATP       ATP-sensitive K+
+KCNJ5      Potassium channel, inwardly rectifying subfamily J, member 5
+KCNJ11     Potassium channel, inwardly rectifying, subfamily J, member 11
+Kir        Killer cell immunoglobulin-like receptor
+KISS1      Kisspeptin 1
+KISS1R     Kisspeptin 1 receptor
+KRAS       Kirsten rat sarcoma viral oncogene homolog
+KS1        Kaurene synthase 1
+KS2        Kaurene synthase 2
+KS3        Kaurene synthase 3
+KS4        Kaurene synthase 4
+KS5        Kaurene synthase 5
+KS6        Kaurene synthase 6
+LDL        Low density lopoprotein
+LEOPARD    Lentigines, electrocardiographic conduction abnormalities, ocular hypertel
+LEP        Leptin
+LEPR       Leptin receptor
+LGR8       Leucine-rich repeat-containing G protein-coupled receptor-8
+LH         Luteinizing hormone
+LHB        Luteinizing hormone beta
+LHCGR      Luteinizing hormone-chorionic gonadotropin receptor
+LHR        Luteinizing hormone receptor
+LHX3       LIM homeobox 3
+LHX4       LIM homeobox 4
+LIMK1      LIM domain kinase 1
+LIN28B     LIN28, C. Elegans, homolog of, B [note: "LIN" class genes are so called ba
+Lp         Lipoprotein
+MAMLD1     Mastermind-like domain-containing protein 1
+MAP2K1     Mitogen-activated protein kinase kinase 1
+MAP2K2     Mitogen-activated protein kinase kinase 2
+MAPK       Mitogen-activated protein kinase
+MC2R       Melanocortin 2 receptor
+MC4R       Melanocortin 4 receptor
+MCM4       Mini-chromosome maintenance 4
+MCT8       Monocarboxylate transporter 8
+MEG3       maternally expressed 3
+MEN        Multiple endocrine neoplasia
+MEN1       Multiple endocrine neoplasia, type I
+MEN2       Multiple endocrine neoplasia, type II
+MEN2a      Multiple endocrine neoplasia, type IIA
+MEN2b      Multiple endocrine neoplasia, type IIB
+MEN4       Multiple endocrine neoplasia, type IV
+Mg         Magnesium
+MIT        Monoiodotyrosine
+MKKS       McKusick-Kaufman syndrome
+MKS1       Meckel syndrome, type 1
+MLL2       Myeloid/lymphoid or mixed-lineage leukemia 2
+MODY       Maturity-onset diabetes of the young
+MODY1      Maturity-onset diabetes of the young, type 1
+MODY2      Maturity-onset diabetes of the young, type 2
+MODY3      Maturity-onset diabetes of the young, type 3
+MODY4      Maturity-onset diabetes of the young, type 4
+MODY5      Maturity-onset diabetes of the young, type 5
+MODY6      Maturity-onset diabetes of the young, type 6
+MRAP       melanocortin 2 receptor accessory protein
+MRKH       Mayer-Rokitansky-Kuster-Hauser
+MURCS      Mullerian duct aplasia, unilateral renal agenesis, and cervicothoracic som
+Na         Sodium
+NADPH      Nicotinamide adenine dinucleotide phosphate
+NELF       Nasal embryonic LHRH factor
+NF1        Neurofibromatosis type 1
+NKX2-1     NK2 homeobox 1
+NNT        Nicotinamide nucleotide transhydrogenase
+NOBOX      Newborn ovary homeobox, mouse, homolog of
+NPY        Neuropeptide Y
+NR0B1      Nuclear receptor subfamily 0, group B, member 1
+NR3C1      Nuclear receptor subfamily 3, group C, member 1 (glucocorticoid receptor)
+NR3C2      Nuclear receptor subfamily 3, group C, member 2
+NR5A1      Nuclear receptor subfamily 5, group A, member 1
+NRAS       Neuroblastoma RAS viral (v-ras) oncogene homolog
+NTRK1      Neurotrophic tyrosine kinase, receptor, type 1
+OMIM       Online Mendelian Inheritance in Man
+OTX2       Orthodenticle homeobox 2
+P          Phosphate
+P450scc    P450 side-chain cleavage
+PAPS       3'-phosphoadenosine 5'-phosphosulfate
+PAPSS2     3'-phosphoadenosine 5'-phosphosulfate synthase 2
+PAX6       Paired box 6
+PAX8       Paired-box-protein 8
+PCNA       Proliferating cell nuclear antigen
+PCOS       Polycystic ovary syndrome
+PCSK1      Proprotein convertase, subtilisin-kexin, type 1
+PDE8B      Phosphodiesterase 8B
+PDE11A     Phosphodiesterase 11A
+PHEX       Phosphate regulating endopeptidase homolog, X-linked
+PHP        Pseudohypoparathyroidism
+PI3K       Phosphoinositide 3-kinase
+PIT1       Pituitary-specific positive transcription factor 1
+PLOD1      Procollagen-lysine, 2-oxoglutarate 5-dioxygenase 1
+POR        Cytochrome P450 oxidoreductase
+POU1F1     POU domain, class 1, transcription factor 1
+PPNAD      Primary pigmented nodular adrenocortical disease
+PPNAD1     Primary pigmented nodular adrenocortical disease 1
+PPNAD2     Primary pigmented nodular adrenocortical disease 2
+PPNAD3     Primary pigmented nodular adrenocortical disease 3
+PRA        Plasma renin activity
+PRKAR1A    Protein kinase, cAMP-dependent, regulatory, type I, alpha
+Prl        Prolactin
+PRL        Prolactin
+PROK2      Prokineticin 2
+PROKR2     Prokineticin receptor 2
+PROP1      Prophet of PIT1
+PTEN       Phosphatase and tensin homolog
+PTH        Parathyroid hormone
+PTHR1      Parathyroid hormone 1 receptor
+PTHrP      Parathyroid hormone related protein
+PTPN11     Protein tyrosine phosphatase, non-receptor type 11
+RAB23      RAB23, member RAS oncogene family
+RAF1       Raf-1 proto-oncogene, serine/threonine kinase
+RANK       Receptor activator of nuclear factor kappa-B
+RECQL3     RECQ protein-like 3
+RECQL4     RECQ protein-like 4
+RET        RET proto-oncogene
+RFC2       Replication factor C (activator 1) 2
+ROHHAD     Rapid-onset obesity with hypothalamic dysfunction, hypoventilation and aut
+RSPO1      R-spondin family, member 1
+RUNX2      Runt-related transcription factor 2
+SADDAN     Severe achondroplasia with developmental delay and acanthosis nigricans
+SCNN1A     Sodium channel, non voltage gated 1 alpha subunit
+SCNN1B     Sodium channel, non voltage gated 1 beta subunit
+SCNN1G     Sodium channel, non voltage gated 1 gamma subunit
+SDCCAG8    Serologically defined colon cancer antigen 8
+SDH5       Succinate dehydrogenase 5
+SDHB       Succinate dehydrogenase complex, subunit B, iron sulfur (Ip)
+SDHC       Succinate dehydrogenase complex, subunit C, integral membrane protein, 15k
+SDHD       Succinate dehydrogenase complex, subunit D, integral membrane protein
+SECISBP2   Selenocysteine binding protein 2
+SEMA3A     Semaphorin 3A; (full description: sema domain, immunoglobulin domain, shor
+SERKAL     46,XX sex reversal with dysgenesis of kidneys, adrenals, and lungs
+SF1        Steroidogenic factor 1
+SGA        Small for gestational age
+SHBG       Sex hormone-binding globulin
+SHOX       Short stature homeobox-containing
+SIADH      Syndrome of inappropriate antidiuretic hormone secretion
+SIM1       Single-minded homolog 1
+SLC5A5     Solute carrier family 5, member 5
+SLC12A3    Solute carrier family 12 (sodium/chloride transporter), member 3
+SLC16A1    Solute carrier family 16 (monocarboxylic acid transporter) member 1
+SLC26A4    Solute carrier family 26, member 4
+SLC34A1    Solute carrier family 34 (type II sodium/phosphate cotransporter), member
+SNRPN      Small nuclear ribonucleoprotein polypeptide N
+SOS1       Son of sevenless homolog 1 (Drosophila)
+SOST       Sclerostin
+SOX2       SRY (sex determining region Y)-box 2
+SOX3       SRY (sex determining region Y)-box 3
+SOX9       SRY (sex determining region Y)-box 9
+SRD5A1     Steroid-5-alpha-reductase type 1
+SRY        Sex-determining region Y
+StAR       Steroidogenic acute regulatory protein
+STAR       Steroidogenic acute regulatory protein
+STAT5B     Signal transducer and activator of transcription 5B
+SULT2A1    Sulfotransferase family, cytosolic, 2A, dehydroepiandrosterone (DHEA)-pref
+T          Testosterone
+T3         Triiodothyronine
+T4         Thyroxine
+TAC3       Tachykinin 3
+TAC3R      Tachykinin 3 receptor
+TBX1       T-box 1
+TBX19      T-box 19
+Tg         Thyroglobulin
+TGF        Transforming growth factor
+THE        Tetrahydrocortisone
+THF        Tetrahydrocortisol
+THRA       Thyroid hormone receptor alpha
+THRB       Thyroid hormone receptor beta
+TmP        Tubular maximum reabsorption of phosphate
+TNFRSF6    Tumor necrosis factor receptor superfamily, member 6
+TNFSF6     Tumor necrosis factor (ligand) superfamily, member 6
+TPO        Thyreoperoxidase
+TRH        Thyrotropin-releasing hormone
+TRHR       Thyrotropin-releasing hormone receptor
+TRIM32     Tripartite motif containing 32
+TSH        Thyroid-stimulating hormone
+TSHB       Thyroid-stimulating hormone beta
+TSHR       Thyroid-stimulating hormone receptor
+TTC8       Tetratricopeptide repeat domain 8
+UCP2       Uncoupling protein 2
+VHL        von Hippel-Lindau
+VLDL       Very-low densitity lipoprotein
+VPS13B     Vacuolar protein sorting 13 homolog B (yeast)
+WDPCP      WD repeat containing planar cell polarity effector
+WDR11      WD repeat-containing protein 11
+WFS1       Wolfram syndrome 1 (wolframin)
+WNT4       Wingless-type mouse mammary tumor virus integration site family, member 4
+WRN        Werner syndrome, RecQ helicase-like
+WT1        Wilms tumor 1
+ZNF9       Zinc finger protein 9
