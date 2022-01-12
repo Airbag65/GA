@@ -1,17 +1,15 @@
 {
-    "name": "antnor211/ga",
+    "name": "elvlin274/ga",
     "autoload": {
         "psr-4": {
-            "Antnor211\\Ga\\": "src/"
+            "Elvlin274\\Ga\\": "src/"
         }
     },
     "authors": [
         {
-            "name": "antnor211",
-            "email": "antnor211@edu.linkoping.se"
+            "name": "elvlin274",
+            "email": "elvlin274@edu.linkoping.se"
         }
     ],
-    "require": {
-      "ext-pdo": "*"
-    }
+    "require": {}
 }
