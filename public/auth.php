@@ -37,4 +37,4 @@ if($password === $userInformation->password){
     var_dump("Logged In");
 }
 
-header("location: login.php");
+header("location: index.php");
