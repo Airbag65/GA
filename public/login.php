@@ -27,35 +27,32 @@ $pdo->exec('PRAGMA foreign_keys = ON');
     <title>Logga in</title>
 </head>
 <body>
-    <form action="auth.php" method="post">
-        <label for="">
-            <span>Användarnamn</span>
-            <br>
-            <input type="text" id="userName" name="userName" required>
-            <br>
-            <span>Lösenord</span>
-            <br>
-            <input type="password" id="passWord" name="passWord" required>
-            <br>
-            <br>
-            <input type="submit" value="Logga in">
-        </label>
-    </form>
+    <div class="login-container">
+        <form action="auth.php" method="post">
+            <label for="">
+                <span>Användarnamn</span>
+                <br>
+                <input type="text" id="userName" name="userName" class="input-field" required>
+                <br><br>
+                <span>Lösenord</span>
+                <br>
+                <input type="password" id="passWord" name="passWord" class="input-field" required>
+                <br><br>
+                <br>
+                <input type="submit" value="Logga in" class="login-button">
+            </label>
+        </form>
+    </div>
     <?php
     if(isset($_SESSION['loggedin'])){
         if(isset($_SESSION['loginatempt'])){
-            if ($_SESSION['loggedin']){
-                echo "Välkommen ".$_SESSION['firstname']."!";
-            }
-            else{
-                if ($_SESSION['loginatempt']) {
+            if ($_SESSION['loginatempt']){
+                if (!$_SESSION['loggedin']) {
                     echo "Fel användarnamn eller lösenord";
                 }
             }
         }
-
     }
-
     ?>
 </body>
 </html>

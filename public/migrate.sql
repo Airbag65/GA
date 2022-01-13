@@ -97,3 +97,8 @@ values (
 insert into doctors
 (firstName, lastName, emailAddress, spec, nameAbreiv, password)
 values ('Anton', 'Norman', 'normananton03@gmail.com', 1, 'antnor', 'heje');
+
+insert into doctors
+(firstName, lastName, emailAddress, spec, nameAbreiv, password)
+values ('Elvira', 'Ling', 'elviraling77@gmail.com', 1, 'elvlin', 'kekw4');
+
