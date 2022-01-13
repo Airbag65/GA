@@ -28,3 +28,7 @@ body{
     justify-content: center;
 }
 
+.invalid-login{
+    display: flex;
+    color: red;
+}
