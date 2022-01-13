@@ -25,6 +25,8 @@ $stmt = $pdo->prepare($userInformationSQL);
 $stmt->execute([$username]);
 $userInformation = $stmt->fetch();
 
+$_SESSION['loggedin'] = false;
+
 if($password === $userInformation->password){
     $_SESSION['username'] = $userInformation->nameAbreiv;
     $_SESSION['password'] = $userInformation->password;
@@ -34,7 +36,11 @@ if($password === $userInformation->password){
     $_SESSION['lastname'] = $userInformation->lastName;
     $_SESSION['id'] = $userInformation->doctorId;
     $_SESSION['loggedin'] = true;
+    $_SESSION['loginatempt'] = true;
     var_dump("Logged In");
+}else{
+    $_SESSION['loginatempt'] = true;
+    header("location: login.php");
 }
 
 header("location: index.php");
