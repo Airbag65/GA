@@ -27,7 +27,8 @@ while (($data = fgetcsv($rawData, 1000, " ")) !== FALSE) {
         }
     }
     $sql .= "('$abbre', '$expan');";
-    var_dump($sql);
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
 }
+
+header("location: index.php");

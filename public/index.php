@@ -55,5 +55,18 @@ if (isset($_SESSION['loggedin'])){
     <input name="age" type="number" placeholder="Ålder"><br><br>
     <input type="submit" value="Lägg till">
 </form>
+<br><br>
+<?php
+$checkForDataSql = "select * from ICD10";
+$stmt = $pdo->prepare($checkForDataSql);
+$stmt->execute();
+$checkForData = $stmt->fetchAll();
+
+if (empty($checkForData)){
+    echo"<a href='addIcdData.php'>Lägg till ICD 10 Data</a>";
+}else{
+    echo "IDC 10 data finns i databasen!";
+}
+?>
 </body>
 </html>
