@@ -1,5 +1,5 @@
 <?php
-require_once "../vendor/autoload.php";
+require_once "../../vendor/autoload.php";
 
 $filename = "C:/code/GA/database/database.db";
 
@@ -25,4 +25,4 @@ EOD;
 $stmt = $pdo->prepare($addPatient);
 $stmt->execute([$firstName,$lastName,$personNr,$age]);
 
-header("location: ./");
+header("location: ../");

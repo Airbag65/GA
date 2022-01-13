@@ -1,5 +1,5 @@
 <?php
-require_once "../vendor/autoload.php";
+require_once "../../vendor/autoload.php";
 
 $filename = "C:/code/GA/database/database.db";
 
@@ -31,4 +31,4 @@ while (($data = fgetcsv($rawData, 1000, " ")) !== FALSE) {
     $stmt->execute();
 }
 
-header("location: index.php");
+header("location: ../index.php");

@@ -48,16 +48,10 @@ $pdo->exec('PRAGMA foreign_keys = ON');
         if(isset($_SESSION['loginatempt'])){
             if ($_SESSION['loginatempt']){
                 if (!$_SESSION['loggedin']) {
-                    echo "Fel användarnamn eller lösenord";
-            if ($_SESSION['loggedin']){
-                echo "Välkommen ".$_SESSION['firstname']."!";
-            }
-            else{
-                if ($_SESSION['loginatempt']) {
                     echo "<p class='invalid-login'>Fel användarnamn eller lösenord</p>";
                 }
             }
-        }}}
+        }
     }
     ?>
 </body>
