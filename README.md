@@ -11,7 +11,7 @@ generera dessa nycklar, som i sin tur används vid inloggning. Vi har även tän
 användas en gång och kommer sedan raderas ur systemet. Vid nästa inloggning kommer man alltså behöva generera en ny säkerhetsnyckel. 
 *Tokensystemet* har vi tänkt skapa så det liknar det system GitHub nyligen infört.
 
-####Uppdatering 10/1 -22
+##Uppdatering 10/1 -22
 Med tanke på tidsbrist kommer vi istället för att skapa ett *tokensystem*, använda oss utav ett vanligt lösenordssystem, men där det verkliga
 lösenordet inte sparas utan kommer gå genom en kryptering för att vara oigenkännligt. Vi vår plan är att använda den säkraste krypteringsteknik 
 vi kan hitta då det är mycket viktigt med hög säkerhet i ett system som detta.
@@ -22,7 +22,7 @@ Django, med stöd för HTML och databas hantering. Anton, med huvudansvar för b
 än php och har även mer erfarenhet där. Django är även ett mycket väl utvecklat och dokumenterat ramverk så det råder ingen brist 
 på information eller funktionalitet. 
 
-####Uppdatering 10/1 -22 
+##Uppdatering 10/1 -22 
 Vi är åter tillbaka till att använda php tekniker för att utveckla detta system. Med terminens gång har vi lärt oss alltmer om detta och även 
 fått tankar och idéer på hur vi skulle kunna skapa vårt system med dessa tekniker. Vi har därför efter en del research valt att återgå till våra
 ursprungliga tankar på att använda php hädanefter. Vi väljer dock att ha kvar Django koden i projektet ur läro- och bedömningssyfte

@@ -32,6 +32,7 @@ create table doctors
     spec integer not null,
     nameAbreiv text not null,
     password text not null,
+    loggedIn integer not null default 0,
     foreign key (spec) references specialisations(specId)
 );
 create table messages
@@ -92,3 +93,7 @@ values (
            'död',
            'Patienten har avlidit'
        );
+
+insert into doctors
+(firstName, lastName, emailAddress, spec, nameAbreiv, password)
+values ('Anton', 'Norman', 'normananton03@gmail.com', 1, 'antnor', 'heje');

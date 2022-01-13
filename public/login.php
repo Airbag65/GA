@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "../vendor/autoload.php";
 
 $filename = "C:/code/GA/database/database.db";
@@ -22,7 +23,7 @@ $pdo->exec('PRAGMA foreign_keys = ON');
     <title>Logga in</title>
 </head>
 <body>
-    <form action="auth.php" method="get">
+    <form action="auth.php" method="post">
         <label for="">
             <span>Användarnamn</span>
             <br>
@@ -36,5 +37,13 @@ $pdo->exec('PRAGMA foreign_keys = ON');
             <input type="submit" value="Logga in">
         </label>
     </form>
+    <?php
+    if(isset($_SESSION['loggedin'])){
+        if ($_SESSION['loggedin']){
+            echo "Välkommen ".$_SESSION['firstname']."!";
+        }
+    }
+
+    ?>
 </body>
 </html>
