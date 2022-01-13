@@ -244,8 +244,8 @@ OMIM       Online Mendelian Inheritance in Man
 OTX2       Orthodenticle homeobox 2
 P          Phosphate
 P450scc    P450 side-chain cleavage
-PAPS       3'-phosphoadenosine 5'-phosphosulfate
-PAPSS2     3'-phosphoadenosine 5'-phosphosulfate synthase 2
+PAPS       3-phosphoadenosine 5-phosphosulfate
+PAPSS2     3-phosphoadenosine 5-phosphosulfate synthase 2
 PAX6       Paired box 6
 PAX8       Paired-box-protein 8
 PCNA       Proliferating cell nuclear antigen

@@ -3,6 +3,7 @@ drop table if exists meetings;
 drop table if exists messages;
 drop table if exists patients;
 drop table if exists specialisations;
+drop table if exists ICD10;
 pragma foreign_keys = on;
 
 
@@ -54,6 +55,12 @@ create table meetings
     date text not null default ' ',
     foreign key (doctorId) references doctors (doctorId),
     foreign key (patientId) references patients (patientId)
+);
+
+create table ICD10(
+    id integer primary key autoincrement not null,
+    abbreviation text,
+    expansion text
 );
 
 

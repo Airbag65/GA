@@ -10,15 +10,26 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 $pdo->exec('PRAGMA foreign_keys = ON');
 
+
 $rawData = file_get_contents("C:/code/GA/public/data/icd10data.txt");
+$rawData =fopen("C:/code/GA/public/data/icd10data.txt", 'r');
 
-var_dump($rawData);
+while (($data = fgetcsv($rawData, 1000, " ")) !== FALSE) {
+    $sql = "insert into ICD10(abbreviation, expansion) values";
+    if($data[0] == "AbbreviatioExpansion") continue;
+    $abbre = $data[0];
+    $expan = "";
 
-$sql = "insert into ICD10(abbreviation, expansion) values";
-$sql .= "('?', 'Hej);";
-/*
-while ((fgetcsv($rawData, 1000, "0x09")) !== FALSE) {
-    break;
+    foreach ($data as $item) {
+        if ($item == $data[0]) continue;
+        elseif ($item == "") continue;
+        else {
+            $expan .= $item;
+            $expan .= " ";
+        }
+    }
+    $sql .= "('$abbre', '$expan');";
+    var_dump($sql);
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
 }
-*/
-var_dump($sql);
