@@ -28,7 +28,7 @@ $pdo->exec('PRAGMA foreign_keys = ON');
 </head>
 <body>
     <div class="login-container">
-        <form action="auth.php" method="post">
+        <form action="functional/auth.php" method="post">
             <label for="">
                 <span>Användarnamn</span>
                 <br>
