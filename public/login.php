@@ -51,7 +51,7 @@ $pdo->exec('PRAGMA foreign_keys = ON');
             }
             else{
                 if ($_SESSION['loginatempt']) {
-                    echo "Fel användarnamn eller lösenord";
+                    echo "<p class='invalid-login'>Fel användarnamn eller lösenord</p>";
                 }
             }
         }
