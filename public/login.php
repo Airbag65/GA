@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION['loginatempt'])){
+    $_SESSION['loginatempt'] = false;
+}
+
 require_once "../vendor/autoload.php";
 
 $filename = "C:/code/GA/database/database.db";
@@ -39,9 +43,17 @@ $pdo->exec('PRAGMA foreign_keys = ON');
     </form>
     <?php
     if(isset($_SESSION['loggedin'])){
-        if ($_SESSION['loggedin']){
-            echo "Välkommen ".$_SESSION['firstname']."!";
+        if(isset($_SESSION['loginatempt'])){
+            if ($_SESSION['loggedin']){
+                echo "Välkommen ".$_SESSION['firstname']."!";
+            }
+            else{
+                if ($_SESSION['loginatempt']) {
+                    echo "Fel användarnamn eller lösenord";
+                }
+            }
         }
+
     }
 
     ?>

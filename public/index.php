@@ -1,4 +1,9 @@
 <?php
+session_start();
+if(!isset($_SESSION['loggedin'])){
+    $_SESSION['loggedin'] = false;
+}
+
 require_once "../vendor/autoload.php";
 
 $filename = "C:/code/GA/database/database.db";
@@ -31,6 +36,17 @@ $patientData = $stmt->fetchAll();
     <title>GA</title>
 </head>
 <body>
+<?php
+if (isset($_SESSION['loggedin'])){
+    if ($_SESSION['loggedin'] === true){
+        echo"<a href='sessionKill.php'>Logga ut</a>";
+        echo"<a href='profile.php'>".$_SESSION['firstname']." ".$_SESSION['lastname']."</a>";
+    }
+    else{
+        echo"<a href='login.php'>Logga in</a>";
+    }
+}
+?>
 <form action="savePatient.php" method="post">
     <label>Lägg till patient:</label><br>
     <input name="firstname" type="text" placeholder="Förnamn"><br><br>
@@ -39,8 +55,5 @@ $patientData = $stmt->fetchAll();
     <input name="age" type="number" placeholder="Ålder"><br><br>
     <input type="submit" value="Lägg till">
 </form>
-<?php
-var_dump($patientData)
-?>
 </body>
 </html>
