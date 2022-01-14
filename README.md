@@ -22,10 +22,14 @@ Django, med stöd för HTML och databas hantering. Anton, med huvudansvar för b
 än php och har även mer erfarenhet där. Django är även ett mycket väl utvecklat och dokumenterat ramverk så det råder ingen brist 
 på information eller funktionalitet. 
 
-##Uppdatering 10/1 -22 
+## Uppdatering 10/1 -22 
 Vi är åter tillbaka till att använda php tekniker för att utveckla detta system. Med terminens gång har vi lärt oss alltmer om detta och även 
 fått tankar och idéer på hur vi skulle kunna skapa vårt system med dessa tekniker. Vi har därför efter en del research valt att återgå till våra
 ursprungliga tankar på att använda php hädanefter. Vi väljer dock att ha kvar Django koden i projektet ur läro- och bedömningssyfte
+
+## Uppdatering 14/1 -22
+Efter att ha skissat färdigt all design till det grafiska gränssnittet och tagit alla designbeslut har vi börjat implementera
+designen i vårt projekt. Vid nuläget är all HTML och CSS för inloggningssidan klar och vi arbetar med att fixa resten.
 
 
 ## **OBS!** Fr.o.m 10/1 -22 gäller nedanstående inte längre
