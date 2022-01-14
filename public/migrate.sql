@@ -59,9 +59,9 @@ create table meetings
 );
 
 create table ICD10(
-    id integer primary key autoincrement not null,
-    abbreviation text,
-    expansion text
+                      id integer primary key autoincrement not null,
+                      abbreviation text,
+                      expansion text
 );
 
 
