@@ -39,22 +39,20 @@ $patientData = $stmt->fetchAll();
 <?php
 if (isset($_SESSION['loggedin'])){
     if ($_SESSION['loggedin'] === true){
-        echo "<a href='functional/sessionKill.php'>Logga ut</a>";
-        echo"<a href='profile.php'>".$_SESSION['firstname']." ".$_SESSION['lastname']."</a>";
+        if($_SESSION['isAdmin'] === 1){
+            echo "<a href='functional/sessionKill.php'>Logga ut</a><br>";
+            echo "<a href='profile/profile.php'>" .$_SESSION['firstname']." ".$_SESSION['lastname']."</a><br>";
+            echo "<a href='profile/admin.php'>Admin</a>";
+        }else{
+            echo "<a href='functional/sessionKill.php'>Logga ut</a><br>";
+            echo "<a href='profile/profile.php'>" .$_SESSION['firstname']." ".$_SESSION['lastname']."</a>";
+        }
     }
     else{
         echo"<a href='login.php'>Logga in</a>";
     }
 }
 ?>
-<form action="functional/savePatient.php" method="post">
-    <label>Lägg till patient:</label><br>
-    <input name="firstname" type="text" placeholder="Förnamn"><br><br>
-    <input name="lastname" type="text" placeholder="Efternamn"><br><br>
-    <input name="personnr" type="text" placeholder="YYYYMMDDXXXX"><br><br>
-    <input name="age" type="number" placeholder="Ålder"><br><br>
-    <input type="submit" value="Lägg till">
-</form>
 <br><br>
 <?php
 $checkForDataSql = "select * from ICD10";

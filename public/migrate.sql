@@ -1,5 +1,5 @@
-drop table if exists doctors;
 drop table if exists meetings;
+drop table if exists doctors;
 drop table if exists messages;
 drop table if exists patients;
 drop table if exists specialisations;
@@ -28,10 +28,13 @@ create table doctors
     doctorId integer primary key autoincrement not null,
     firstName text not null default 'Göran',
     lastName text not null default 'Göransson',
+    age integer not null,
+    personNr integer not null,
     emailAddress text not null,
     spec integer not null,
-    nameAbreiv text not null,
+    nameAbbrev text not null,
     password text not null,
+    isAdmin integer not null default 0,
     loggedIn integer not null default 0,
     foreign key (spec) references specialisations(specId)
 );
@@ -74,11 +77,13 @@ values (
 insert into patients(firstName, lastName, personNr, age)
 values('Anders', 'Andersson', 20000000, 50);
 
-insert into doctors(firstName, lastName, emailAddress, spec, nameAbreiv, password)
+insert into doctors(firstName, lastName, age, personNr, emailAddress, spec, nameAbbrev, password)
 values
     (
         'Nils',
         'Nilsson',
+        30,
+        199201012299,
         'nils.nilsson@nilsmail.com',
         1,
         'nilnil',
@@ -95,10 +100,13 @@ values (
        );
 
 insert into doctors
-(firstName, lastName, emailAddress, spec, nameAbreiv, password)
-values ('Anton', 'Norman', 'normananton03@gmail.com', 1, 'antnor', 'f29444ed56b0ffeeadc2908a172e92f1');
+(firstName, lastName, age, personNr, emailAddress, spec, nameAbbrev, password, isAdmin)
+values ('Anton', 'Norman', 18, 200304070000, 'normananton03@gmail.com', 1, 'antnor', 'f29444ed56b0ffeeadc2908a172e92f1', 1);
 
 insert into doctors
-(firstName, lastName, emailAddress, spec, nameAbreiv, password)
-values ('Elvira', 'Ling', 'elviraling77@gmail.com', 1, 'elvlin', '85855b2978bd7857121527196cac2d9f');
+(firstName, lastName, age, personNr, emailAddress, spec, nameAbbrev, password, isAdmin)
+values ('Elvira', 'Ling', 19, 200301080000, 'elviraling77@gmail.com', 1, 'elvlin', '85855b2978bd7857121527196cac2d9f', 1);
 
+insert into
+    doctors(firstName, lastName, age, personNr, emailAddress, spec, nameAbbrev, password, isAdmin)
+values ('Vilgot','Kihlberg',18,200303250000,'vilgot.kihlberg@gmail.com',1,'vilkih','50e930c4b066caaa769f07318ff81a37',1);
