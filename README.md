@@ -31,6 +31,10 @@ ursprungliga tankar på att använda php hädanefter. Vi väljer dock att ha kva
 Efter att ha skissat färdigt all design till det grafiska gränssnittet och tagit alla designbeslut har vi börjat implementera
 designen i vårt projekt. Vid nuläget är all HTML och CSS för inloggningssidan klar och vi arbetar med att fixa resten.
 
+## Färgkoder vi använder:
+#EA4C6C
+#3567C1
+
 
 ## **OBS!** Fr.o.m 10/1 -22 gäller nedanstående inte längre
 ### Starta Server
