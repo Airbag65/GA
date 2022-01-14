@@ -4,3 +4,4 @@ backup.json
 __pycache__
 .idea
 /vendor/
+/database/
