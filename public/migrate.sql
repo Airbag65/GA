@@ -82,7 +82,7 @@ values
         'nils.nilsson@nilsmail.com',
         1,
         'nilnil',
-        'gibberish'
+        'd970019ea54182a6259b47409af28de2'
     );
 
 
@@ -96,9 +96,9 @@ values (
 
 insert into doctors
 (firstName, lastName, emailAddress, spec, nameAbreiv, password)
-values ('Anton', 'Norman', 'normananton03@gmail.com', 1, 'antnor', 'heje');
+values ('Anton', 'Norman', 'normananton03@gmail.com', 1, 'antnor', 'f29444ed56b0ffeeadc2908a172e92f1');
 
 insert into doctors
 (firstName, lastName, emailAddress, spec, nameAbreiv, password)
-values ('Elvira', 'Ling', 'elviraling77@gmail.com', 1, 'elvlin', 'kekw4');
+values ('Elvira', 'Ling', 'elviraling77@gmail.com', 1, 'elvlin', '85855b2978bd7857121527196cac2d9f');
 

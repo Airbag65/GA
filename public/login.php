@@ -28,7 +28,7 @@ $pdo->exec('PRAGMA foreign_keys = ON');
 </head>
 <body>
     <div class="login-container">
-        <form action="auth.php" method="post">
+        <form action="functional/auth.php" method="post">
             <label for="">
                 <span>Användarnamn</span>
                 <br>
@@ -46,18 +46,13 @@ $pdo->exec('PRAGMA foreign_keys = ON');
     <?php
     if(isset($_SESSION['loggedin'])){
         if(isset($_SESSION['loginatempt'])){
-            if ($_SESSION['loggedin']){
-                echo "Välkommen ".$_SESSION['firstname']."!";
-            }
-            else{
-                if ($_SESSION['loginatempt']) {
+            if ($_SESSION['loginatempt']){
+                if (!$_SESSION['loggedin']) {
                     echo "<p class='invalid-login'>Fel användarnamn eller lösenord</p>";
                 }
             }
         }
-
     }
-
     ?>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "../vendor/autoload.php";
+require_once "../../vendor/autoload.php";
 
 $filename = "C:/code/GA/database/database.db";
 
@@ -12,7 +12,7 @@ $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 $pdo->exec('PRAGMA foreign_keys = ON');
 
 $username = $_POST['userName'];
-$password = $_POST['passWord'];
+$password = md5($_POST['passWord']);
 var_dump($username);
 var_dump($password);
 
@@ -38,9 +38,8 @@ if($password === $userInformation->password){
     $_SESSION['loggedin'] = true;
     $_SESSION['loginatempt'] = true;
     var_dump("Logged In");
+    header("location: ../index.php");
 }else{
     $_SESSION['loginatempt'] = true;
-    header("location: login.php");
+    header("location: ../login.php");
 }
-
-header("location: index.php");
