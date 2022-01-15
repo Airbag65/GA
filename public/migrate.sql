@@ -98,15 +98,18 @@ values (
            'död',
            'Patienten har avlidit'
        );
+insert into
+    specialisations(specName, specAcro)
+values ('Administratör', 'admin');
+insert into doctors
+(firstName, lastName, age, personNr, emailAddress, spec, nameAbbrev, password, isAdmin)
+values ('Anton', 'Norman', 18, 200304070000, 'normananton03@gmail.com', 2, 'antnor', 'f29444ed56b0ffeeadc2908a172e92f1', 1);
 
 insert into doctors
 (firstName, lastName, age, personNr, emailAddress, spec, nameAbbrev, password, isAdmin)
-values ('Anton', 'Norman', 18, 200304070000, 'normananton03@gmail.com', 1, 'antnor', 'f29444ed56b0ffeeadc2908a172e92f1', 1);
-
-insert into doctors
-(firstName, lastName, age, personNr, emailAddress, spec, nameAbbrev, password, isAdmin)
-values ('Elvira', 'Ling', 19, 200301080000, 'elviraling77@gmail.com', 1, 'elvlin', '85855b2978bd7857121527196cac2d9f', 1);
+values ('Elvira', 'Ling', 19, 200301080000, 'elviraling77@gmail.com', 2, 'elvlin', '85855b2978bd7857121527196cac2d9f', 1);
 
 insert into
     doctors(firstName, lastName, age, personNr, emailAddress, spec, nameAbbrev, password, isAdmin)
-values ('Vilgot','Kihlberg',18,200303250000,'vilgot.kihlberg@gmail.com',1,'vilkih','50e930c4b066caaa769f07318ff81a37',1);
+values ('Vilgot','Kihlberg',18,200303250000,'vilgot.kihlberg@gmail.com', 2,'vilkih','50e930c4b066caaa769f07318ff81a37',1);
+

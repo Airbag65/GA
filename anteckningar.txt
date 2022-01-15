@@ -1,0 +1,9 @@
+* labb. resultat
+* remisser
+* undersökningar
+* någonting med vitala parametrar
+    * blodtryck
+    * syresättning
+    * puls
+    * blodgrupp
+* journalanteckning !!!!!!
