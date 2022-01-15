@@ -11,7 +11,7 @@ generera dessa nycklar, som i sin tur används vid inloggning. Vi har även tän
 användas en gång och kommer sedan raderas ur systemet. Vid nästa inloggning kommer man alltså behöva generera en ny säkerhetsnyckel. 
 *Tokensystemet* har vi tänkt skapa så det liknar det system GitHub nyligen infört.
 
-##Uppdatering 10/1 -22
+## Uppdatering 10/1 -22
 Med tanke på tidsbrist kommer vi istället för att skapa ett *tokensystem*, använda oss utav ett vanligt lösenordssystem, men där det verkliga
 lösenordet inte sparas utan kommer gå genom en kryptering för att vara oigenkännligt. Vi vår plan är att använda den säkraste krypteringsteknik 
 vi kan hitta då det är mycket viktigt med hög säkerhet i ett system som detta.
@@ -32,8 +32,8 @@ Efter att ha skissat färdigt all design till det grafiska gränssnittet och tag
 designen i vårt projekt. Vid nuläget är all HTML och CSS för inloggningssidan klar och vi arbetar med att fixa resten.
 
 ## Färgkoder vi använder:
-#EA4C6C
-#3567C1
+#EA4C6C - Röd,
+#3567C1 - Blå
 
 
 ## **OBS!** Fr.o.m 10/1 -22 gäller nedanstående inte längre

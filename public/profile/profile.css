@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.navigation {
+    height: 10vh;
+    width: 100%;
+    background: #3567C1;
+}
+
+.grid-container {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.small-grid-container {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.invisable-link {
+    pointer-events: none;
+    cursor: default;
+}
+
+.grid-item1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.small-grid-item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.tillbaka-link {
+    font-size: 30px;
+    padding-left: 2rem;
+    text-decoration: none;
+    color: white;
+}
+.tillbaka-link:hover {
+    color: #dedede
+}
+
+.profile-link {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+.profile-link:hover {
+    color: #dedede
+}

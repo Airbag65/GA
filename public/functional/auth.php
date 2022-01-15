@@ -34,6 +34,7 @@ if($password === $userInformation->password){
     $_SESSION['spec'] = $userInformation->spec;
     $_SESSION['firstname'] = $userInformation->firstName;
     $_SESSION['lastname'] = $userInformation->lastName;
+    $_SESSION['personNr'] = $userInformation->personNr;
     $_SESSION['id'] = $userInformation->doctorId;
     $_SESSION['isAdmin'] = intval($userInformation->isAdmin);
     $_SESSION['loggedin'] = true;
