@@ -63,7 +63,7 @@ $checkForData = $stmt->fetchAll();
 if (empty($checkForData)){
     echo "<a href='functional/addIcdData.php'>Lägg till ICD 10 Data</a>";
 }else{
-    echo "IDC 10 data finns i databasen!";
+    echo "ICD 10 data finns i databasen!";
 }
 ?>
 </body>

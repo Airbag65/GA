@@ -13,7 +13,7 @@ function modPersonNr(string $personNr){
             $modNr .= $charArray[$i];
         }elseif($i === 8){
             $modNr .= "-";
-            $modNr .= "X";$modNr .= "X";$modNr .= "X";$modNr .= "X";
+            $modNr .= "XXXX";
             break;
         }
     }

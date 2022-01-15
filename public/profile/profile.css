@@ -70,3 +70,52 @@ body {
 .profile-link:hover {
     color: #dedede
 }
+
+.main-content {
+    display: flex;
+    width: 75%;
+    margin: auto;
+    padding-top: 10vh;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+}
+
+.user a{
+    font-size: 20px;
+    color: #717171;
+}
+
+.user-logo {
+    width: 18.75rem;
+    height: 18.75rem;
+}
+
+.info-card {
+    width: 65%;
+    padding: 2rem;
+    margin: 2rem;
+    border: solid #717171 1px;
+    border-radius: 2rem;
+    box-shadow: .25rem .25rem .25rem rgba(0, 0, 0, 0.25);
+}
+
+.name {
+    color: #3567C1;
+    font-size: 30px;
+}
+
+.username {
+    color: #717171;
+    font-size: 20px;
+}
+
+.card-info {
+    padding-top: .25rem;
+    font-size: 24px;
+    color: #717171;
+}
