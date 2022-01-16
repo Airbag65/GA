@@ -50,6 +50,7 @@ if (isset($_SESSION['loggedin'])){
     }
     else{
         echo"<a href='login.php'>Logga in</a>";
+        echo"<p>Du har inte tillgång till hemsidans funktioner när du inte är inloggad!</p>";
     }
 }
 ?>
