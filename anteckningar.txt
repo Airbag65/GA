@@ -1,9 +1,20 @@
+
+Saker att tänka på att implementera:
 * labb. resultat
 * remisser
 * undersökningar
-* någonting med vitala parametrar
+* vitala parametrar:
     * blodtryck
     * syresättning
     * puls
     * blodgrupp
 * journalanteckning !!!!!!
+
+Specialiseringar:
+* Admin
+* Undersköterska
+* Läkare
+* Kirurg
+* Ortoped
+* Optiker
+*

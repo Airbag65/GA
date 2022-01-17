@@ -20,7 +20,11 @@ create table patients
     lastName text not null default 'Grön',
     personNr integer not null,
     age integer not null default 0,
-    diagnoses blob default 'Inga Diagnoser'
+    diagnoses blob default 'Inga Diagnoser',
+    bloodPreasure float default 0.0,
+    spO2 float default 95.0,
+    pulse float default 0.0,
+    bloodGroup text default 'A+'
 );
 
 create table doctors
@@ -74,8 +78,8 @@ values (
            'uska'
        );
 
-insert into patients(firstName, lastName, personNr, age)
-values('Anders', 'Andersson', 20000000, 50);
+insert into patients(firstName, lastName, personNr, age, diagnoses, bloodPreasure, spO2, pulse, bloodGroup)
+values ('Göran', 'Antersson', 192003041337, 102, 'Inga Diagnoser', 23.6, 86.9, 40.1, 'B-');
 
 insert into doctors(firstName, lastName, age, personNr, emailAddress, spec, nameAbbrev, password)
 values
@@ -98,9 +102,16 @@ values (
            'död',
            'Patienten har avlidit'
        );
+
+
 insert into
     specialisations(specName, specAcro)
-values ('Administratör', 'admin');
+values ('Administratör', 'admin'),
+       ('Läkare', 'laka'),
+       ('Kirurg', 'kiru'),
+       ('Ortoped', 'orto'),
+       ('Optiker', 'opti');
+
 insert into doctors
 (firstName, lastName, age, personNr, emailAddress, spec, nameAbbrev, password, isAdmin)
 values ('Anton', 'Norman', 18, 200304070000, 'normananton03@gmail.com', 2, 'antnor', 'f29444ed56b0ffeeadc2908a172e92f1', 1);
