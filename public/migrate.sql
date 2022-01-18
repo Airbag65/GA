@@ -42,6 +42,18 @@ create table doctors
     loggedIn integer not null default 0,
     foreign key (spec) references specialisations(specId)
 );
+
+create table bloodGroup
+(
+    id integer primary key autoincrement not null,
+    date text not null,
+    bloodGroup text not null default 'A+',
+    patientId integer not null,
+    foreign key (patientId) references patients(patientId)
+);
+
+-- TODO Tabeller för resterande vitala parametrar
+
 create table messages
 (
     messageId integer primary key autoincrement not null,
@@ -66,9 +78,9 @@ create table meetings
 );
 
 create table ICD10(
-                      id integer primary key autoincrement not null,
-                      abbreviation text,
-                      expansion text
+    id integer primary key autoincrement not null,
+    abbreviation text,
+    expansion text
 );
 
 
