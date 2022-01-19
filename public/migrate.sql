@@ -4,6 +4,10 @@ drop table if exists messages;
 drop table if exists patients;
 drop table if exists specialisations;
 drop table if exists ICD10;
+drop table if exists bloodGroup;
+drop table if exists syresättning;
+drop table if exists puls;
+drop table if exists blodtryck;
 pragma foreign_keys = on;
 
 
@@ -48,6 +52,33 @@ create table bloodGroup
     id integer primary key autoincrement not null,
     date text not null,
     bloodGroup text not null default 'A+',
+    patientId integer not null,
+    foreign key (patientId) references patients(patientId)
+);
+
+create table syresättning
+(
+    id integer primary key autoincrement not null,
+    date text not null,
+    syresattning float not null default 0.0,
+    patientId integer not null,
+    foreign key (patientId) references patients(patientId)
+);
+
+create table puls
+(
+    id integer primary key autoincrement not null,
+    date text not null,
+    puls float not null default 0.0,
+    patientId integer not null,
+    foreign key (patientId) references patients(patientId)
+);
+
+create table blodtryck
+(
+    id integer primary key autoincrement not null,
+    date text not null,
+    blodtryck float not null default 0.0,
     patientId integer not null,
     foreign key (patientId) references patients(patientId)
 );
