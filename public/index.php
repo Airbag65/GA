@@ -56,7 +56,7 @@ if (isset($_SESSION['loggedin'])){
         $stmt->execute();
         $getPatients = $stmt->fetchAll();
         foreach ($getPatients as $patient) {
-            echo $patient->firstName." ".$patient->lastName."<a href='journalanteckning/meeting.php?id=$patient->patientId'>Nytt Läkarbesök</a><br>";
+            echo $patient->firstName." ".$patient->lastName."  "."<a href='journalanteckning/meeting.php?id=$patient->patientId'>Nytt Läkarbesök</a><br>";
         }
     }
     else{
