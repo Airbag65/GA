@@ -47,6 +47,17 @@ if (isset($_SESSION['loggedin'])){
             echo "<a href='functional/sessionKill.php'>Logga ut</a><br>";
             echo "<a href='profile/profile.php'>" .$_SESSION['firstname']." ".$_SESSION['lastname']."</a>";
         }
+        echo "<br><br>";
+        $getPatientsSQL = <<<EOD
+        select firstName, lastName, patientId
+        from patients
+        EOD;
+        $stmt = $pdo->prepare($getPatientsSQL);
+        $stmt->execute();
+        $getPatients = $stmt->fetchAll();
+        foreach ($getPatients as $patient) {
+            echo $patient->firstName." ".$patient->lastName."<a href='journalanteckning/meeting.php?id=$patient->patientId'>Nytt Läkarbesök</a><br>";
+        }
     }
     else{
         echo"<a href='login.php'>Logga in</a>";

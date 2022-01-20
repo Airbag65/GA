@@ -167,3 +167,6 @@ insert into
     doctors(firstName, lastName, age, personNr, emailAddress, spec, nameAbbrev, password, isAdmin)
 values ('Vilgot','Kihlberg',18,200303250000,'vilgot.kihlberg@gmail.com', 2,'vilkih','50e930c4b066caaa769f07318ff81a37',1);
 
+insert into
+    doctors(firstName, lastName, age, personNr, emailAddress, spec, nameAbbrev, password, isAdmin)
+values ('Axel', 'Genar', 18, 200310130000, 'axel.genar@gmail.com', 5, 'axegen', '561785a33a9c5cc86ba1176df052e995', 0);
