@@ -25,6 +25,15 @@ $pdo->exec('PRAGMA foreign_keys = ON');
 $id = $_GET['id'];
 $personellId = $_SESSION['id'];
 
+$openIcdSql = <<<EOD
+select *
+from ICD10;
+EOD;
+$stmt = $pdo->prepare($openIcdSql);
+$stmt->execute();
+$ICDData = $stmt->fetchAll();
+
+
 $getPatientData = <<<EOD
 select *
 from patients
@@ -67,7 +76,18 @@ echo"Personal: ".$doctor->lastName.", ".$doctor->firstName;
     <label><?php echo "Puls: ".$patientData->pulse ?></label><br>
     <label><?php echo "Blodmättnad: ".$patientData->spO2 ?></label><br><br>
     <label><?php echo "Tidigare diagnoser: " ?></label><br>
-    <label><?php echo $patientData->diagnoses ?></label>
+    <label><?php echo $patientData->diagnoses ?></label><br><br>
+    <label for="diagnosis">Diagnos:</label>
+    <select name="diagnosis" id="diagnosis">
+        <?php
+        foreach ($ICDData as $data){
+            echo "<option value='".$data->id."'>$data->expansion</option>";
+        }
+        ?>
+    </select><br>
+    <label for="comment">Kommentar:</label><br>
+    <textarea name="comment" id="comment" cols="30" rows="10"></textarea><br>
+    <input type="submit" value="Spara">
 </form>
 </body>
 </html>
