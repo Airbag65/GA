@@ -11,6 +11,7 @@ if(!isset($_SESSION['createAttempt'])){
 }
 
 require_once "../../vendor/autoload.php";
+require_once "../functional/functions.php";
 
 $filename = "C:/code/GA/database/database.db";
 
@@ -22,7 +23,29 @@ $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 $pdo->exec('PRAGMA foreign_keys = ON');
 
 $id = $_GET['id'];
-var_dump($id);
+$personellId = $_SESSION['id'];
+
+$getPatientData = <<<EOD
+select *
+from patients
+where patientId is ?;
+EOD;
+
+$stmt = $pdo->prepare($getPatientData);
+$stmt->execute([$id]);
+$patientData = $stmt->fetch();
+
+$personellSql = <<< EOD
+select doctorId, firstName, lastName, emailAddress, spec, nameAbbrev
+from doctors
+where doctorId is ?;
+EOD;
+$stmt = $pdo->prepare($personellSql);
+$stmt->execute([$personellId]);
+$doctor = $stmt->fetch(PDO::FETCH_OBJ);
+
+echo"Personal: ".$doctor->lastName.", ".$doctor->firstName;
+
 
 ?>
 <!doctype html>
@@ -35,6 +58,16 @@ var_dump($id);
     <title>Läkarbesök</title>
 </head>
 <body>
-
+<form action="../functional/saveMeeting.php">
+    <label><?php echo "Patient: ".$patientData->lastName.", ".$patientData->firstName ?></label><br>
+    <label><?php echo modPersonNr($patientData->personNr) ?></label><br><br>
+    <label>Vitala parametrar:</label><br>
+    <label><?php echo "Blodgrupp: ".$patientData->bloodGroup ?></label><br>
+    <label><?php echo "Blodtryck: ".$patientData->bloodPreasure ?></label><br>
+    <label><?php echo "Puls: ".$patientData->pulse ?></label><br>
+    <label><?php echo "Blodmättnad: ".$patientData->spO2 ?></label><br><br>
+    <label><?php echo "Tidigare diagnoser: " ?></label><br>
+    <label><?php echo $patientData->diagnoses ?></label>
+</form>
 </body>
 </html>

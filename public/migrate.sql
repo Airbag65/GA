@@ -28,7 +28,7 @@ create table patients
     bloodPreasure float default 0.0,
     spO2 float default 95.0,
     pulse float default 0.0,
-    bloodGroup text default 'A+'
+    bloodGroup text default 'Okänd'
 );
 
 create table doctors
@@ -43,7 +43,6 @@ create table doctors
     nameAbbrev text not null,
     password text not null,
     isAdmin integer not null default 0,
-    loggedIn integer not null default 0,
     foreign key (spec) references specialisations(specId)
 );
 
@@ -51,7 +50,7 @@ create table bloodGroup
 (
     id integer primary key autoincrement not null,
     date text not null,
-    bloodGroup text not null default 'A+',
+    bloodGroup text not null default 'Okänd',
     patientId integer not null,
     foreign key (patientId) references patients(patientId)
 );
@@ -83,7 +82,6 @@ create table blodtryck
     foreign key (patientId) references patients(patientId)
 );
 
--- TODO Tabeller för resterande vitala parametrar
 
 create table messages
 (
@@ -170,3 +168,7 @@ values ('Vilgot','Kihlberg',18,200303250000,'vilgot.kihlberg@gmail.com', 2,'vilk
 insert into
     doctors(firstName, lastName, age, personNr, emailAddress, spec, nameAbbrev, password, isAdmin)
 values ('Axel', 'Genar', 18, 200310130000, 'axel.genar@gmail.com', 5, 'axegen', '561785a33a9c5cc86ba1176df052e995', 0);
+
+insert into
+    patients(firstName, lastName, personNr, age, diagnoses, bloodPreasure, spO2, pulse, bloodGroup)
+values ('Bengt', 'Wallgren', 200301010000, 19, 'Inga diagnoser', 0.0, 95.0, 99.0, 'Okänd');
