@@ -67,14 +67,17 @@ echo"Personal: ".$doctor->lastName.", ".$doctor->firstName;
     <title>Läkarbesök</title>
 </head>
 <body>
-<form action="../functional/saveMeeting.php">
+<form action="../functional/saveMeeting.php" method="post">
     <label><?php echo "Patient: ".$patientData->lastName.", ".$patientData->firstName ?></label><br>
     <label><?php echo modPersonNr($patientData->personNr) ?></label><br><br>
     <label>Vitala parametrar:</label><br>
     <label><?php echo "Blodgrupp: ".$patientData->bloodGroup ?></label><br>
-    <label><?php echo "Blodtryck: ".$patientData->bloodPreasure ?></label><br>
-    <label><?php echo "Puls: ".$patientData->pulse ?></label><br>
-    <label><?php echo "Blodmättnad: ".$patientData->spO2 ?></label><br><br>
+    <label for=blodtryck""><?php echo "Föregående blodtryck: ".$patientData->bloodPreasure ?></label><br>
+    <input type="text" id="blodtryck" placeholder="Ange Blodtryck" name="blodtryck"><br>
+    <label for="puls"><?php echo "Föregående puls: ".$patientData->pulse ?></label><br>
+    <input type="text" id="puls" placeholder="Ange Puls" name="puls"><br>
+    <label for="mattnad"><?php echo "Föregående blodmättnad: ".$patientData->spO2 ?></label><br>
+    <input type="text" id="mattnad" name="mattnad" placeholder="Ange Blodmättnad"><br><br>
     <label><?php echo "Tidigare diagnoser: " ?></label><br>
     <label><?php echo $patientData->diagnoses ?></label><br><br>
     <label for="diagnosis">Diagnos:</label>
@@ -87,6 +90,7 @@ echo"Personal: ".$doctor->lastName.", ".$doctor->firstName;
     </select><br>
     <label for="comment">Kommentar:</label><br>
     <textarea name="comment" id="comment" cols="30" rows="10"></textarea><br>
+    <input type="hidden" name="patientId" value="<?php echo $id?>">
     <input type="submit" value="Spara">
 </form>
 </body>

@@ -1,13 +1,14 @@
 drop table if exists meetings;
 drop table if exists doctors;
 drop table if exists messages;
-drop table if exists patients;
-drop table if exists specialisations;
-drop table if exists ICD10;
 drop table if exists bloodGroup;
 drop table if exists syresättning;
 drop table if exists puls;
 drop table if exists blodtryck;
+drop table if exists patients;
+drop table if exists specialisations;
+drop table if exists ICD10;
+
 pragma foreign_keys = on;
 
 
@@ -49,7 +50,7 @@ create table doctors
 create table bloodGroup
 (
     id integer primary key autoincrement not null,
-    date text not null,
+    date text default CURRENT_TIMESTAMP,
     bloodGroup text not null default 'Okänd',
     patientId integer not null,
     foreign key (patientId) references patients(patientId)
@@ -58,7 +59,7 @@ create table bloodGroup
 create table syresättning
 (
     id integer primary key autoincrement not null,
-    date text not null,
+    date text default CURRENT_TIMESTAMP,
     syresattning float not null default 0.0,
     patientId integer not null,
     foreign key (patientId) references patients(patientId)
@@ -67,7 +68,7 @@ create table syresättning
 create table puls
 (
     id integer primary key autoincrement not null,
-    date text not null,
+    date text default CURRENT_TIMESTAMP,
     puls float not null default 0.0,
     patientId integer not null,
     foreign key (patientId) references patients(patientId)
@@ -76,7 +77,7 @@ create table puls
 create table blodtryck
 (
     id integer primary key autoincrement not null,
-    date text not null,
+    date text default CURRENT_TIMESTAMP,
     blodtryck float not null default 0.0,
     patientId integer not null,
     foreign key (patientId) references patients(patientId)
@@ -101,7 +102,10 @@ create table meetings
     patientId integer not null,
     diagnosis text not null default 'Ingen Diagnos',
     comment text default ' ',
-    date text not null default ' ',
+    blodtryck text default null,
+    puls text default null,
+    mattnad text default null,
+    date text not null default CURRENT_TIMESTAMP,
     foreign key (doctorId) references doctors (doctorId),
     foreign key (patientId) references patients (patientId)
 );
@@ -170,5 +174,5 @@ insert into
 values ('Axel', 'Genar', 18, 200310130000, 'axel.genar@gmail.com', 5, 'axegen', '561785a33a9c5cc86ba1176df052e995', 0);
 
 insert into
-    patients(firstName, lastName, personNr, age, diagnoses, bloodPreasure, spO2, pulse, bloodGroup)
-values ('Bengt', 'Wallgren', 200301010000, 19, 'Inga diagnoser', 0.0, 95.0, 99.0, 'Okänd');
+    patients(firstName, lastName, personNr, age, bloodPreasure, spO2, pulse, bloodGroup)
+values ('Bengt', 'Wallgren', 200301010000, 19, 0.0, 95.0, 99.0, 'Okänd');
