@@ -119,7 +119,7 @@ create table ICD10(
 
 insert into specialisations(specName, specAcro)
 values (
-           'Underskörtersa',
+           'Underskörterska',
            'uska'
        );
 
