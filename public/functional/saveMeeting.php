@@ -46,7 +46,7 @@ $stmt->execute([$_POST['patientId']]);
 $patientData = $stmt->fetch();
 var_dump($patientData);
 
-if ($patientData->diagnoses === "Inga Diagnoser"){
+if (strtolower($patientData->diagnoses) === "inga diagnoser"){
     $updateDiagnosesSql = <<<EOD
     update patients
     set diagnoses = ?,
@@ -58,7 +58,7 @@ if ($patientData->diagnoses === "Inga Diagnoser"){
     $stmt = $pdo->prepare($updateDiagnosesSql);
     $stmt->execute([$ICD->abbreviation, $_POST['blodtryck'], $_POST['puls'], $_POST['mattnad'], $_POST['patientId']]);
 } else{
-    $patientData->diagnoses .= ", $ICD->abbreviation";
+    $patientData->diagnoses .= ";".$ICD->abbreviation;
     $updateDiagnosesSql = <<<EOD
     update patients
     set diagnoses = ?,

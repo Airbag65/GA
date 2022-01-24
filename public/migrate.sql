@@ -25,7 +25,7 @@ create table patients
     lastName text not null default 'Grön',
     personNr integer not null,
     age integer not null default 0,
-    diagnoses blob default 'Inga Diagnoser',
+    diagnoses blob default 'Inga Diagnoser;',
     bloodPreasure float default 0.0,
     spO2 float default 95.0,
     pulse float default 0.0,
