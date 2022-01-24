@@ -11,5 +11,7 @@
             "email": "elvlin274@edu.linkoping.se"
         }
     ],
-    "require": {}
+    "require": {
+        "twig/twig": "^3.3"
+    }
 }
