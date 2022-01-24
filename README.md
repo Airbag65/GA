@@ -31,6 +31,9 @@ ursprungliga tankar på att använda php hädanefter. Vi väljer dock att ha kva
 Efter att ha skissat färdigt all design till det grafiska gränssnittet och tagit alla designbeslut har vi börjat implementera
 designen i vårt projekt. Vid nuläget är all HTML och CSS för inloggningssidan klar och vi arbetar med att fixa resten.
 
+## Uppdatering 24/1 -22
+Vi har tagit beslutet att använda twig med tanke på säkerhet.
+
 ## Färgkoder vi använder:
 #EA4C6C - Röd,
 #3567C1 - Blå
