@@ -24,3 +24,38 @@ $pdo->exec('PRAGMA foreign_keys = ON');
 
 $id = intval($_GET['id']);
 $personellId = intval($_SESSION['id']);
+
+$getPatientSql = <<<EOD
+select *
+from patients
+where patientId is ?;
+EOD;
+$stmt = $pdo->prepare($getPatientSql);
+$stmt->execute([$id]);
+$patientData = $stmt->fetch();
+var_dump($patientData);
+
+
+$getMeetingsSql = <<<EOD
+select *
+from meetings
+where patientId is ?;
+EOD;
+$stmt = $pdo->prepare($getMeetingsSql);
+$stmt->execute([$id]);
+$meetings = $stmt->fetchAll();
+var_dump($meetings);
+?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Journal</title>
+</head>
+<body>
+
+</body>
+</html>
