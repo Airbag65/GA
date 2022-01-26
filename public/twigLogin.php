@@ -1,12 +1,5 @@
 <?php
 require_once "functional/twigFunctions.php";
-require "../vendor/autoload.php";
-
-session_start();
-if (!isset($_SESSION['loginatempt'])){
-    $_SESSION['loginatempt'] = false;
-}
-
 require_once "../vendor/autoload.php";
 
 $filename = "C:/code/GA/database/database.db";
