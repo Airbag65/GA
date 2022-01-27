@@ -16,7 +16,7 @@ $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 $pdo->exec('PRAGMA foreign_keys = ON');
 
 if(!$_SESSION['loggedin']){
-    header("location: ../login.php");
+    header("location: ../loginTest.php");
 }else{
     $personNr = $_SESSION['personNr'];
     $modPersonNr = modPersonNr($personNr);
