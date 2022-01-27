@@ -36,8 +36,9 @@ $patientData = $stmt->fetch();
 
 
 $getMeetingsSql = <<<EOD
-select *
-from meetings
+select meetingId, patientId, diagnosis, comment, blodtryck, puls, mattnad, date, firstName, lastName
+from meetings m 
+join doctors d on d.doctorId = m.doctorId
 where patientId is ?;
 EOD;
 $stmt = $pdo->prepare($getMeetingsSql);
@@ -62,19 +63,45 @@ if(strtolower($patientData->diagnoses) === "inga diagnoser"){
 </head>
 <body>
 <?php
+
 echo <<<patient
 <p>$patientData->firstName, $patientData->lastName</p>
 <p>Personnummer: $patientData->personNr</p>
 <p>Ålder: $patientData->age</p>
-<p>Blodgrupp: $patientData->bloodGroup</p><br>
+patient;
+if(strtolower($patientData->bloodGroup) !== "okänd"){
+    echo "<p>Blodgrupp: $patientData->bloodGroup</p><br>";
+}else{
+    echo "<a href='../edit/editBloodGroup.php?id=".$patientData->patientId."'>Lägg till blodgrupp</a>";
+}
+echo <<<patient
 <p>Senaste Mätningar:</p>
 <p>Blodtryck: $patientData->bloodPreasure</p>
 <p>Puls: $patientData->pulse</p>
-<p>Blodmattnad: $patientData->spO2</p>
+<p>Blodmättnad: $patientData->spO2</p>
 <p>Tidigare Diagnoser: </p>
 patient;
+
+
+
 foreach ($formerDiagnoses as $formerDiagnosis) {
     echo "<p>$formerDiagnosis</p>";
+}
+echo "<br>";
+foreach ($meetings as $meeting){
+    echo <<<eod
+    <div class='journal-anteckning'>
+        <h4>Journalanteckning</h4>
+        <p>Personal: $meeting->lastName, $meeting->firstName</p>
+        <p>Datum för journalanteckning: $meeting->date</p><br>
+        <p>Vitala parametrar vid besök:</p>
+        <p>Blodtryck: $meeting->blodtryck</p>
+        <p>Puls: $meeting->puls</p>
+        <p>Mättnad: $meeting->mattnad</p><br>
+        <p>Diagnos: $meeting->diagnosis</p>
+        <p>Läkarens Kommentar: $meeting->comment</p>
+    </div>
+    eod;
 }
 ?>
 </body>
