@@ -4,7 +4,7 @@
 *{
     font-family: 'Inter', sans-serif;
 }
-body{
+.body-container{
     height: 94vh;
     display: flex;
     justify-content: center;
@@ -13,20 +13,21 @@ body{
 }
 
 .input-field{
-    width: 10rem;
+    width: 16rem;
+}
+
+.login-container{
+    font-size: 1.4rem;
 }
 
 .login-button{
-    height: 2.5rem;
-    width: 10.1rem;
+    height: 3rem;
+    width: 16.5rem;
+    font-size: 1rem;
     background-color: #3567C1;
     color: #ffffff;
     border: 1px none;
     border-radius: 4px;
-}
-.login-container{
-    display: flex;
-    justify-content: center;
 }
 
 .invalid-login{
