@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="login.css">
     <title>Logga in</title>
 </head>
-<body>
+<body class="body-container">
 <div class="login-container">
     <form action="functional/auth.php" method="post">
         <label for="">
@@ -24,8 +24,8 @@
             <input type="submit" value="Logga in" class="login-button">
         </label>
     </form>
-    <p class="invalid-login">{{ loginfail }}</p>
 </div>
+<p class="invalid-login">{{ loginfail }}</p>
 
 </body>
 </html>
