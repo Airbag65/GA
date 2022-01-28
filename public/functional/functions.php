@@ -19,3 +19,18 @@ function modPersonNr(string $personNr){
     }
     return $modNr;
 }
+
+/**
+ * @param null
+ * @return object
+ * initierar databasen enklare i alla filer
+ */
+function initDb(){
+    $filename = "C:/code/GA/database/database.db";
+    $dns = "sqlite:$filename";
+    $pdo = new PDO($dns);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+    $pdo->exec('PRAGMA foreign_keys = ON');
+    return $pdo;
+}

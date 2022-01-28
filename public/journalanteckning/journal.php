@@ -13,14 +13,7 @@ if(!isset($_SESSION['createAttempt'])){
 require_once "../../vendor/autoload.php";
 require_once "../functional/functions.php";
 
-$filename = "C:/code/GA/database/database.db";
-
-$dns = "sqlite:$filename";
-
-$pdo = new PDO($dns);
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
-$pdo->exec('PRAGMA foreign_keys = ON');
+$pdo = initDb();
 
 $id = intval($_GET['id']);
 $personellId = intval($_SESSION['id']);
@@ -72,18 +65,15 @@ patient;
 if(strtolower($patientData->bloodGroup) !== "okänd"){
     echo "<p>Blodgrupp: $patientData->bloodGroup</p><br>";
 }else{
-    echo "<a href='../edit/editBloodGroup.php?id=".$patientData->patientId."'>Lägg till blodgrupp</a>";
+    echo "<a href='../edit/editBloodGroup.php?id=".$patientData->patientId."'>Lägg till blodgrupp</a><br>";
 }
 echo <<<patient
 <p>Senaste Mätningar:</p>
 <p>Blodtryck: $patientData->bloodPreasure</p>
 <p>Puls: $patientData->pulse</p>
 <p>Blodmättnad: $patientData->spO2</p>
-<p>Tidigare Diagnoser: </p>
+<p>Tidigare Diagnoser: </p><br>
 patient;
-
-
-
 foreach ($formerDiagnoses as $formerDiagnosis) {
     echo "<p>$formerDiagnosis</p>";
 }
@@ -104,5 +94,7 @@ foreach ($meetings as $meeting){
     eod;
 }
 ?>
+<br>
+<a href="../">Tillbaka</a>
 </body>
 </html>
