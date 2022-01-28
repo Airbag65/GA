@@ -34,5 +34,8 @@ if(isset($_SESSION['loggedin'])){
     }
 }
 
+$logo = "../images/logo.png";
+
+
 rendering('views', 'login.twig', $data);
 
