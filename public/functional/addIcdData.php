@@ -31,4 +31,4 @@ while (($data = fgetcsv($rawData, 1000, " ")) !== FALSE) {
     $stmt->execute();
 }
 
-header("Location: ../home.php");
+header("Location: ../index.php");

@@ -40,8 +40,8 @@ if($password === $userInformation->password){
     $_SESSION['loggedin'] = true;
     $_SESSION['loginatempt'] = true;
     var_dump("Logged In");
-    header("location: ../home.php");
+    header("location: ../index.php");
 }else{
     $_SESSION['loginatempt'] = true;
-    header("Location: ../index.php");
+    header("Location: ../login.php");
 }
