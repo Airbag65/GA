@@ -17,7 +17,6 @@ EOD;
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $patientData = $stmt->fetchAll();
-
 ?>
 
 <!doctype html>
@@ -43,16 +42,29 @@ if (isset($_SESSION['loggedin'])){
         }
         echo "<br><br>";
         $getPatientsSQL = <<<EOD
-        select firstName, lastName, patientId
+        select firstName, lastName, patientId, personNr
         from patients
         EOD;
         $stmt = $pdo->prepare($getPatientsSQL);
         $stmt->execute();
-        $getPatients = $stmt->fetchAll();
+        $patients = $stmt->fetchAll();
+        /*
+        $patients = [];
         foreach ($getPatients as $patient) {
-            echo $patient->firstName." ".$patient->lastName."  "."<a href='journalanteckning/meeting.php?id=$patient->patientId'>Nytt Läkarbesök</a>"
+            $patients[] = $patient->firstName." ".$patient->lastName."  "."<a href='journalanteckning/meeting.php?id=$patient->patientId'>Nytt Läkarbesök</a>"
         ."  "." <a href='journalanteckning/journal.php?id=$patient->patientId'>Läs Journal</a><br>";
+            $patients[] = $patient;
         }
+        */
+
+        echo <<<EOD
+        <form action="search.php" method="post">
+            <input type="text" name="search-patient" placeholder="Sök patient med personnummer...">
+            <input type="submit">
+        </form>
+        EOD;
+        var_dump($patients);
+
     }
     else{
         echo "<a href='login.php'>Logga in</a>";
