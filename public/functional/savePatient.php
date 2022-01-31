@@ -26,4 +26,4 @@ EOD;
 $stmt = $pdo->prepare($addPatient);
 $stmt->execute([$firstName,$lastName,$personNr,$age]);
 
-header("location: ../profile/admin.php");
+header("Location: ../profile/admin.php");

@@ -14,4 +14,4 @@ EOD;
 $stmt = $pdo->prepare($setBloodGroup);
 $stmt->execute([$group,$id]);
 
-header("location: ../journalanteckning/journal.php?id=$id");
+header("Location: ../journalanteckning/journal.php?id=$id");

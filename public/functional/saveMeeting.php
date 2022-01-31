@@ -98,4 +98,4 @@ values (?,?,?,?,?,?,?);
 EOD;
 $stmt = $pdo->prepare($saveMeetingSql);
 $stmt->execute([$_SESSION['id'], $_POST['patientId'], $ICD->abbreviation, $_POST['comment'], $_POST['blodtryck'], $_POST['puls'], $_POST['mattnad']]);
-header('location: ../');
+header('Location: ../');

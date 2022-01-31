@@ -38,7 +38,7 @@ if ($password === $confPassword){
 else{
     $_SESSION['createAttempt'] = true;
     $_SESSION['createSuccess'] = false;
-    header("location: ../profile/admin.php");
+    header("Location: ../profile/admin.php");
 }
 
 
