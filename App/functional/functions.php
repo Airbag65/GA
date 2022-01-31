@@ -34,3 +34,13 @@ function initDb(){
     $pdo->exec('PRAGMA foreign_keys = ON');
     return $pdo;
 }
+
+function requireLogin(){
+    if(isset($_SESSION['loggedin'])){
+        if($_SESSION['loggedin'] == true){
+        }
+        else{
+            header("location: /login");
+        }
+    }
+}

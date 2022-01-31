@@ -1,12 +1,8 @@
 <?php
-session_start();
-if(!isset($_SESSION['loggedin'])){
-    $_SESSION['loggedin'] = false;
-}
-
 require_once "../vendor/autoload.php";
 require_once "functional/functions.php";
 
+var_dump($_SESSION);
 $pdo = initDb();
 
 
@@ -69,7 +65,7 @@ if (isset($_SESSION['loggedin'])){
 
     }
     else{
-        echo "<a href='index.php'>Logga in</a>";
+        echo "<a href='../public/index.php'>Logga in</a>";
         echo"<p>Du har inte tillgång till hemsidans funktioner när du inte är inloggad!</p>";
     }
 }

@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 require_once "../../vendor/autoload.php";
 
 $filename = "C:/code/GA/database/database.db";
@@ -43,5 +44,5 @@ if($password === $userInformation->password){
     header("location: ../home.php");
 }else{
     $_SESSION['loginatempt'] = true;
-    header("Location: ../index.php");
+    header("Location: /home.php");
 }

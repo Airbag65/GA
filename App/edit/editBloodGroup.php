@@ -1,6 +1,9 @@
 <?php
 require_once "../../vendor/autoload.php";
 require_once "../functional/functions.php";
+
+requireLogin();
+
 $pdo = initDb();
 
 $id = intval($_GET['id']);

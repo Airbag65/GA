@@ -1,8 +1,9 @@
 <?php
-session_start();
-if(!isset($_SESSION['loggedin'])){
-    $_SESSION['loggedin'] = false;
-}
+require_once "../../vendor/autoload.php";
+require_once "../functional/functions.php";
+
+requireLogin();
+
 if(!isset($_SESSION['isAdmin'])){
     $_SESSION['isAdmin'] = 0;
 }
@@ -10,8 +11,7 @@ if(!isset($_SESSION['createAttempt'])){
     $_SESSION['createAttempt'] = false;
 }
 
-require_once "../../vendor/autoload.php";
-require_once "../functional/functions.php";
+
 
 $pdo = initDb();
 
@@ -87,6 +87,6 @@ echo"Personal: ".$doctor->lastName.", ".$doctor->firstName;
     <input type="submit" value="Spara">
 </form>
 <br>
-<a href="../">Tillbaka</a>
+<a href="../../public">Tillbaka</a>
 </body>
 </html>

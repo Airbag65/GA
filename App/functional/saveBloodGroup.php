@@ -1,6 +1,9 @@
 <?php
 require_once "../../vendor/autoload.php";
 require_once "functions.php";
+
+requireLogin();
+
 $pdo = initDb();
 
 $id = intval($_POST['id']);
@@ -12,6 +15,6 @@ set bloodGroup = ?
 where patientId is ?;
 EOD;
 $stmt = $pdo->prepare($setBloodGroup);
-$stmt->execute([$group,$id]);
+$stmt->execute([$group, $id]);
 
 header("Location: ../journalanteckning/journal.php?id=$id");

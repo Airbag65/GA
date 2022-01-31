@@ -1,37 +1,40 @@
 <?php
 session_start();
 
-require_once "functional/twigFunctions.php";
 require_once "../vendor/autoload.php";
+require_once "../vendor/pecee/simple-router/helpers.php";
+require_once "../App/functional/functions.php";
+require_once "../App/functional/twigFunctions.php";
 
-if (!isset($_SESSION['loginatempt'])){
-    $_SESSION['loginatempt'] = false;
-}
+use Pecee\Http\Request;
+use Pecee\SimpleRouter\SimpleRouter;
 
-$filename = "C:/code/GA/database/database.db";
+SimpleRouter::get('/', function (){
+    requireLogin();
+    require "../App/home.php";
+});
 
-$dns = "sqlite:$filename";
+SimpleRouter::get('/home', function (){
+//    require "../App/home.php";
+    echo "/home";
+});
 
-$pdo = new PDO($dns);
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
-$pdo->exec('PRAGMA foreign_keys = ON');
+SimpleRouter::get('/logout', function (){
+    session_destroy();
+    header("Location: /");
+});
 
-$data = [
-    "userField" => "Användarnamn eller mejl",
-    "passwordField" => "Lösenord"
-];
+SimpleRouter::error(function(Request $request, \Exception $exception) {
 
-if(isset($_SESSION['loggedin'])){
-    if(isset($_SESSION['loginatempt'])){
-        if ($_SESSION['loginatempt']){
-            if (!$_SESSION['loggedin']) {
-                $data['loginfail'] = "Fel användarnamn eller lösenord";
-            }else{
-                $data['loginfail'] = "";
-            }
-        }
+    switch($exception->getCode()) {
+        case 404:
+            response()->redirect('/');
+            break;
+        default:
+            response()->redirect('/');
     }
-}
 
-rendering('views', 'index.twig', $data);
+});
+
+SimpleRouter:: start();
+

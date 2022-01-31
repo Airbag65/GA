@@ -16,7 +16,7 @@ $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 $pdo->exec('PRAGMA foreign_keys = ON');
 
 if(!$_SESSION['loggedin']){
-    header("location: ../loginTest.php");
+    header("Location: ../login.php");
 }else{
     $personNr = $_SESSION['personNr'];
     $modPersonNr = modPersonNr($personNr);
@@ -49,14 +49,14 @@ $meetings = $stmt->fetch();
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="profile.css">
+        <link rel="stylesheet" href="../../public/CSS/profile.css">
         <title>Profil - <?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></title>
     </head>
     <body>
         <nav class="navigation">
             <div class="grid-container">
                 <div class="grid-item1">
-                    <a href="../" class="tillbaka-link">← Tillbaka</a>
+                    <a href="../../public" class="tillbaka-link">← Tillbaka</a>
                 </div>
                 <div class="grid-item2 small-grid-container">
                     <?php
@@ -78,7 +78,7 @@ $meetings = $stmt->fetch();
 
         <section class="main-content">
             <div class="user">
-                <img src="../images/user.png" alt="user" class="user-logo">
+                <img src="../../public/images/user.png" alt="user" class="user-logo">
                 <a href="#">Ändra Profilbild</a>
             </div>
             <div class="info-card">
