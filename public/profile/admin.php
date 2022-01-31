@@ -23,7 +23,7 @@ $pdo->exec('PRAGMA foreign_keys = ON');
 
 if($_SESSION['isAdmin'] === 0){
     echo"<script>alert('Du har inte Admin behörighet')</script>";
-    header('location: ../');
+    header('Location: ../');
 }
 elseif($_SESSION['isAdmin'] === 1){
     ?>
@@ -38,7 +38,7 @@ elseif($_SESSION['isAdmin'] === 1){
         <title>Administrering</title>
     </head>
     <body>
-    <a href="../" class="go-back"> <-- Tillbaka till start </a>
+    <a href="../home.php" class="go-back"> <-- Tillbaka till start </a>
     <div class="add-container">
         <div class="add-patient">
             <h2>Lägg till patient</h2>

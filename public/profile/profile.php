@@ -56,7 +56,7 @@ $meetings = $stmt->fetch();
         <nav class="navigation">
             <div class="grid-container">
                 <div class="grid-item1">
-                    <a href="../" class="tillbaka-link">← Tillbaka</a>
+                    <a href="../home.php" class="tillbaka-link">← Tillbaka</a>
                 </div>
                 <div class="grid-item2 small-grid-container">
                     <?php

@@ -59,12 +59,20 @@ if (isset($_SESSION['loggedin'])){
         */
 
         echo <<<EOD
-        <form action="search.php" method="post">
-            <input type="text" name="search-patient" placeholder="Sök patient med personnummer...">
+        <form action="functional/search.php" method="post">
+            <input type="text" name="search-patient" id="search-patient" placeholder="Sök patient med personnummer...">
             <input type="submit">
         </form>
         EOD;
-        var_dump($patients);
+        if(isset($_SESSION['chosen-patient'])){
+            if($_SESSION['chosen-patient'] === 'Patienten finns inte') {
+                echo $_SESSION['chosen-patient'];
+            } else {
+                $chosenPatient = $_SESSION['chosen-patient'];
+                echo $chosenPatient->firstName." ".$chosenPatient->lastName."  "."<a href='journalanteckning/meeting.php?id=$chosenPatient->patientId'>Nytt Läkarbesök</a>"
+                    ."  "." <a href='journalanteckning/journal.php?id=$chosenPatient->patientId'>Läs Journal</a><br>";
+            }
+        }
 
 
     }
