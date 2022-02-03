@@ -40,7 +40,7 @@ function requireLogin(){
         if($_SESSION['loggedin'] == true){
         }
         else{
-            header("location: /login");
+            header("Location: /login");
         }
     }
 }

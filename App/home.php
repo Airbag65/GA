@@ -27,15 +27,18 @@ $patientData = $stmt->fetchAll();
 </head>
 <body>
 <?php
+if(!isset($_SESSION['loggedin'])){
+    $_SESSION['loggedin'] = false;
+}
 if (isset($_SESSION['loggedin'])){
     if ($_SESSION['loggedin'] === true){
         if($_SESSION['isAdmin'] === 1){
-            echo "<a href='functional/sessionKill.php'>Logga ut</a><br>";
+            echo "<a href='/logout/'>Logga ut</a><br>";
             echo "<a href='profile/profile.php'>" .$_SESSION['firstname']." ".$_SESSION['lastname']."</a><br>";
             echo "<a href='profile/admin.php'>Admin</a>";
         }else{
-            echo "<a href='functional/sessionKill.php'>Logga ut</a><br>";
-            echo "<a href='profile/profile.php'>" .$_SESSION['firstname']." ".$_SESSION['lastname']."</a>";
+            echo "<a href='/logout/'>Logga ut</a><br>";
+            echo "<a href='/profile/profile.php'>" .$_SESSION['firstname']." ".$_SESSION['lastname']."</a>";
         }
         echo "<br><br>";
         $getPatientsSQL = <<<EOD
@@ -55,7 +58,7 @@ if (isset($_SESSION['loggedin'])){
         */
 
         echo <<<EOD
-        <form action="search.php" method="post">
+        <form action="functional/search.php" method="post">
             <input type="text" name="search-patient" placeholder="Sök patient med personnummer...">
             <input type="submit">
         </form>
@@ -65,7 +68,7 @@ if (isset($_SESSION['loggedin'])){
 
     }
     else{
-        echo "<a href='../public/index.php'>Logga in</a>";
+        echo "<a href='/login/'>Logga in</a>";
         echo"<p>Du har inte tillgång till hemsidans funktioner när du inte är inloggad!</p>";
     }
 }

@@ -6,22 +6,32 @@ require_once "../vendor/pecee/simple-router/helpers.php";
 require_once "../App/functional/functions.php";
 require_once "../App/functional/twigFunctions.php";
 
+initDb();
+
 use Pecee\Http\Request;
 use Pecee\SimpleRouter\SimpleRouter;
 
 SimpleRouter::get('/', function (){
-    requireLogin();
     require "../App/home.php";
 });
 
 SimpleRouter::get('/home', function (){
-//    require "../App/home.php";
-    echo "/home";
+    //requireLogin();
+    require "../App/home.php";
 });
 
 SimpleRouter::get('/logout', function (){
-    session_destroy();
-    header("Location: /");
+    require "../App/functional/sessionKill.php";
+});
+
+SimpleRouter::get("/profile", function (){
+   require "../App/profile/profile.php";
+});
+
+SimpleRouter::get("/login", function (){
+    echo "login/";
+    var_dump($_SESSION);
+    require "../App/login.php";
 });
 
 SimpleRouter::error(function(Request $request, \Exception $exception) {
