@@ -6,7 +6,7 @@ require_once "../vendor/pecee/simple-router/helpers.php";
 require_once "../App/functional/functions.php";
 require_once "../App/functional/twigFunctions.php";
 
-initDb();
+$pdo = initDb();
 
 use Pecee\Http\Request;
 use Pecee\SimpleRouter\SimpleRouter;
