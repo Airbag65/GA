@@ -2,7 +2,6 @@
 require_once "../vendor/autoload.php";
 require_once "functional/functions.php";
 
-var_dump($_SESSION);
 $pdo = initDb();
 
 
@@ -81,7 +80,7 @@ $stmt->execute();
 $checkForData = $stmt->fetchAll();
 
 if (empty($checkForData)){
-    echo "<a href='functional/addIcdData.php'>Lägg till ICD 10 Data</a>";
+    echo "<a href='/addData'>Lägg till ICD 10 Data</a>";
 }else{
     echo "ICD 10 data finns i databasen!";
 }

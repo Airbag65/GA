@@ -29,9 +29,11 @@ SimpleRouter::get("/profile", function (){
 });
 
 SimpleRouter::get("/login", function (){
-    echo "login/";
-    var_dump($_SESSION);
     require "../App/login.php";
+});
+
+SimpleRouter::get("/addData", function (){
+   require "../App/functional/addIcdData.php";
 });
 
 SimpleRouter::error(function(Request $request, \Exception $exception) {
