@@ -6,11 +6,9 @@ $data = [
 
 if(!isset($_SESSION["loggedin"])){
     $_SESSION["loggedin"] = false;
-    echo "loggedin false<br>";
 }
 if(!isset($_SESSION['loginatempt'])){
     $_SESSION['loginatempt'] = false;
-    echo "loginatempt false<br>";
 }
 
 if(isset($_SESSION['loggedin'])){
@@ -24,5 +22,4 @@ if(isset($_SESSION['loggedin'])){
         }
     }
 }
-$data["path"] = "/auth";
 rendering('views', 'index.twig', $data);

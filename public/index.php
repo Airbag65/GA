@@ -36,7 +36,7 @@ SimpleRouter::get("/addData", function (){
    require "../App/functional/addIcdData.php";
 });
 
-SimpleRouter::get("/auth", function (){
+SimpleRouter::post("/auth", function (){
     require "../App/functional/auth.php";
 });
 
