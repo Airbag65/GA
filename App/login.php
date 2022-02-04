@@ -24,4 +24,5 @@ if(isset($_SESSION['loggedin'])){
         }
     }
 }
+$data["path"] = "/auth";
 rendering('views', 'index.twig', $data);

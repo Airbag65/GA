@@ -13,6 +13,7 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $patientData = $stmt->fetchAll();
 
+var_dump($_SESSION);
 ?>
 
 <!doctype html>

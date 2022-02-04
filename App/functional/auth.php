@@ -1,16 +1,6 @@
 <?php
-session_start();
 
-require_once "../../vendor/autoload.php";
-
-$filename = "C:/code/GA/database/database.db";
-
-$dns = "sqlite:$filename";
-
-$pdo = new PDO($dns);
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
-$pdo->exec('PRAGMA foreign_keys = ON');
+$pdo = initDb();
 
 $username = $_POST['userName'];
 $password = md5($_POST['passWord']);
@@ -41,8 +31,8 @@ if($password === $userInformation->password){
     $_SESSION['loggedin'] = true;
     $_SESSION['loginatempt'] = true;
     var_dump("Logged In");
-    header("location: /home/");
+    //header("location: /home/");
 }else{
     $_SESSION['loginatempt'] = true;
-    header("Location: /login/");
+    //header("Location: /login/");
 }

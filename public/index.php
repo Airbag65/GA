@@ -16,7 +16,7 @@ SimpleRouter::get('/', function (){
 });
 
 SimpleRouter::get('/home', function (){
-    //requireLogin();
+    requireLogin();
     require "../App/home.php";
 });
 
@@ -34,6 +34,10 @@ SimpleRouter::get("/login", function (){
 
 SimpleRouter::get("/addData", function (){
    require "../App/functional/addIcdData.php";
+});
+
+SimpleRouter::get("/auth", function (){
+    require "../App/functional/auth.php";
 });
 
 SimpleRouter::error(function(Request $request, \Exception $exception) {
