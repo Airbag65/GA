@@ -1,10 +1,7 @@
 <?php
-session_start();
 if(!isset($_SESSION['loggedin'])){
     $_SESSION['loggedin'] = false;
 }
-require_once "../../vendor/autoload.php";
-require_once "../functional/functions.php";
 
 $filename = "C:/code/GA/database/database.db";
 
@@ -16,7 +13,7 @@ $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 $pdo->exec('PRAGMA foreign_keys = ON');
 
 if(!$_SESSION['loggedin']){
-    header("Location: ../login.php");
+    header("Location: /login");
 }else{
     $personNr = $_SESSION['personNr'];
     $modPersonNr = modPersonNr($personNr);
@@ -49,26 +46,26 @@ $meetings = $stmt->fetch();
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="../../public/CSS/profile.css">
+        <link rel="stylesheet" href="/CSS/profile.css">
         <title>Profil - <?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></title>
     </head>
     <body>
         <nav class="navigation">
             <div class="grid-container">
                 <div class="grid-item1">
-                    <a href="../../public" class="tillbaka-link">← Tillbaka</a>
+                    <a href="/" class="tillbaka-link">← Tillbaka</a>
                 </div>
                 <div class="grid-item2 small-grid-container">
                     <?php
                     if ($_SESSION['loggedin'] === true){
-                        if($_SESSION['isAdmin'] === 1){
-                            echo "<div class='small-grid-item1 small-grid-item'><a href='admin.php' class='profile-link'>Admin</a></div>";
-                            echo "<div class='small-grid-item1 small-grid-item'><a href='profile.php' class='profile-link'>" .$_SESSION['firstname']." ".$_SESSION['lastname']."</a></div>";
-                            echo "<div class='small-grid-item1 small-grid-item'><a href='../functional/sessionKill.php' class='profile-link'>Logga ut</a></div>";
+                        if($_SESSION['isAdmin'] == 1){
+                            echo "<div class='small-grid-item1 small-grid-item'><a href='/admin' class='profile-link'>Admin</a></div>";
+                            echo "<div class='small-grid-item1 small-grid-item'><a href='/profile' class='profile-link'>" .$_SESSION['firstname']." ".$_SESSION['lastname']."</a></div>";
+                            echo "<div class='small-grid-item1 small-grid-item'><a href='/logout' class='profile-link'>Logga ut</a></div>";
                         }else{
                             echo "<div class='small-grid-item1 small-grid-item'></a></div>";
-                            echo "<div class='small-grid-item1 small-grid-item'><a href='profile.php' class='profile-link'>" .$_SESSION['firstname']." ".$_SESSION['lastname']."</a></div>";
-                            echo "<div class='small-grid-item1 small-grid-item'><a href='../functional/sessionKill.php' class='profile-link'>Logga ut</a></div>";
+                            echo "<div class='small-grid-item1 small-grid-item'><a href='/profile' class='profile-link'>" .$_SESSION['firstname']." ".$_SESSION['lastname']."</a></div>";
+                            echo "<div class='small-grid-item1 small-grid-item'><a href='/logout' class='profile-link'>Logga ut</a></div>";
                         }
                     }
                     ?>
@@ -78,7 +75,7 @@ $meetings = $stmt->fetch();
 
         <section class="main-content">
             <div class="user">
-                <img src="../../public/images/user.png" alt="user" class="user-logo">
+                <img src="/images/user.png" alt="user" class="user-logo">
                 <a href="#">Ändra Profilbild</a>
             </div>
             <div class="info-card">

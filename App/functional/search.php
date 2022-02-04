@@ -1,7 +1,4 @@
 <?php
-session_start();
-require_once "../../vendor/autoload.php";
-require_once "functions.php";
 
 $pdo = initDb();
 
@@ -25,4 +22,4 @@ if($fetchPatient){
     $_SESSION['chosen-patient'] = "Patienten finns inte";
 }
 
-header("Location: ../home.php");
+header("Location: /home");

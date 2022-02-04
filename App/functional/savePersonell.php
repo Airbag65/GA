@@ -1,7 +1,5 @@
 <?php
 
-require_once "../../vendor/autoload.php";
-
 requireLogin();
 
 $filename = "C:/code/GA/database/database.db";

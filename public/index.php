@@ -40,6 +40,26 @@ SimpleRouter::post("/auth", function (){
     require "../App/functional/auth.php";
 });
 
+SimpleRouter::get("/profile", function(){
+    require "../App/profile/profile.php";
+});
+
+SimpleRouter::get("/admin", function(){
+    require "../App/profile/admin.php";
+});
+
+SimpleRouter::post("/save-patient", function(){
+    require "../App/functional/savePatient.php";
+});
+
+SimpleRouter::post("/save-personell", function(){
+    require "../App/functional/savePersonell.php";
+});
+
+SimpleRouter::post("/search", function (){
+    require "../App/functional/search.php";
+});
+
 SimpleRouter::error(function(Request $request, \Exception $exception) {
 
     switch($exception->getCode()) {

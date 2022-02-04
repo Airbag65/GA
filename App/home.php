@@ -33,11 +33,11 @@ if (isset($_SESSION['loggedin'])){
     if ($_SESSION['loggedin'] === true){
         if($_SESSION['isAdmin'] === 1){
             echo "<a href='/logout/'>Logga ut</a><br>";
-            echo "<a href='profile/profile.php'>" .$_SESSION['firstname']." ".$_SESSION['lastname']."</a><br>";
-            echo "<a href='profile/admin.php'>Admin</a>";
+            echo "<a href='/profile/'>" .$_SESSION['firstname']." ".$_SESSION['lastname']."</a><br>";
+            echo "<a href='/admin/'>Admin</a>";
         }else{
             echo "<a href='/logout/'>Logga ut</a><br>";
-            echo "<a href='/profile/profile.php'>" .$_SESSION['firstname']." ".$_SESSION['lastname']."</a>";
+            echo "<a href='/profile/'>" .$_SESSION['firstname']." ".$_SESSION['lastname']."</a>";
         }
         echo "<br><br>";
         $getPatientsSQL = <<<EOD
@@ -57,11 +57,18 @@ if (isset($_SESSION['loggedin'])){
         */
 
         echo <<<EOD
-        <form action="functional/search.php" method="post">
+        <form action="/search" method="post">
             <input type="text" name="search-patient" placeholder="Sök patient med personnummer...">
             <input type="submit">
         </form>
         EOD;
+        if(isset($_SESSION["chosen-patient"])){
+            //om patient inte finns
+                //Skriva det
+            // om patient vald
+                //Skriva ut patient
+                //Länk till möte och läsa journal
+        }
         var_dump($patients);
 
 

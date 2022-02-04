@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 if(!isset($_SESSION['loggedin'])){
     $_SESSION['loggedin'] = false;
 }
@@ -9,8 +9,6 @@ if(!isset($_SESSION['isAdmin'])){
 if(!isset($_SESSION['createAttempt'])){
     $_SESSION['createAttempt'] = false;
 }
-
-require_once "../../vendor/autoload.php";
 
 $filename = "C:/code/GA/database/database.db";
 
@@ -38,11 +36,11 @@ elseif($_SESSION['isAdmin'] === 1){
         <title>Administrering</title>
     </head>
     <body>
-    <a href="../home.php" class="go-back"> <-- Tillbaka till start </a>
+    <a href="/home" class="go-back"> <-- Tillbaka till start </a>
     <div class="add-container">
         <div class="add-patient">
             <h2>Lägg till patient</h2>
-            <form action="../functional/savePatient.php" method="post">
+            <form action="/save-patient" method="post">
                 <input name="firstname" type="text" placeholder="Förnamn"><br><br>
                 <input name="lastname" type="text" placeholder="Efternamn"><br><br>
                 <input name="personnr" type="text" placeholder="YYYYMMDDXXXX"><br><br>
@@ -52,7 +50,7 @@ elseif($_SESSION['isAdmin'] === 1){
         </div>
         <div class="add-personell">
             <h2>Lägg till Personal</h2>
-            <form action="../functional/savePersonell.php" method="post">
+            <form action="/save-personell" method="post">
                 <input type="text" placeholder="Förnamn" name="firstname"><br><br>
                 <input type="text" placeholder="Efternamn" name="lastname"><br><br>
                 <input type="number" name="spec" placeholder="Specialisering"><br><br>
