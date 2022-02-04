@@ -1,5 +1,5 @@
 <?php
-require_once "../../vendor/autoload.php";
+/*require_once "../../vendor/autoload.php";
 
 $filename = "C:/code/GA/database/database.db";
 
@@ -9,8 +9,11 @@ $pdo = new PDO($dns);
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 $pdo->exec('PRAGMA foreign_keys = ON');
+*/
 
-$rawData = fopen("C:/code/GA/public/data/icd10data.txt", 'r');
+$pdo = initDb();
+
+$rawData = fopen("C:/code/GA/database/icd10data.txt", 'r');
 
 while (($data = fgetcsv($rawData, 1000, " ")) !== FALSE) {
     $sql = "insert into ICD10(abbreviation, expansion) values";
@@ -31,4 +34,4 @@ while (($data = fgetcsv($rawData, 1000, " ")) !== FALSE) {
     $stmt->execute();
 }
 
-header("Location: ../home.php");
+header("Location: /home");

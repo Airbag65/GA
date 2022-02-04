@@ -1,5 +1,4 @@
 <?php
-var_dump($_SESSION);
 $data = [
 "userField" => "Användarnamn eller mejl",
 "passwordField" => "Lösenord"
