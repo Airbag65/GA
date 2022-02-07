@@ -59,7 +59,7 @@ patient;
 if(strtolower($patientData->bloodGroup) !== "okänd"){
     echo "<p>Blodgrupp: $patientData->bloodGroup</p><br>";
 }else{
-    echo "<a href='../edit/editBloodGroup.php?id=".$patientData->patientId."'>Lägg till blodgrupp</a><br>";
+    echo "<a href='/save-bloodgroup/".$patientData->patientId."'>Lägg till blodgrupp</a><br>";
 }
 echo <<<patient
 <p>Senaste Mätningar:</p>

@@ -80,6 +80,11 @@ SimpleRouter::get("/save-bloodgroup/{id}", function($id){
     require "../App/edit/editBloodGroup.php";
 });
 
+SimpleRouter::post("/save-bloodgroup", function(){
+    requireLogin();
+    require "../App/functional/saveBloodGroup.php";
+});
+
 SimpleRouter::error(function(Request $request, \Exception $exception) {
 
     switch($exception->getCode()) {

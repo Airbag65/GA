@@ -1,8 +1,4 @@
 <?php
-require_once "../../vendor/autoload.php";
-require_once "functions.php";
-
-requireLogin();
 
 $pdo = initDb();
 
@@ -17,4 +13,4 @@ EOD;
 $stmt = $pdo->prepare($setBloodGroup);
 $stmt->execute([$group, $id]);
 
-header("Location: ../journalanteckning/journal.php?id=$id");
+header("Location: /journal/".$id);
