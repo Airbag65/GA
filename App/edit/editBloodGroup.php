@@ -23,7 +23,7 @@ $name = $stmt->fetch();
 </head>
 <body>
 <h2><?php echo "Patient: ".$name->lastName.", ".$name->firstName ?></h2>
-<form action="../functional/saveBloodGroup.php" method="post">
+<form action="/save-bloodgroup" method="post">
     <label for="blodgrupp">Ange blodgrupp:</label><br>
     <select name="blodgrupp" id="blodgrupp">
         <option value="A+">A+</option>
