@@ -1,8 +1,5 @@
 <?php
-$data = [
-"userField" => "Användarnamn eller mejl",
-"passwordField" => "Lösenord"
-];
+$data = [];
 
 if(!isset($_SESSION["loggedin"])){
     $_SESSION["loggedin"] = false;
