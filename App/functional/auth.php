@@ -15,6 +15,12 @@ EOD;
 $stmt = $pdo->prepare($userInformationSQL);
 $stmt->execute([$username]);
 $userInformation = $stmt->fetch();
+var_dump($userInformation);
+
+if(!$userInformation){
+    $_SESSION['loginatempt'] = true;
+    header("Location: /login/");
+}
 
 $_SESSION['loggedin'] = false;
 
