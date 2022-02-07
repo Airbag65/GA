@@ -14,7 +14,8 @@
 
 .asc-logo{
     justify-content: flex-start;
-    margin-bottom: 3rem;
+    position: absolute;
+    bottom: 38rem;
 }
 
 .input-field{
@@ -22,7 +23,8 @@
 }
 
 .login-container{
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    position: absolute;
 }
 
 .login-button{
@@ -33,9 +35,12 @@
     color: #ffffff;
     border: 1px none;
     border-radius: 4px;
+    margin-bottom: 0.5rem;
 }
 
 .invalid-login{
     display: flex;
     color: red;
+    position: absolute;
+    bottom: 16rem;
 }
