@@ -22,4 +22,4 @@ if(isset($_SESSION['loggedin'])){
         }
     }
 }
-rendering('views', 'index.twig', $data);
+rendering('views', 'login.twig', $data);
