@@ -63,8 +63,11 @@ if (isset($_SESSION['loggedin'])){
         </form>
         EOD;
         if(isset($_SESSION["chosen-patient"])){
-            //om patient inte finns
-                //Skriva det
+            if ($_SESSION['chosen-patient'] == "Patienten finns inte"){
+                echo"<p>".$_SESSION["chosen-patient"]."</p>";
+            }else{
+                echo "<p>".$_SESSION["chosen-patient"]->lastName.", ".$_SESSION["chosen-patient"]->firstName."</p>";
+            }
             // om patient vald
                 //Skriva ut patient
                 //Länk till möte och läsa journal

@@ -60,6 +60,14 @@ SimpleRouter::post("/search", function (){
     require "../App/functional/search.php";
 });
 
+SimpleRouter::get("/meeting/{id}", function ($id){
+    require "../App/journalanteckning/meeting.php?id=$id";
+});
+
+SimpleRouter::get("/journal/{id}", function ($id){
+    require "../App/journalanteckning/journal.php?id=$id";
+});
+
 SimpleRouter::error(function(Request $request, \Exception $exception) {
 
     switch($exception->getCode()) {
