@@ -75,6 +75,11 @@ SimpleRouter::get("/journal/{id}", function ($id){
     require "../App/journalanteckning/journal.php";
 });
 
+SimpleRouter::get("/save-bloodgroup/{id}", function($id){
+    requireLogin();
+    require "../App/edit/editBloodGroup.php";
+});
+
 SimpleRouter::error(function(Request $request, \Exception $exception) {
 
     switch($exception->getCode()) {
