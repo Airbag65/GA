@@ -1,8 +1,4 @@
 <?php
-require_once "../../vendor/autoload.php";
-require_once "../functional/functions.php";
-
-requireLogin();
 
 if(!isset($_SESSION['isAdmin'])){
     $_SESSION['isAdmin'] = 0;

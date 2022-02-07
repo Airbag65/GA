@@ -66,7 +66,9 @@ if (isset($_SESSION['loggedin'])){
             if ($_SESSION['chosen-patient'] == "Patienten finns inte"){
                 echo"<p>".$_SESSION["chosen-patient"]."</p>";
             }else{
-                echo "<p>".$_SESSION["chosen-patient"]->lastName.", ".$_SESSION["chosen-patient"]->firstName."</p>";
+                echo "<p>".$_SESSION["chosen-patient"]->lastName.", ".$_SESSION["chosen-patient"]->firstName.
+                    "</p><a href='/meeting/".$_SESSION["chosen-patient"]->patientId."'>Nytt Läkarbesök</a><a href='/journal/".
+                    $_SESSION["chosen-patient"]->patientId."'>Läs Journal</a>";
             }
             // om patient vald
                 //Skriva ut patient

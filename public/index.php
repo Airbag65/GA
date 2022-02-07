@@ -61,11 +61,18 @@ SimpleRouter::post("/search", function (){
 });
 
 SimpleRouter::get("/meeting/{id}", function ($id){
-    require "../App/journalanteckning/meeting.php?id=$id";
+    requireLogin();
+    require "../App/journalanteckning/meeting.php";
+});
+
+SimpleRouter::post("/meeting", function (){
+    requireLogin();
+    require "../App/functional/saveMeeting.php";
 });
 
 SimpleRouter::get("/journal/{id}", function ($id){
-    require "../App/journalanteckning/journal.php?id=$id";
+    requireLogin();
+    require "../App/journalanteckning/journal.php";
 });
 
 SimpleRouter::error(function(Request $request, \Exception $exception) {
@@ -80,5 +87,5 @@ SimpleRouter::error(function(Request $request, \Exception $exception) {
 
 });
 
-SimpleRouter:: start();
+SimpleRouter::start();
 

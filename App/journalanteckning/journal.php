@@ -1,8 +1,4 @@
 <?php
-require_once "../../vendor/autoload.php";
-require_once "../functional/functions.php";
-
-requireLogin();
 
 if(!isset($_SESSION['isAdmin'])){
     $_SESSION['isAdmin'] = 0;
@@ -11,11 +7,10 @@ if(!isset($_SESSION['createAttempt'])){
     $_SESSION['createAttempt'] = false;
 }
 
-
 $pdo = initDb();
 
-$id = intval($_GET['id']);
 $personellId = intval($_SESSION['id']);
+
 
 $getPatientSql = <<<EOD
 select *

@@ -1,8 +1,4 @@
 <?php
-require_once "../../vendor/autoload.php";
-require_once "../functional/functions.php";
-
-requireLogin();
 
 if(!isset($_SESSION['isAdmin'])){
     $_SESSION['isAdmin'] = 0;
@@ -11,11 +7,7 @@ if(!isset($_SESSION['createAttempt'])){
     $_SESSION['createAttempt'] = false;
 }
 
-
-
 $pdo = initDb();
-
-$id = $_GET['id'];
 $personellId = $_SESSION['id'];
 
 $openIcdSql = <<<EOD
@@ -60,7 +52,7 @@ echo"Personal: ".$doctor->lastName.", ".$doctor->firstName;
     <title>Läkarbesök</title>
 </head>
 <body>
-<form action="../functional/saveMeeting.php" method="post">
+<form action="/meeting/" method="post">
     <label><?php echo "Patient: ".$patientData->lastName.", ".$patientData->firstName ?></label><br>
     <label><?php echo modPersonNr($patientData->personNr) ?></label><br><br>
     <label>Vitala parametrar:</label><br>
