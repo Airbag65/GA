@@ -1,7 +1,5 @@
 <?php
 
-requireLogin();
-
 $filename = "C:/code/GA/database/database.db";
 
 $dns = "sqlite:$filename";
