@@ -25,6 +25,7 @@ if(!$userInformation){
 $_SESSION['loggedin'] = false;
 
 if($password === $userInformation->password){
+    // TODO SKAPA instans av user klass
     $_SESSION['username'] = $userInformation->nameAbbrev;
     $_SESSION['password'] = $userInformation->password;
     $_SESSION['email'] = $userInformation->emailAddress;
