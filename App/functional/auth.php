@@ -26,6 +26,18 @@ $_SESSION['loggedin'] = false;
 
 if($password === $userInformation->password){
     // TODO SKAPA instans av user klass
+    $user = new User(
+        $userInformation->doctorId,
+        $userInformation->firstName,
+        $userInformation->lastName,
+        $userInformation->personNr,
+        $userInformation->emailAddress,
+        $userInformation->nameAbbrev,
+        $userInformation->spec,
+        $userInformation->password,
+        $userInformation->isAdmin
+    );
+    $_SESSION['user'] = $user;
     $_SESSION['username'] = $userInformation->nameAbbrev;
     $_SESSION['password'] = $userInformation->password;
     $_SESSION['email'] = $userInformation->emailAddress;
