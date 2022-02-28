@@ -23,6 +23,4 @@ class User
         $this->password = $password;
         $this->isAdmin = $isAdmin;
     }
-
-
 }

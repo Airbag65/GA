@@ -58,7 +58,8 @@ if (isset($_SESSION['loggedin'])){
 
         echo <<<EOD
         <form action="/search" method="post">
-            <input type="text" name="search-patient" placeholder="Sök patient med personnummer...">
+            <label for="search-patient">Sök patient med personnummer (12 siffror):</label>
+            <input type="text" id="search-patient" name="search-patient" placeholder="YYYYMMDDXXXX">
             <input type="submit">
         </form>
         EOD;
