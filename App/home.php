@@ -4,6 +4,7 @@ require_once "functional/functions.php";
 
 $pdo = initDb();
 
+$data = [];
 
 $sql = <<<EOD
 select *
