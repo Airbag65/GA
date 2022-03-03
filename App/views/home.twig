@@ -9,6 +9,15 @@
     <title>Hem</title>
 </head>
 <body>
-<p>Hej</p>
+{{ nav | raw }}
+<br><br>
+<form action="/search" method="post">
+    <label for="search-patient">Sök patient med personnummer (12 siffror):</label>
+    <input type="text" id="search-patient" name="search-patient" placeholder="YYYYMMDDXXXX">
+    <input type="submit">
+</form>
+{{ chosen | raw }}
+<br>
+{{ data | raw }}
 </body>
 </html>
