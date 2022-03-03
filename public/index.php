@@ -30,6 +30,7 @@ SimpleRouter::get('/logout', function (){
 });
 
 SimpleRouter::get("/profile", function (){
+    requireLogin();
    require "../App/profile/profile.php";
    exit;
 });
@@ -50,21 +51,25 @@ SimpleRouter::post("/auth", function (){
 });
 
 SimpleRouter::get("/admin", function(){
+    requireLogin();
     require "../App/profile/admin.php";
     exit;
 });
 
 SimpleRouter::post("/save-patient", function(){
+    requireLogin();
     require "../App/functional/savePatient.php";
     exit;
 });
 
 SimpleRouter::post("/save-personell", function(){
+    requireLogin();
     require "../App/functional/savePersonell.php";
     exit;
 });
 
 SimpleRouter::post("/search", function (){
+    requireLogin();
     require "../App/functional/search.php";
     exit;
 });
