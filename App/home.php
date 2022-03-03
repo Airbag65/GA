@@ -100,3 +100,5 @@ if (empty($checkForData)){
 ?>
 </body>
 </html>
+<?php
+rendering('views', 'home.twig', $data);
