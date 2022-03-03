@@ -13,6 +13,7 @@ use Pecee\Http\Request;
 use Pecee\SimpleRouter\SimpleRouter;
 
 SimpleRouter::get('/', function (){
+    requireLogin();
     require "../App/home.php";
     exit;
 });
