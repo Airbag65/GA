@@ -1,5 +1,6 @@
 <?php
 
+
 $pdo = initDb();
 
 $rawData = fopen("C:/code/GA/database/icd10data.txt", 'r');
