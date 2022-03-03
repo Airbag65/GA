@@ -11,9 +11,6 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $patientData = $stmt->fetchAll();
 
-?>
-
-<?php
 if(!isset($_SESSION['loggedin'])){
     $_SESSION['loggedin'] = false;
 }
@@ -59,20 +56,14 @@ if (isset($_SESSION['loggedin'])){
                 <a href="/meeting/$patientId">Nytt Läkarbesök</a>
                 <a href="/journal/$patientId">Läs Journal</a>
                 EOD;
-
-
             }
         }
-
-
     }
     else{
         echo "<a href='/login/'>Logga in</a>";
         echo"<p>Du har inte tillgång till hemsidans funktioner när du inte är inloggad!</p>";
     }
 }
-?>
-<?php
 $checkForDataSql = "select * from ICD10";
 $stmt = $pdo->prepare($checkForDataSql);
 $stmt->execute();
@@ -83,8 +74,4 @@ if (empty($checkForData)){
 }else{
     $data["data"] ="ICD 10 data finns i databasen!";
 }
-?>
-</body>
-</html>
-<?php
 rendering('views', 'home.twig', $data);
