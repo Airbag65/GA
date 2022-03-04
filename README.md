@@ -34,6 +34,10 @@ designen i vårt projekt. Vid nuläget är all HTML och CSS för inloggningssida
 ## Uppdatering 24/1 -22
 Vi har tagit beslutet att använda twig med tanke på säkerhet.
 
+## Uppdatering 4/3 -22
+Vi har klarställt routningen för att både göra systemets URL mer lättläst, samt säkrad från SQL inmatning. Den fungerar nu som den ska 
+och den är etablerad över hela systemet. 
+
 ## Färgkoder vi använder:
 #EA4C6C - Röd,
 #3567C1 - Blå
