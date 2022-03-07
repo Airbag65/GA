@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
-*{
+* {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.navigation{
+.navigation {
     height: 10vh;
     width: 100%;
     background: #3567C1;
@@ -21,23 +21,6 @@
     grid-template-rows: 1fr;
 }
 
-.small-grid-container {
-    display: grid;
-    height: 100%;
-    width: 100%;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    background: blueviolet;
-}
-
-.small-grid-item {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    background: green;
-}
-
 .grid-item1 {
     display: flex;
     justify-content: flex-start;
@@ -45,4 +28,30 @@
     height: 100%;
     width: 100%;
     background: brown;
+}
+
+.grid-item2 {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    background: red;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.test-1 {
+    background: blue;
+}
+
+.test-2 {
+    background: green;
+}
+
+.test-3 {
+    background: lightgoldenrodyellow;
+}
+
+.small-grid-item {
+    height: 100%;
+    width: 100%;
 }
