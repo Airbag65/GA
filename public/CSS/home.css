@@ -27,6 +27,7 @@
     width: 100%;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+    background: blueviolet;
 }
 
 .small-grid-item {
@@ -34,4 +35,14 @@
     align-items: center;
     height: 100%;
     width: 100%;
+    background: green;
+}
+
+.grid-item1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: brown;
 }
