@@ -20,15 +20,15 @@ if (isset($_SESSION['loggedin'])){
     if ($_SESSION['loggedin'] === true){
         if($_SESSION['isAdmin'] === 1){
             $data["nav"] = <<<EOD
-            <div class="small-grid-item test-1"><a href="/logout/">Logga ut</a</div>
-            <div class="small-grid-item test-2"><a href="/profile/">$firstname $lastname</a></div>
-            <div class="small-grid-item test-3"><a href="/admin/">Admin</a></div>
+            <div class="small-grid-item small-grid-item1"><a href="/logout/">Logga ut</a</div>
+            <div class="small-grid-item small-grid-item2"><a href="/profile/">$firstname $lastname</a></div>
+            <div class="small-grid-item small-grid-item3"><a href="/admin/">Admin</a></div>
             EOD;
 
         }else{
             $data["nav"] = <<<EOD
-            <div class="small-grid-item test-2"><a href="/logout/">Logga ut</a></div>
-            <div class="small-grid-item test-3"><a href="/profile/">$firstname $lastname</a></div>
+            <div class="small-grid-item small-grid-item1"><a href="/logout/">Logga ut</a></div>
+            <div class="small-grid-item small-grid-item2"><a href="/profile/">$firstname $lastname</a></div>
             EOD;
 
         }

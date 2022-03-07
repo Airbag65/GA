@@ -27,31 +27,33 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    background: brown;
 }
 
 .grid-item2 {
     display: grid;
     width: 100%;
     height: 100%;
-    background: red;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.test-1 {
-    background: blue;
-}
-
-.test-2 {
-    background: green;
-}
-
-.test-3 {
-    background: lightgoldenrodyellow;
-}
-
 .small-grid-item {
+    display: grid;
+    grid-column: 3;
     height: 100%;
     width: 100%;
+}
+.small-grid-item1{
+    display: grid;
+    grid-column: 1;
+}
+
+.small-grid-item2{
+    display: grid;
+    grid-column: 2;
+}
+
+.small-grid-item3{
+    display: grid;
+    grid-column: 3;
 }
