@@ -105,7 +105,7 @@ create table meetings
     blodtryck text default null,
     puls text default null,
     mattnad text default null,
-    date text not null default CURRENT_TIMESTAMP,
+    date timestamp not null default CURRENT_TIMESTAMP,
     foreign key (doctorId) references doctors (doctorId),
     foreign key (patientId) references patients (patientId)
 );
