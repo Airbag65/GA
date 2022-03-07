@@ -59,3 +59,4 @@ och den är etablerad över hela systemet.
 * Navigera dig till %home%/GA/scr/backend/GA
 * Kör ```python3 manage.py runserver YOUR_IP:8000``` i kommandoraden
     * Fungerar på Windows, Linux och MacOS
+    

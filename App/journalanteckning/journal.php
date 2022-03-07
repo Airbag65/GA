@@ -89,6 +89,6 @@ foreach ($meetings as $meeting){
 }
 ?>
 <br>
-<a href="../../public">Tillbaka</a>
+<a href="/">Tillbaka</a>
 </body>
 </html>
