@@ -3,6 +3,7 @@
 /**
  * @param string $personNr
  * @return string
+ * modifierar person nummer till att byta ut de fyra sista mot XXXX
  */
 function modPersonNr(string $personNr){
     $modNr = "";

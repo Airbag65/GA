@@ -11,16 +11,23 @@ generera dessa nycklar, som i sin tur används vid inloggning. Vi har även tän
 användas en gång och kommer sedan raderas ur systemet. Vid nästa inloggning kommer man alltså behöva generera en ny säkerhetsnyckel. 
 *Tokensystemet* har vi tänkt skapa så det liknar det system GitHub nyligen infört.
 
-## Uppdatering 10/1 -22
-Med tanke på tidsbrist kommer vi istället för att skapa ett *tokensystem*, använda oss utav ett vanligt lösenordssystem, men där det verkliga
-lösenordet inte sparas utan kommer gå genom en kryptering för att vara oigenkännligt. Vi vår plan är att använda den säkraste krypteringsteknik 
-vi kan hitta då det är mycket viktigt med hög säkerhet i ett system som detta.
+## Tekniker
+- PHP: 8.1
+- SQLite: 3.0
+- twig: 3.3
+- pecee/simple-router 4.3.7.2
 
 ### Tekniker
 Vår tanke initiellt var att använda php för att skapa detta system, men vi har istället valt att använda pythonramverket 
 Django, med stöd för HTML och databas hantering. Anton, med huvudansvar för backend delen, är mycket mer bekväm med python 
 än php och har även mer erfarenhet där. Django är även ett mycket väl utvecklat och dokumenterat ramverk så det råder ingen brist 
 på information eller funktionalitet. 
+
+## Uppdatering 10/1 -22
+Med tanke på tidsbrist kommer vi istället för att skapa ett *tokensystem*, använda oss utav ett vanligt lösenordssystem, men där det verkliga
+lösenordet inte sparas utan kommer gå genom en kryptering för att vara oigenkännligt. Vi vår plan är att använda den säkraste krypteringsteknik
+vi kan hitta då det är mycket viktigt med hög säkerhet i ett system som detta.
+
 
 ## Uppdatering 10/1 -22 
 Vi är åter tillbaka till att använda php tekniker för att utveckla detta system. Med terminens gång har vi lärt oss alltmer om detta och även 
@@ -33,6 +40,10 @@ designen i vårt projekt. Vid nuläget är all HTML och CSS för inloggningssida
 
 ## Uppdatering 24/1 -22
 Vi har tagit beslutet att använda twig med tanke på säkerhet.
+
+## Uppdatering 4/3 -22
+Vi har klarställt routningen för att både göra systemets URL mer lättläst, samt säkrad från SQL inmatning. Den fungerar nu som den ska 
+och den är etablerad över hela systemet. 
 
 ## Färgkoder vi använder:
 #EA4C6C - Röd,
@@ -55,3 +66,4 @@ Vi har tagit beslutet att använda twig med tanke på säkerhet.
 * Navigera dig till %home%/GA/scr/backend/GA
 * Kör ```python3 manage.py runserver YOUR_IP:8000``` i kommandoraden
     * Fungerar på Windows, Linux och MacOS
+    

@@ -9,7 +9,15 @@
     <title>Hem</title>
 </head>
 <body>
-{{ nav | raw }}
+<nav class="navigation">
+    <div class="grid-container">
+        <div class="grid-item1">
+        </div>
+        <div class="grid-item2 small-grid-container">
+        {{ nav | raw }}
+        </div>
+    </div>
+</nav>
 <br><br>
 <form action="/search" method="post">
     <label for="search-patient">Sök patient med personnummer (12 siffror):</label>
