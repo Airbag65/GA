@@ -5,5 +5,8 @@
             "Elvlin274\\Ga\\": "src/"
         }
     },
-    "require": {}
+    "require": {
+        "twig/twig": "^3.3",
+        "pecee/simple-router": "4.3.7.2"
+    }
 }
