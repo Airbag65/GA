@@ -7,3 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Journal | {{ patientFirstName }} {{ patientLastName }}</title>
 </head>
+{{ patientInfo | raw }}
+{{ bloodGroup | raw }}
+{{ vitals | raw }}
+{% for note in journalNote %}
+    {{ note | raw}}
+{% endfor %}
+<br>
+<a href="/">Tillbaka</a>
