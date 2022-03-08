@@ -21,6 +21,25 @@ function modPersonNr(string $personNr){
     return $modNr;
 }
 
+
+/**
+ * @param string $personNr
+ * @return string
+ */
+function modPersonNrDash(string $personNr){
+    $modNr = "";
+    $charArray = str_split($personNr);
+    for($i = 0; $i < count($charArray); $i++){
+        if($i !== 8){
+            $modNr .= $charArray[$i];
+        }else{
+            $modNr .= "-";
+            $modNr .= $charArray[$i];
+        }
+    }
+    return $modNr;
+}
+
 /**
  * @param null
  * @return object

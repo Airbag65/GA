@@ -7,16 +7,18 @@ if(!isset($_SESSION['createAttempt'])){
     $_SESSION['createAttempt'] = false;
 }
 
+$data = [];
+
 $pdo = initDb();
 $personellId = $_SESSION['id'];
 
 $openIcdSql = <<<EOD
-select *
+select id, expansion
 from ICD10;
 EOD;
 $stmt = $pdo->prepare($openIcdSql);
 $stmt->execute();
-$ICDData = $stmt->fetchAll();
+$ICDData = $stmt->fetchAll(PDO::FETCH_OBJ);
 
 
 $getPatientData = <<<EOD
@@ -40,6 +42,24 @@ $doctor = $stmt->fetch(PDO::FETCH_OBJ);
 
 echo"Personal: ".$doctor->lastName.", ".$doctor->firstName;
 
+$data["personellFirstName"] = $doctor->firstName;
+$data["personellLastName"] = $doctor->lastName;
+$data["patientFirstName"] = $patientData->firstName;
+$data["patientLastName"] = $patientData->lastName;
+$data["personNumber"] = modPersonNrDash($patientData->personNr);
+$data["bloodGroup"] = $patientData->bloodGroup;
+$data["bloodPreasure"] = $patientData->bloodPreasure;
+$data["pulse"] = $patientData->pulse;
+$data["mattnad"] = $patientData->spO2;
+$data["diagnoses"] = $patientData->diagnoses;
+$data["id"] = $id;
+$data["ICDid"] = [];
+$data["ICDexp"] = [];
+$data["ICD"] = $ICDData;
+foreach ($ICDData as $item){
+    $data["ICDid"][] = $item->id;
+    $data["ICDexp"][] = $item->expansion;
+}
 
 ?>
 <!doctype html>
@@ -68,8 +88,8 @@ echo"Personal: ".$doctor->lastName.", ".$doctor->firstName;
     <label for="diagnosis">Diagnos:</label>
     <select name="diagnosis" id="diagnosis">
         <?php
-        foreach ($ICDData as $data){
-            echo "<option value='".$data->id."'>$data->expansion</option>";
+        foreach ($ICDData as $dataitem){
+            echo "<option value='".$dataitem->id."'>$dataitem->expansion</option>";
         }
         ?>
     </select><br>
@@ -82,3 +102,6 @@ echo"Personal: ".$doctor->lastName.", ".$doctor->firstName;
 <a href="../../public">Tillbaka</a>
 </body>
 </html>
+
+<?php
+rendering("views", "meeting.twig", $data);

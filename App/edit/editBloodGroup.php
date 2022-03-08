@@ -15,6 +15,6 @@ $name = $stmt->fetch();
 
 $data["firstName"] = $name->firstName;
 $data["lastName"] = $name->lastName;
-
 $data["hiddenData"] = "<input type='hidden' name='id' value='$id'>";
+
 rendering("views", "editBloodGroup.twig", $data);
