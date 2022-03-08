@@ -25,13 +25,13 @@
     <label for="diagnosis">Diagnos:</label>
     <select name="diagnosis" id="diagnosis">
         <!-- FÅ DETTA ATT FUNGERA! -->
-        {% for id, exp in IDC %}
-            <option value="{{ id }}">{{ exp }}</option>
+        {% for item in IDC %}
+            <option value="{{ item['id'] }}">{{ item['expansion'] }}</option>
         {% endfor %}
     </select><br>
     <label for="comment">Kommentar:</label><br>
     <textarea name="comment" id="comment" cols="30" rows="10"></textarea><br>
-    <input type="hidden" name="patientId" value="<?php echo $id?>">
+    <input type="hidden" name="patientId" value="{{ id }}">
     <input type="submit" value="Spara">
 </form>
 <br>
