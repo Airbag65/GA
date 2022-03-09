@@ -22,7 +22,7 @@ if (isset($_SESSION['loggedin'])){
             $data["nav"] = <<<EOD
             <div class="small-grid-item small-grid-item1"><a href="/admin/">Admin</a></div>
             <div class="small-grid-item small-grid-item2"><a href="/profile/">$firstname $lastname</a></div>
-            <div class="small-grid-item small-grid-item3"><a href="/logout/">Logga ut</a</div>
+            <div class="small-grid-item small-grid-item3"><a href="/logout/">Logga ut</a></div>
 
 
             EOD;
