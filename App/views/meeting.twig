@@ -25,8 +25,8 @@
     <label for="diagnosis">Diagnos:</label>
     <select name="diagnosis" id="diagnosis">
         <!-- FÅ DETTA ATT FUNGERA! -->
-        {% for item in IDC %}
-            <option value="{{ item['id'] }}">{{ item['expansion'] }}</option>
+        {% for item in ICD %}
+            <option value="{{ item.id }}">{{ item.expansion }}</option>
         {% endfor %}
     </select><br>
     <label for="comment">Kommentar:</label><br>
