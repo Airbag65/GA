@@ -39,9 +39,15 @@
 
 .small-grid-item {
     display: grid;
-    grid-column: 3;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     width: 100%;
+}
+
+.small-grid-item a{
+    text-decoration: none;
+    color: white;
 }
 .small-grid-item1{
     display: grid;
