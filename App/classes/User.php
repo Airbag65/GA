@@ -23,4 +23,23 @@ class User
         $this->password = $password;
         $this->isAdmin = $isAdmin;
     }
+
+    /**
+     * @param string $username
+     * @param string $newPassword
+     * Byter lösenord för vald profil
+     * Ingen return
+     */
+    public function updatePassword(string $username,string $newPassword)
+    {
+        $password = md5($newPassword);
+        $pdo = initDb();
+        $sql = <<<EOD
+        update doctors 
+            set password = ?
+        where nameAbbrev is ?;
+        EOD;
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([$username, $password]);
+    }
 }
