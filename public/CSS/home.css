@@ -75,8 +75,10 @@ body{
     color: black;
 }
 
-.home-link:hover{
-    color: #dedede
+.home-link:hover
+{
+    color: #3567C1;
+    cursor: pointer;
 }
 
 .main-content{
@@ -106,8 +108,17 @@ body{
     grid-row: 2;
 }
 
+.search-field {
+    display: flex;
+}
 .search-button{
     display: grid;
     grid-row: 2;
     grid-column: 2;
+    height: 1.4rem;
+    width: 4rem;
+    border: none;
+    margin-left: 0.2rem;
+    background: #3567C1;
+    color: #ffffff;
 }

@@ -21,11 +21,14 @@
 </nav>
 <div class="main-content">
     <div class="search-patient search-container">
-        <h1>Välkommen {{ firstname }}!</h1>
+            <h1>Välkommen {{ firstname }}!</h1><br><br>
     <form action="/search" method="post">
-        <label for="search-patient">Sök patient med personnummer (12 siffror):</label>
-        <input type="text" id="search-patient" name="search-patient" placeholder="YYYYMMDDXXXX" class="search-box">
-        <input type="submit" class="search-button" value="Sök">
+        <label for="search-patient">Sök patient med personnummer (12 siffror):</label><br>
+        <div class="search-field">
+            <input type="text" id="search-patient" name="search-patient" placeholder="YYYYMMDDXXXX" class="search-box">
+            <input type="submit" class="search-button" value="Sök">
+        </div>
+
     </form>
 {{ chosen | raw }}
     </div>
