@@ -78,4 +78,6 @@ if (empty($checkForData)){
 }else{
     $data["data"] ="ICD 10 data finns i databasen!";
 }
+
+$data["firstname"] = $firstname;
 rendering('views', 'home.twig', $data);
