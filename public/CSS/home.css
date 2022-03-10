@@ -30,6 +30,10 @@
     width: 100%;
 }
 
+.logo-img{
+    height: 6vh;
+}
+
 .grid-item2 {
     display: grid;
     width: 100%;
