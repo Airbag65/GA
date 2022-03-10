@@ -10,8 +10,8 @@
 .navigation {
     height: 8vh;
     width: 100%;
-    background: #3567C1;
-    box-shadow: 0px 1px 4px #717171;
+    background: #f3f3f3;
+    box-shadow: 0px 0.5px 5px #e7e7e7;
 }
 
 .grid-container {
@@ -32,6 +32,7 @@
 
 .logo-img{
     height: 6vh;
+    margin-left: 5rem;
 }
 
 .grid-item2 {
@@ -68,7 +69,7 @@
 .home-link {
     font-size: 20px;
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 .home-link:hover{
