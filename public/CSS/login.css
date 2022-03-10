@@ -36,6 +36,20 @@
     border: 1px none;
     border-radius: 4px;
     margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.login-button:hover{
+    animation: hover 0.3s ease forwards;
+}
+
+@keyframes hover {
+    from{
+        background-color: #3567C1;
+    }
+    to{
+        background-color: #295bb3;
+    }
 }
 
 .invalid-login{

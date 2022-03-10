@@ -121,4 +121,18 @@ body{
     margin-left: 0.2rem;
     background: #3567C1;
     color: #ffffff;
+    cursor: pointer;
+}
+
+.search-button:hover{
+    animation: hover 0.3s ease forwards;
+}
+
+@keyframes hover {
+    from{
+        background-color: #3567C1;
+    }
+    to{
+        background-color: #295bb3;
+    }
 }
