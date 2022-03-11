@@ -5,24 +5,33 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/CSS/editBloodGroup.css">
     <title>Ändra Blodgrupp | {{ firstName }} {{ lastName }}</title>
 </head>
 <body>
-<h2>{{ lastName }}, {{ firstName }}</h2>
-<form action="/save-bloodgroup" method="post">
-    <label for="blodgrupp">Ange blodgrupp:</label><br>
-    <select name="blodgrupp" id="blodgrupp">
-        <option value="A+">A+</option>
-        <option value="A-">A-</option>
-        <option value="B+">B+</option>
-        <option value="B-">B-</option>
-        <option value="AB+">AB+</option>
-        <option value="AB-">AB-</option>
-        <option value="0+">0+</option>
-        <option value="0-">0-</option>
-    </select>
-    {{ hiddenData | raw }}
-    <input type="submit" value="Spara">
-</form>
+<nav class="navigation">
+    <img src="/images/logo.png" alt="logo" class="logo-img">
+</nav>
+<div class="main-content">
+    <h2>Lägg till blodgrupp för: {{ lastName }}, {{ firstName }}</h2><br>
+    <form action="/save-bloodgroup" method="post">
+        <label for="blodgrupp">Ange blodgrupp:</label><br><br>
+        <div class="input-submit">
+            <select name="blodgrupp" id="blodgrupp" class="input">
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="0+">0+</option>
+                <option value="0-">0-</option>
+            </select>
+            {{ hiddenData | raw }}
+            <input type="submit" value="Spara" class="submit-button">
+        </div>
+    </form>
+</div>
+
 </body>
 </html>
