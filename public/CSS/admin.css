@@ -1,20 +1,65 @@
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background: #eeeeee;
 }
 
-.add-container {
+.navigation {
     display: flex;
-    width: 70%;
-    min-height: 5vh;
-    justify-content: space-evenly;
-}
-
-.go-back {
-    display: flex;
-    justify-content: center;
     align-items: center;
+    height: 8vh;
     width: 100%;
-    min-height: 5vh;
+    background: #ffffff;
+    box-shadow: 0px 0.6px 5px #e7e7e7;
 }
+
+.logo-img{
+    height: 6vh;
+    margin-left: 2rem;
+    margin-top: -0.2rem;
+}
+
+.go-back{
+    text-decoration: none;
+    color: #000000;
+    left:0.8rem;
+    top: 9vh;
+    position: absolute;
+}
+
+.main-content{
+    padding: 1rem;
+}
+.add-container{
+    background: #ffffff;
+    width: 100rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.11);
+    border-left: 1px solid rgba(0, 0, 0, 0.11);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr;
+}
+
+.add-title{
+    height: 2rem;
+}
+.add-patient{
+    display: grid;
+    grid-column: 1;
+}
+
+.add-personell{
+    display: grid;
+    grid-column: 3;
+}
+
+
