@@ -20,15 +20,19 @@ if (isset($_SESSION['loggedin'])){
     if ($_SESSION['loggedin'] === true){
         if($_SESSION['isAdmin'] === 1){
             $data["nav"] = <<<EOD
-            <div class="small-grid-item test-1"><a href="/logout/">Logga ut</a</div>
-            <div class="small-grid-item test-2"><a href="/profile/">$firstname $lastname</a></div>
-            <div class="small-grid-item test-3"><a href="/admin/">Admin</a></div>
+            <div class='small-grid-item small-grid-item1'><a href='/admin/' class='home-link'>Admin</a></div>
+            <div class='small-grid-item small-grid-item2'><a href='/profile/' class='home-link'>$firstname $lastname</a></div>
+            <div class='small-grid-item small-grid-item3'><a href='/logout/' class='home-link'>Logga ut</a></div>
+
+
             EOD;
 
         }else{
             $data["nav"] = <<<EOD
-            <div class="small-grid-item test-2"><a href="/logout/">Logga ut</a></div>
-            <div class="small-grid-item test-3"><a href="/profile/">$firstname $lastname</a></div>
+            <div class='small-grid-item small-grid-item1'></div>
+            <div class='small-grid-item small-grid-item2'><a href='/profile/' class='home-link'>$firstname $lastname</a></div>
+            <div class='small-grid-item small-grid-item3'><a href='/logout/' class='home-link'>Logga ut</a></div>
+
             EOD;
 
         }
@@ -74,4 +78,6 @@ if (empty($checkForData)){
 }else{
     $data["data"] ="ICD 10 data finns i databasen!";
 }
+
+$data["firstname"] = $firstname;
 rendering('views', 'home.twig', $data);

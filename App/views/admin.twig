@@ -5,14 +5,18 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="/CSS/admin.css">
     <title>Administrering</title>
 </head>
 <body>
-<a href="/home" class="go-back"> <-- Tillbaka till start </a>
+<nav class="navigation">
+    <img src="/images/logo.png" alt="logo" class="logo-img">
+</nav>
+<a href="/home" class="go-back"><h3>🡰 Tillbaka</h3> </a>
+<div class="main-content">
 <div class="add-container">
     <div class="add-patient">
-        <h2>Lägg till patient</h2>
+        <h2 class="add-title">Lägg till patient</h2>
         <form action="/save-patient" method="post">
             <input name="firstname" type="text" placeholder="Förnamn"><br><br>
             <input name="lastname" type="text" placeholder="Efternamn"><br><br>
@@ -21,6 +25,7 @@
             <input type="submit" value="Lägg till">
         </form>
     </div>
+    <br><br>
     <div class="add-personell">
         <h2>Lägg till Personal</h2>
         <form action="/save-personell" method="post">
@@ -37,6 +42,7 @@
             <input type="submit" value="Lägg till">
         </form>
         {{ createSuccess }}
+    </div>
     </div>
 </div>
 </body>

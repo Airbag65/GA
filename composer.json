@@ -5,6 +5,12 @@
             "Elvlin274\\Ga\\": "src/"
         }
     },
+    "authors": [
+        {
+            "name": "elvlin274",
+            "email": "elvlin274@edu.linkoping.se"
+        }
+    ],
     "require": {
         "twig/twig": "^3.3",
         "pecee/simple-router": "4.3.7.2"
