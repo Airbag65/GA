@@ -45,6 +45,11 @@ Vi har tagit beslutet att använda twig med tanke på säkerhet.
 Vi har klarställt routningen för att både göra systemets URL mer lättläst, samt säkrad från SQL inmatning. Den fungerar nu som den ska 
 och den är etablerad över hela systemet. 
 
+## Uppdatering 11/3 -22
+Vi har gjort alla sidor i systemet med twig ramverket för att ytterligare säkra upp systemet från 
+SQL inmatningar. Vi har även påbörjat det sista steget i att skapa systemet vilket är att göra 
+systemets gränssnitt snyggt, använarvänligt och mer stilrent med css styling. 
+
 ## Färgkoder vi använder:
 #EA4C6C - Röd,
 #3567C1 - Blå
