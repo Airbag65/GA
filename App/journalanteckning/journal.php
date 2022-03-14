@@ -28,7 +28,8 @@ $getMeetingsSql = <<<EOD
 select meetingId, patientId, diagnosis, comment, blodtryck, puls, mattnad, date, firstName, lastName
 from meetings m 
 join doctors d on d.doctorId = m.doctorId
-where patientId is ?;
+where patientId is ?
+order by date desc;
 EOD;
 $stmt = $pdo->prepare($getMeetingsSql);
 $stmt->execute([$id]);
