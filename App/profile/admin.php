@@ -17,7 +17,7 @@ $pdo = initDb();
 if ($_SESSION['isAdmin'] === 0) {
     header('Location: ../');
 } else{
-   // echo"<script>alert('Administrering upptagen!')</script>";
+    echo"<script>alert('Administrering upptagen!')</script>";
 }
 if ($_SESSION['createAttempt']) {
     if ($_SESSION['createSuccess']) {
