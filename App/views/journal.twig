@@ -24,12 +24,23 @@
 </nav>
 <a href="/home" class="go-back"><h3>🡰 Tillbaka</h3></a>
 <div class="main-content">
-    {{ patientInfo | raw }}
-    {{ bloodGroup | raw }}
-    {{ vitals | raw }}
-    {% for note in journalNote %}
-        {{ note | raw}}
-    {% endfor %}
+    <h2>Journal</h2><br>
+    <div class="content-container">
+        <div class="person-info">
+            {{ patientInfo | raw }}
+            <br>
+            {{ vitals | raw }}
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="notes">
+            {% for note in journalNote %}
+                {{ note | raw }}
+                <br>
+            {% endfor %}
+        </div>
+    </div>
 </div>
 
 <br>

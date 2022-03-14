@@ -44,10 +44,12 @@ $data["formerDiagnoses"] = $formerDiagnoses;
 $data["patientFirstName"] = $patientData->firstName;
 $data["patientLastName"] = $patientData->lastName;
 
+$modnr = modPersonNrDash($patientData->personNr);
+
 $data["patientInfo"] = <<<patient
 <div class="patient-info">
 <p><b>$patientData->lastName, $patientData->firstName</b></p>
-<p>Personnummer: $patientData->personNr</p>
+<p>Personnummer: $modnr</p>
 <p>Ålder: $patientData->age</p>
 patient;
 
@@ -65,7 +67,7 @@ $data["vitals"] = <<<patient
 <p>Blodtryck: $patientData->bloodPreasure</p>
 <p>Puls: $patientData->pulse</p>
 <p>Blodmättnad: $patientData->spO2</p>
-<p>Tidigare Diagnoser: </p>
+<p>Tidigare Diagnoser: $patientData->diagnoses</p>
 </div>
 
 patient;

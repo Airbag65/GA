@@ -55,9 +55,14 @@ body {
     width: 100%;
 }
 
+.grid-item2 {
+    width: 100%;
+}
+
 .small-grid-item {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 100%;
     width: 100%;
 }
@@ -69,15 +74,13 @@ body {
     top: 9vh;
     position: absolute;
 }
-.tillbaka-link:hover {
-    color: #dedede
-}
 
 .profile-link {
     font-size: 20px;
     text-decoration: none;
     color: black;
 }
+
 .profile-link:hover {
     color: #3567C1;
 }
