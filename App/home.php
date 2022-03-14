@@ -24,7 +24,6 @@ if (isset($_SESSION['loggedin'])){
             <div class='small-grid-item small-grid-item2'><a href='/profile/' class='home-link'>$firstname $lastname</a></div>
             <div class='small-grid-item small-grid-item3'><a href='/logout/' class='home-link'>Logga ut</a></div>
 
-
             EOD;
 
         }else{

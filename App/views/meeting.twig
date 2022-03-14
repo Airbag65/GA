@@ -5,36 +5,51 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Läkarbesök | </title>
+    <link rel="stylesheet" href="/CSS/meeting.css">
+    <title>Läkarbesök | {{ patientFirstName }} {{ patientLastName }}</title>
 </head>
+<nav class="navigation">
+    <div class="grid-container">
+        <div class="grid-item1">
+            <img src="/images/logo.png" alt="logo" class="logo-img">
+        </div>
+        <div class="grid-item2 small-grid-container">
+            {{ nav | raw }}
+        </div>
+    </div>
+</nav>
 <body>
-<p>Personal: {{ personellLastName }}, {{ personellFirstName }}</p>
-<form action="/meeting/" method="post">
-    <label>Patient: {{ patientLastName }}, {{ patientFirstName }}</label><br>
-    <label>{{ personNumber }}</label><br><br>
-    <label>Vitala parametrar:</label><br>
-    <label>Blodgrupp: {{ bloodGroup }}</label><br>
-    <label for=blodtryck"">Föregående blodtryck: {{ bloodPreasure }}</label><br>
-    <input type="text" id="blodtryck" placeholder="Ange Blodtryck" name="blodtryck"><br>
-    <label for="puls">Föregående puls: {{ pulse }}</label><br>
-    <input type="text" id="puls" placeholder="Ange Puls" name="puls"><br>
-    <label for="mattnad">Föregående blodmättnad: {{ mattnad }}</label><br>
-    <input type="text" id="mattnad" name="mattnad" placeholder="Ange Blodmättnad"><br><br>
-    <label>Tidigare diagnoser: </label><br>
-    <label>{{ diagnoses }}</label><br><br>
-    <label for="diagnosis">Diagnos:</label>
-    <select name="diagnosis" id="diagnosis">
-        <!-- FÅ DETTA ATT FUNGERA! -->
-        {% for item in ICD %}
-            <option value="{{ item.id }}">{{ item.expansion }}</option>
-        {% endfor %}
-    </select><br>
-    <label for="comment">Kommentar:</label><br>
-    <textarea name="comment" id="comment" cols="30" rows="10"></textarea><br>
-    <input type="hidden" name="patientId" value="{{ id }}">
-    <input type="submit" value="Spara">
-</form>
-<br>
-<a href="../../public">Tillbaka</a>
+<div class="main-content">
+    <div class="meeting-container">
+        <a href="/home" class="go-back"><h3>🡰 Tillbaka</h3> </a>
+        <p>Personal: {{ personellLastName }}, {{ personellFirstName }}</p>
+        <form action="/meeting/" method="post">
+        <label>Patient: {{ patientLastName }}, {{ patientFirstName }}</label><br>
+        <label>{{ personNumber }}</label><br><br>
+        <label>Vitala parametrar:</label><br>
+        <label>Blodgrupp: {{ bloodGroup }}</label><br>
+        <label for=blodtryck"">Föregående blodtryck: {{ bloodPreasure }}</label><br>
+        <input type="text" id="blodtryck" placeholder="Ange Blodtryck" name="blodtryck"><br>
+        <label for="puls">Föregående puls: {{ pulse }}</label><br>
+        <input type="text" id="puls" placeholder="Ange Puls" name="puls"><br>
+        <label for="mattnad">Föregående blodmättnad: {{ mattnad }}</label><br>
+        <input type="text" id="mattnad" name="mattnad" placeholder="Ange Blodmättnad"><br><br>
+        <label>Tidigare diagnoser: </label><br>
+        <label>{{ diagnoses }}</label><br><br>
+        <label for="diagnosis">Diagnos:</label>
+        <select name="diagnosis" id="diagnosis">
+            <!-- FÅ DETTA ATT FUNGERA! -->
+            {% for item in ICD %}
+                <option value="{{ item.id }}">{{ item.expansion }}</option>
+            {% endfor %}
+        </select><br>
+        <label for="comment">Kommentar:</label><br>
+        <textarea name="comment" id="comment" cols="30" rows="10"></textarea><br>
+        <input type="hidden" name="patientId" value="{{ id }}">
+        <input type="submit" value="Spara">
+        </form>
+        <br>
+    </div>
+</div>
 </body>
 </html>
