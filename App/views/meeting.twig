@@ -22,11 +22,13 @@
 <div class="main-content">
     <div class="meeting-container">
         <a href="/home" class="go-back"><h3>🡰 Tillbaka</h3> </a>
-        <p>Personal: {{ personellLastName }}, {{ personellFirstName }}</p>
+        <h2>Nytt möte för {{ patientLastName }}, {{ patientFirstName }}</h2><br>
+        <p><b>Antecknad av:</b><br> {{ personellLastName }}, {{ personellFirstName }}</p><br>
+    <div>
         <form action="/meeting/" method="post">
         <label>Patient: {{ patientLastName }}, {{ patientFirstName }}</label><br>
         <label>{{ personNumber }}</label><br><br>
-        <label>Vitala parametrar:</label><br>
+        <label><b>Vitala parametrar:</b></label><br>
         <label>Blodgrupp: {{ bloodGroup }}</label><br>
         <label for=blodtryck"">Föregående blodtryck: {{ bloodPreasure }}</label><br>
         <input type="text" id="blodtryck" placeholder="Ange Blodtryck" name="blodtryck"><br>
@@ -48,7 +50,7 @@
         <input type="hidden" name="patientId" value="{{ id }}">
         <input type="submit" value="Spara">
         </form>
-        <br>
+    </div><br>
     </div>
 </div>
 </body>
