@@ -45,23 +45,29 @@ $data["patientFirstName"] = $patientData->firstName;
 $data["patientLastName"] = $patientData->lastName;
 
 $data["patientInfo"] = <<<patient
-<p>$patientData->firstName, $patientData->lastName</p>
+<div class="patient-info">
+<p><b>$patientData->lastName, $patientData->firstName</b></p>
 <p>Personnummer: $patientData->personNr</p>
 <p>Ålder: $patientData->age</p>
 patient;
 
 $patientId = $patientData->patientId;
 if(strtolower($patientData->bloodGroup) !== "okänd"){
-    $data["bloodGroup"] = "<p>Blodgrupp: $patientData->bloodGroup</p><br>";
+    $data["patientInfo"] .= "<p>Blodgrupp: $patientData->bloodGroup</p>";
 }else{
-    $data["bloodGroup"] = "<a href='/save-bloodgroup/$patientId'>Lägg till blodgrupp</a><br>";
+    $data["patientInfo"] .= "<a href='/save-bloodgroup/$patientId'>Lägg till blodgrupp</a>";
 }
+$data["patientInfo"] .= "</div>";
+
 $data["vitals"] = <<<patient
-<p>Senaste Mätningar:</p>
+<div class="vitals">
+<p><b>Senaste Mätningar</b></p>
 <p>Blodtryck: $patientData->bloodPreasure</p>
 <p>Puls: $patientData->pulse</p>
 <p>Blodmättnad: $patientData->spO2</p>
-<p>Tidigare Diagnoser: </p><br>
+<p>Tidigare Diagnoser: </p>
+</div>
+
 patient;
 
 foreach ($meetings as $meeting){
