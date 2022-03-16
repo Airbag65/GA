@@ -46,7 +46,7 @@ if (isset($_SESSION['loggedin'])){
         if(isset($_SESSION["chosen-patient"])){
             if ($_SESSION['chosen-patient'] == "Patienten finns inte"){
                 $patient = $_SESSION["chosen-patient"];
-                $data["chosen"] = "<p>Patienten finns inte i systemet</p>";
+                $data["chosen"] = "<p class='patient-not-found'>Patienten finns inte i systemet</p>";
 
             }else {
                 $patient = $_SESSION["chosen-patient"];
@@ -56,8 +56,8 @@ if (isset($_SESSION['loggedin'])){
 
                 $data["chosen"] = <<<EOD
                 <p>$patientLastname, $patientFirstname</p>
-                <a href="/meeting/$patientId">Nytt Läkarbesök</a>
-                <a href="/journal/$patientId">Läs Journal</a>
+                <a href="/meeting/$patientId" class="new-meeting">Nytt Läkarbesök</a>
+                <a href="/journal/$patientId" class="read-records">Läs Journal</a>
                 EOD;
             }
         }

@@ -90,9 +90,10 @@ body{
     padding: 1rem;
 }
 .search-container{
-    height: 30rem;
+    position: relative;
+    height: 100%;
     width: 100rem;
-    padding: 2rem;
+    padding: 4rem;
     margin: 2rem;
     background: #ffffff;
     border-right: 1px solid rgba(0, 0, 0, 0.11);
@@ -135,4 +136,52 @@ body{
     to{
         background-color: #295bb3;
     }
+}
+
+.user-pic{
+    height: 3rem;
+    width: 3rem;
+    position: absolute;
+    right: 4rem;
+    top: 4rem;
+}
+
+.chosen-patient{
+    height: 5rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.11);
+    border-left: 1px solid rgba(0, 0, 0, 0.11);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.patient-not-found{
+    color: red;
+}
+
+.new-meeting{
+    text-decoration: none;
+}
+
+.read-records{
+    text-decoration: none;
+}
+
+.schedule-container{
+    background: rgba(0,0,0,0.05);
+    margin: auto;
+    padding: 2rem;
+    width: 80rem;
+    min-height: 20rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.11);
+    border-left: 1px solid rgba(0, 0, 0, 0.11);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.schedule-item{
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.11);
+    border-top: 8px solid rgb(45, 97, 191);
+    height: 7rem;
+    width: 100%
 }

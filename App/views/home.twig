@@ -21,16 +21,39 @@
 </nav>
 <div class="main-content">
     <div class="search-patient search-container">
-            <h1>Välkommen {{ firstname }}!</h1><br><br>
+        <h1>Välkommen {{ firstname }}!</h1><br><br>
+        <img src="/images/user.png" alt="profile picture" class="user-pic">
+        <h3>För att registrera ett patientbesök eller läsa en patients journal, använd sökfunktionen nedan.</h3><br><hr><br><br>
     <form action="/search" method="post">
         <label for="search-patient">Sök patient med personnummer (12 siffror):</label><br>
         <div class="search-field">
             <input type="text" id="search-patient" name="search-patient" placeholder="YYYYMMDDXXXX" class="search-box">
             <input type="submit" class="search-button" value="Sök">
         </div>
-
     </form>
-{{ chosen | raw }}
+        <div class="chosen-patient">
+            {{ chosen | raw }}
+        </div>
+
+        <br><br><br><br><hr>
+        <br><br><br>
+        <br><br><br>
+        <h2>Dagens schema</h2><br>
+    <div class="schedule-container">
+        <div class="schedule">
+            <h3>Måndag 14/4</h3><br>
+           <div class="schedule-item"><h4>08:30 - Patientbesök Bengt Wallgren</h4></div><br>
+            <div class="schedule-item"><h4>09:30 - Patientbesök Lotta Persson</h4></div><br>
+            <div class="schedule-item"><h4>10:30 - Rast</h4></div><br>
+            <div class="schedule-item"><h4>10:45 - Labratoriet </h4></div><br>
+            <div class="schedule-item"><h4>11:55 - Personalmöte</h4></div><br>
+            <div class="schedule-item"><h4>13:00 - Lunch</h4></div><br>
+            <div class="schedule-item"><h4>13:30 - Patientbesök Sven Karlsson</h4></div><br>
+            <div class="schedule-item"><h4>14:30 - Patientbesök Agneta Grävling</h4></div><br>
+            <div class="schedule-item"><h4>15:30 - Rast</h4></div><br>
+            <div class="schedule-item"><h4>15:45 - Labratoriet</h4></div><br>
+        </div>
+    </div>
     </div>
 </div>
 <br>
