@@ -75,6 +75,19 @@ body {
     position: absolute;
 }
 
+.go-back:hover{
+    animation: hover 0.2s ease forwards;
+}
+
+@keyframes hover {
+    from{
+        color: #000000;
+    }
+    to{
+        color: #3567C1;
+    }
+}
+
 .profile-link {
     font-size: 20px;
     text-decoration: none;
@@ -87,8 +100,9 @@ body {
 
 .main-content {
     display: flex;
+    align-items: center;
     width: 100rem;
-    padding: 2rem 2rem 4rem 2rem;
+    padding: 4rem;
     border-right: 1px solid rgba(0, 0, 0, 0.11);
     border-left: 1px solid rgba(0, 0, 0, 0.11);
     border-top: 1px solid rgba(0, 0, 0, 0.08);
@@ -105,7 +119,7 @@ body {
 }
 
 .user a{
-    font-size: 20px;
+    font-size: 15px;
     color: #717171;
 }
 
@@ -118,7 +132,8 @@ body {
     width: 65%;
     padding: 2rem;
     margin: 2rem;
-    border: solid rgba(0, 0, 0, 0.11) 1px;
+    border: solid rgba(0, 0, 0, 0.05) 1px;
+    box-shadow: 0px 0.6px 5px #e7e7e7;
 }
 
 .name {
