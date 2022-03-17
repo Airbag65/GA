@@ -35,31 +35,32 @@ body{
 .main-content{
     padding: 1rem;
 }
-.add-container{
+
+.content-container {
     background: #ffffff;
     width: 100rem;
+    min-height: 10rem;
     margin: 2rem auto;
     padding: 2rem;
     border-right: 1px solid rgba(0, 0, 0, 0.11);
     border-left: 1px solid rgba(0, 0, 0, 0.11);
     border-top: 1px solid rgba(0, 0, 0, 0.08);
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    display: grid;
-    grid-template-columns: 2fr 1fr 2fr;
-    grid-template-rows: 1fr;
 }
 
-.add-title{
-    height: 2rem;
-}
-.add-patient{
-    display: grid;
-    grid-column: 1;
+.add-container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
-.add-personell{
-    display: grid;
-    grid-column: 3;
+.add-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
+.add-item > h2 {
+    padding-bottom: 2rem;
+}
 
