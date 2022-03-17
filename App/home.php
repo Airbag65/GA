@@ -55,9 +55,11 @@ if (isset($_SESSION['loggedin'])){
                 $patientId = $patient->patientId;
 
                 $data["chosen"] = <<<EOD
+                <div class="chosen-patient">
                 <p>$patientLastname, $patientFirstname</p>
                 <a href="/meeting/$patientId" class="new-meeting">Nytt Läkarbesök</a>
                 <a href="/journal/$patientId" class="read-records">Läs Journal</a>
+                </div>
                 EOD;
             }
         }
