@@ -10,7 +10,17 @@
 </head>
 <body>
 <nav class="navigation">
-    <img src="/images/logo.png" alt="logo" class="logo-img">
+    <div class="grid-container">
+        <div class="grid-item grid-item1"><img src="/images/logo.png" alt="logo" class="logo-img"></div>
+        <div class="grid-item grid-item2">
+            <div class="small-grid-item small-grid-item1"></div>
+            <div class="small-grid-item small-grid-item2"></div>
+            <div class="small-grid-item small-grid-item3">
+                <a href="/logout" class="logout-link">Logga ut</a>
+            </div>
+        </div>
+    </div>
+
 </nav>
 <a href="/home" class="go-back"><h3>🡰 Tillbaka</h3></a>
 <div class="main-content">
@@ -22,29 +32,28 @@
             <div class="add-patient add-item">
                 <h2>Lägg till patient</h2>
                 <form action="/save-patient" method="post">
-                    <input name="firstname" type="text" placeholder="Förnamn"><br><br>
-                    <input name="lastname" type="text" placeholder="Efternamn"><br><br>
-                    <input name="personnr" type="text" placeholder="YYYYMMDDXXXX"><br><br>
-                    <input name="age" type="number" placeholder="Ålder"><br><br>
-                    <input type="submit" value="Lägg till">
+                    <input class="input-field" name="firstname" type="text" placeholder="Förnamn"><br><br>
+                    <input class="input-field" name="lastname" type="text" placeholder="Efternamn"><br><br>
+                    <input class="input-field" name="personnr" type="text" placeholder="YYYYMMDDXXXX"><br><br>
+                    <input class="input-field" name="age" type="number" placeholder="Ålder"><br><br>
+                    <input type="submit" value="Lägg till" class="add-button">
                 </form>
             </div>
             <!--<br><br> -->
-            <hr>
             <div class="add-personell add-item">
                 <h2>Lägg till Personal</h2>
                 <form action="/save-personell" method="post">
-                    <input type="text" placeholder="Förnamn" name="firstname"><br><br>
-                    <input type="text" placeholder="Efternamn" name="lastname"><br><br>
-                    <input type="number" name="spec" placeholder="Specialisering"><br><br>
-                    <input type="text" name="email" placeholder="E-mail"><br><br>
-                    <input type="text" placeholder="YYYYMMDDXXXX" name="personnr"><br><br>
-                    <input type="number" name="age" placeholder="Ålder"><br><br>
-                    <input type="number" name="isAdmin" placeholder="Admin?"><br><br>
-                    <input type="text" name="abbrev" placeholder="Namnförkortning/Användarnamn"><br><br>
-                    <input type="password" name="password" placeholder="Lösenord"><br><br>
-                    <input type="password" name="confpass" placeholder="Upprepa lösenord"><br><br>
-                    <input type="submit" value="Lägg till">
+                    <input class="input-field" type="text" placeholder="Förnamn" name="firstname"><br><br>
+                    <input class="input-field" type="text" placeholder="Efternamn" name="lastname"><br><br>
+                    <input class="input-field" type="number" name="spec" placeholder="Specialisering"><br><br>
+                    <input class="input-field" type="text" name="email" placeholder="E-mail"><br><br>
+                    <input class="input-field" type="text" placeholder="YYYYMMDDXXXX" name="personnr"><br><br>
+                    <input class="input-field" type="number" name="age" placeholder="Ålder"><br><br>
+                    <input class="input-field" type="number" name="isAdmin" placeholder="Admin?"><br><br>
+                    <input class="input-field" type="text" name="abbrev" placeholder="Namnförkortning/Användarnamn"><br><br>
+                    <input class="input-field" type="password" name="password" placeholder="Lösenord"><br><br>
+                    <input class="input-field" type="password" name="confpass" placeholder="Upprepa lösenord"><br><br>
+                    <input type="submit" value="Lägg till" class="add-button">
                 </form>
                 {{ createSuccess }}
             </div>
