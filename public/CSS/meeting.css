@@ -138,3 +138,16 @@ body{
         background-color: #295bb3;
     }
 }
+
+.go-back:hover{
+    animation: hover-back 0.2s ease forwards;
+}
+
+@keyframes hover-back {
+    from{
+        color: #000000;
+    }
+    to{
+        color: #3567C1;
+    }
+}
