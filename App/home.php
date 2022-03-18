@@ -53,12 +53,19 @@ if (isset($_SESSION['loggedin'])){
                 $patientLastname = $patient->lastName;
                 $patientFirstname = $patient->firstName;
                 $patientId = $patient->patientId;
+                $modPersonNr = modPersonNrDash($patient->personNr);
 
                 $data["chosen"] = <<<EOD
                 <div class="chosen-patient">
-                <p>$patientLastname, $patientFirstname</p>
-                <a href="/meeting/$patientId" class="new-meeting">Nytt Läkarbesök</a>
-                <a href="/journal/$patientId" class="read-records">Läs Journal</a>
+                    <div class="patient-info">
+                    <img src="/images/user.png" alt="user" class="chosen-patient-img">
+                        <b>$patientLastname, $patientFirstname</b>
+                        <p>$modPersonNr</p>
+                    </div>
+                    <div class="choose-action">
+                        <a href="/meeting/$patientId" class="new-meeting">Nytt Läkarbesök</a>
+                        <a href="/journal/$patientId" class="read-records">Läs Journal</a>
+                    </div>
                 </div>
                 EOD;
             }
