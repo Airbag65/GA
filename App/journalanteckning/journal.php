@@ -75,17 +75,21 @@ patient;
 
 foreach ($meetings as $meeting){
     $data["journalNote"][] = <<<eod
-    <div class='journal-anteckning'>
-        <h4>Journalanteckning</h4>
-        <p>Personal: $meeting->lastName, $meeting->firstName</p>
+        <h3>Journalanteckning</h3><br>
+        <div class="record-item1">
+        <p>Antecknad av: $meeting->lastName, $meeting->firstName</p>
         <p>Datum för journalanteckning: $meeting->date</p><br>
+        </div>
+        <div class="record-item2">
         <p>Vitala parametrar vid besök:</p>
         <p>Blodtryck: $meeting->blodtryck</p>
         <p>Puls: $meeting->puls</p>
         <p>Mättnad: $meeting->mattnad</p><br>
+        </div>
+        <div class="record-item3">
         <p>Diagnos: $meeting->diagnosis</p>
         <p>Läkarens Kommentar: $meeting->comment</p>
-    </div>
+        </div>
     eod;
 }
 rendering("views", "journal.twig", $data);

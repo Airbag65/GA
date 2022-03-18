@@ -37,8 +37,7 @@
         <br>
         <div class="notes">
             {% for note in journalNote %}
-                {{ note | raw }}
-                <br>
+                <div class="record-note">{{ note | raw }}</div>
             {% endfor %}
         </div>
     </div>

@@ -93,8 +93,8 @@ body {
 }
 
 .medical-logo{
-    height: 4rem;
-    width: 4rem;
+    height: 3.5rem;
+    width: 3.5rem;
     position: absolute;
     right: 3rem;
     top: 2rem;
@@ -115,4 +115,29 @@ body {
     to{
         color: #3567C1;
     }
+}
+
+.record-note{
+    width: 94rem;
+    display: grid;
+    /*grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;*/
+    background: rgba(0,0,0,0.03);
+    border: solid 1px rgba(0,0,0,0.05);
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.record-item1{
+    grid-column: 2;
+    grid-row: 1;
+}
+.record-item2{
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.record-item3{
+    grid-column: 2;
+    grid-row: 2;
 }
