@@ -1,7 +1,10 @@
 # Gymnasiearbete
 Detta arbete är gjort av **Anton Norman**, **Elvira Ling** och **Vilgot Kihlberg**
 ## Idén
-> Tanken är att vi ska skapa ett *journalsystem för sjukvården*.
+> Tanken är att vi ska skapa ett *journalsystem för sjukvården*. 
+> Det ska kunna hantera läkarbesök och visa journal för en utvald patient.
+> Journalen ska visa alla bestämmelser från tidigare läkarbesök samt en sammanställning
+> av patientens tidigare vitala parametrar och tidigare diagnoser.
 
 ### Säkerhet
 Stor vikt kommer läggas på systemets säkerhet, då det i praktiken är menat att hantera personuppgifter och tidigare journaluppgifter 
