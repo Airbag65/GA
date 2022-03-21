@@ -124,7 +124,7 @@ values (
        );
 
 insert into patients(firstName, lastName, personNr, age, diagnoses, bloodPreasure, spO2, pulse, bloodGroup)
-values ('Göran', 'Antersson', 192003041337, 102, 'Inga Diagnoser', 23.6, 86.9, 40.1, 'B-');
+values ('Göran', 'Antersson', 192003041337, 102, 'DÖD', 23.6, 86.9, 40.1, 'B-');
 
 insert into doctors(firstName, lastName, age, personNr, emailAddress, spec, nameAbbrev, password)
 values
