@@ -130,17 +130,11 @@ body {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-areas: "a b";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 
 .record-item {
-
-}
-
-.child-1 {
-    grid-area: a;
-}
-
-.child-2 {
-    grid-area: b;
+    height: 100%;
+    width: 100%;
 }
