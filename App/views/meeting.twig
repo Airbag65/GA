@@ -20,9 +20,10 @@
 </nav>
 <body>
 <div class="main-content">
+    <a href="/home" class="go-back"><h3>🡰 Tillbaka</h3></a>
     <div class="meeting-container">
-        <a href="/home" class="go-back"><h3>🡰 Tillbaka</h3></a>
         <h2>Nytt möte för {{ patientLastName }}, {{ patientFirstName }}</h2><br><br>
+        <img src="/images/meeting-icon.png" alt="" class="meeting-icon" >
         <p><b>Antecknad av:</b><br> {{ personellLastName }}, {{ personellFirstName }}</p>
         <br><hr><br><br>
         <form action="/meeting/" method="post">

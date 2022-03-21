@@ -94,6 +94,7 @@ body{
     padding: 1rem;
 }
 .meeting-container{
+    position: relative;
     background: #ffffff;
     width: 80vw;
     height: 40rem;
@@ -103,6 +104,12 @@ body{
     border-left: 1px solid rgba(0, 0, 0, 0.11);
     border-top: 1px solid rgba(0, 0, 0, 0.08);
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.meeting-icon{
+    top: 2rem;
+    right: 3rem;
+    position: absolute;
 }
 
 .form-container {
