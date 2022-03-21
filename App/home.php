@@ -24,7 +24,6 @@ if (isset($_SESSION['loggedin'])){
             <div class='small-grid-item small-grid-item2'><a href='/profile/' class='home-link'>$firstname $lastname</a></div>
             <div class='small-grid-item small-grid-item3'><a href='/logout/' class='home-link'>Logga ut</a></div>
 
-
             EOD;
 
         }else{
@@ -47,18 +46,27 @@ if (isset($_SESSION['loggedin'])){
         if(isset($_SESSION["chosen-patient"])){
             if ($_SESSION['chosen-patient'] == "Patienten finns inte"){
                 $patient = $_SESSION["chosen-patient"];
-                $data["chosen"] = "<p>Patienten finns inte i systemet</p>";
+                $data["chosen"] = "<p class='patient-not-found'>Patienten finns inte i systemet</p>";
 
             }else {
                 $patient = $_SESSION["chosen-patient"];
                 $patientLastname = $patient->lastName;
                 $patientFirstname = $patient->firstName;
                 $patientId = $patient->patientId;
+                $modPersonNr = modPersonNrDash($patient->personNr);
 
                 $data["chosen"] = <<<EOD
-                <p>$patientLastname, $patientFirstname</p>
-                <a href="/meeting/$patientId">Nytt Läkarbesök</a>
-                <a href="/journal/$patientId">Läs Journal</a>
+                <div class="chosen-patient">
+                    <div class="patient-info">
+                    <img src="/images/user.png" alt="user" class="chosen-patient-img">
+                        <b>$patientLastname, $patientFirstname</b>
+                        <p>$modPersonNr</p>
+                    </div>
+                    <div class="choose-action">
+                        <a href="/meeting/$patientId" class="new-meeting">Nytt Läkarbesök</a>
+                        <a href="/journal/$patientId" class="read-records">Läs Journal</a>
+                    </div>
+                </div>
                 EOD;
             }
         }

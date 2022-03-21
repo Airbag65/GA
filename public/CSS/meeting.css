@@ -6,26 +6,15 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body{
     background: #eeeeee;
 }
 
 .navigation {
-    display: flex;
-    align-items: center;
     height: 8vh;
     width: 100%;
     background: #ffffff;
     box-shadow: 0px 0.6px 5px #e7e7e7;
-}
-
-.grid-item1 {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100%;
-    width: 100%;
 }
 
 .grid-container {
@@ -34,6 +23,14 @@ body{
     width: 100%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+}
+
+.grid-item1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 .logo-img{
@@ -96,46 +93,11 @@ body{
 .main-content{
     padding: 1rem;
 }
-
-.admin-icon{
-    top: 2rem;
-    right: 3rem;
-    position: absolute;
-}
-
-
-.input-field {
-    width: 40%;
-    height: 1.5rem;
-}
-
-.add-button{
-    width: 10rem;
-    height: 2rem;
-    border: 1px solid rgba(0, 0, 0, 0.15);;
-    background: #3567C1;
-    color: #ffffff;
-    cursor: pointer;
-}
-
-.add-button:hover{
-    animation: hover-button 0.3s ease forwards;
-}
-
-@keyframes hover-button {
-    from{
-        background-color: #3567C1;
-    }
-    to{
-        background-color: #295bb3;
-    }
-}
-
-.content-container {
-    background: #ffffff;
+.meeting-container{
     position: relative;
+    background: #ffffff;
     width: 80vw;
-    min-height: 10rem;
+    height: 40rem;
     margin: 2rem auto;
     padding: 2rem;
     border-right: 1px solid rgba(0, 0, 0, 0.11);
@@ -144,28 +106,51 @@ body{
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.add-container{
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
+.meeting-icon{
+    top: 2rem;
+    right: 3rem;
+    position: absolute;
+}
+
+.form-container {
     width: 100%;
-}
-
-.add-item {
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
+    padding-right: 10rem;
 }
 
-.add-item > h2 {
-    padding-bottom: 2rem;
+.comment-area{
+    resize: none;
 }
 
-.go-back:hover{
-    animation: hover 0.2s ease forwards;
+.save-button{
+    width: 10rem;
+    height: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);;
+    background: #3567C1;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.save-button:hover{
+    animation: hover 0.3s ease forwards;
 }
 
 @keyframes hover {
+    from{
+        background-color: #3567C1;
+    }
+    to{
+        background-color: #295bb3;
+    }
+}
+
+.go-back:hover{
+    animation: hover-back 0.2s ease forwards;
+}
+
+@keyframes hover-back {
     from{
         color: #000000;
     }

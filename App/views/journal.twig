@@ -5,13 +5,42 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/CSS/journal.css">
     <title>Journal | {{ patientFirstName }} {{ patientLastName }}</title>
 </head>
-{{ patientInfo | raw }}
-{{ bloodGroup | raw }}
-{{ vitals | raw }}
-{% for note in journalNote %}
-    {{ note | raw}}
-{% endfor %}
+<nav class="navigation">
+    <div class="grid-container">
+        <div class="grid-item1">
+            <img src="/images/logo.png" alt="logo" class="logo-img">
+        </div>
+        <div class="grid-item2 small-grid-container">
+            <div class="small-grid-item"></div>
+            <div class="small-grid-item"></div>
+            <div class="small-grid-item">
+                <a href="/logout/" class="logout-link">Logga ut</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<a href="/home" class="go-back"><h3>🡰 Tillbaka</h3></a>
+<div class="main-content">
+    <h2>Journal</h2><br>
+    <img src="/images/medical-file.png" alt="file-img" class="medical-logo">
+    <div class="content-container">
+        <div class="person-info">
+            {{ patientInfo | raw }}
+            <br>
+            {{ vitals | raw }}
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="notes">
+            {% for note in journalNote %}
+                <div class="record-note">{{ note | raw }}</div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
 <br>
-<a href="/">Tillbaka</a>

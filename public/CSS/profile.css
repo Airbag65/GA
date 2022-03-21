@@ -4,16 +4,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
     font-family: 'Inter', sans-serif;
 }
 
+body {
+    background: #eeeeee;
+}
+
 .navigation {
-    height: 10vh;
+    display: flex;
+    align-items: center;
+    height: 8vh;
     width: 100%;
-    background: #3567C1;
+    background: #ffffff;
+    box-shadow: 0px 0.6px 5px #e7e7e7;
+}
+
+.logo-img{
+    height: 6vh;
+    margin-left: 2rem;
+    margin-top: -0.2rem;
 }
 
 .grid-container {
@@ -45,37 +55,60 @@ body {
     width: 100%;
 }
 
+.grid-item2 {
+    width: 100%;
+}
+
 .small-grid-item {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 100%;
     width: 100%;
 }
 
-.tillbaka-link {
-    font-size: 30px;
-    padding-left: 2rem;
+.go-back {
     text-decoration: none;
-    color: white;
+    color: #000000;
+    left:0.8rem;
+    top: 9vh;
+    position: absolute;
 }
-.tillbaka-link:hover {
-    color: #dedede
+
+.go-back:hover{
+    animation: hover 0.2s ease forwards;
+}
+
+@keyframes hover {
+    from{
+        color: #000000;
+    }
+    to{
+        color: #3567C1;
+    }
 }
 
 .profile-link {
     font-size: 20px;
     text-decoration: none;
-    color: white;
+    color: black;
 }
+
 .profile-link:hover {
-    color: #dedede
+    color: #3567C1;
 }
 
 .main-content {
     display: flex;
-    width: 75%;
-    margin: auto;
-    padding-top: 10vh;
+    align-items: center;
+    width: 80vw;
+    padding: 4rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.11);
+    border-left: 1px solid rgba(0, 0, 0, 0.11);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    margin: 3rem auto;
+    background: #ffffff;
 }
 
 .user {
@@ -86,7 +119,7 @@ body {
 }
 
 .user a{
-    font-size: 20px;
+    font-size: 15px;
     color: #717171;
 }
 
@@ -99,9 +132,8 @@ body {
     width: 65%;
     padding: 2rem;
     margin: 2rem;
-    border: solid #717171 1px;
-    border-radius: 2rem;
-    box-shadow: .25rem .25rem .25rem rgba(0, 0, 0, 0.25);
+    border: solid rgba(0, 0, 0, 0.05) 1px;
+    box-shadow: 0px 0.6px 5px #e7e7e7;
 }
 
 .name {
@@ -118,4 +150,5 @@ body {
     padding-top: .25rem;
     font-size: 24px;
     color: #717171;
+    background: #ffffff;
 }

@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #eeeeee;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0px 0.6px 5px #e7e7e7;
+}
+
+.logo-img {
+    height: 6vh;
+    margin-left: 2rem;
+    margin-top: -0.2rem;
+    grid-column: 1;
+}
+
+.grid-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.grid-item1 {
+    display: flex;
+    grid-column: 1;
+    align-items: center;
+}
+
+.grid-item2 {
+    grid-column: 2;
+}
+
+.small-grid-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column: 2;
+}
+
+.small-grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout-link {
+    font-size: 20px;
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+}
+
+.logout-link:hover {
+    color: #3567C1;
+}
+
+.go-back{
+    text-decoration: none;
+    color: #000000;
+    left:0.8rem;
+    top: 9vh;
+    position: absolute;
+}
+
+.main-content {
+    background: #ffffff;
+    width: 80vw;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.11);
+    border-left: 1px solid rgba(0, 0, 0, 0.11);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.medical-logo{
+    width: 3.5rem;
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+}
+
+.content-container {
+    width: 100%;
+}
+
+.go-back:hover{
+    animation: hover-back 0.2s ease forwards;
+}
+
+@keyframes hover-back {
+    from{
+        color: #000000;
+    }
+    to{
+        color: #3567C1;
+    }
+}
+
+
+
+.record-note{
+    width: 75vw;
+    background: rgba(0,0,0,0.03);
+    border: solid 1px rgba(0,0,0,0.05);
+    padding: 1rem;
+    margin: 2rem auto;
+}
+
+.grid-container-record {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.record-item {
+    height: 100%;
+    width: 100%;
+}

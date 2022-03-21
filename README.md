@@ -17,6 +17,28 @@ användas en gång och kommer sedan raderas ur systemet. Vid nästa inloggning k
 - twig: 3.3
 - pecee/simple-router 4.3.7.2
 
+## Endpoints
+|Endpoints          |Protokoll  |Beskrivning              |
+|-------------------|-----------|-------------------------|
+|/                  |GET        |Startsidan. Utgångspunkt för övriga funktioner|
+|/home              |GET        |Startsidan. Utgångspunkt för övriga funktioner|
+|/search            |POST       |Sök efter patient med personnummer. Skicka tillbaka patient data plus länkar om patient hittas|
+|/profile           |GET        |Profilsida för inloggad personal|
+|/admin             |GET        |Sida för att amninistrera systemet. Kräver behörighet|
+|/save-patient      |POST       |Spara en nyregistrerad patient till databasen|
+|/save-personell    |POST       |Spara nyregistrerad personal till databasen|
+|/logout            |GET        |Loggar ut det inloggade kontot. Rensar sessionen|
+|/login             |GET        |Logga in nytt konto, om inget konto är inloggat|
+|/auth              |POST       |Autentisera inloggningen och spara den i sessionen|
+|/addData           |GET        |Lägg in all ICD-10 data i databasen, vid behov|
+|/meeting/1         |GET        |Registrera nytt besök för patient med patientId 1. Samma för alla patientId i systemet|
+|/meeting           |POST       |Sparar det registerade mötet till databasen|
+|/journal/1          |GET        |Läs journal för patient med patientId 1. Samma för alla patientId|
+|/save-bloodgroup/1 |GET        |Registrera blodgrupp för patient med patientId 1. Samma för alla patientId|
+|/save-bloodgroup   |POST       |Spara den registrerade blodgruppen till databasen|
+
+
+
 ### Tekniker
 Vår tanke initiellt var att använda php för att skapa detta system, men vi har istället valt att använda pythonramverket 
 Django, med stöd för HTML och databas hantering. Anton, med huvudansvar för backend delen, är mycket mer bekväm med python 

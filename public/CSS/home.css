@@ -90,9 +90,10 @@ body{
     padding: 1rem;
 }
 .search-container{
-    height: 30rem;
-    width: 100rem;
-    padding: 2rem;
+    position: relative;
+    height: 100%;
+    width: 80vw;
+    padding: 4rem;
     margin: 2rem;
     background: #ffffff;
     border-right: 1px solid rgba(0, 0, 0, 0.11);
@@ -135,4 +136,89 @@ body{
     to{
         background-color: #295bb3;
     }
+}
+
+.home-icon{
+    position: absolute;
+    top: 4rem;
+    right: 3rem;
+}
+
+.chosen-patient{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    min-height: 5rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.11);
+    border-left: 1px solid rgba(0, 0, 0, 0.11);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.chosen-patient-img {
+    height: 2rem;
+    position: absolute;
+    top: 1.1rem;
+    left:0.5rem;
+}
+
+.patient-info {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding: 1rem 0 1rem 3rem;
+}
+
+.choose-action {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 1rem;
+}
+
+.choose-action > a {
+    align-self: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: black;
+    width: inherit;
+    justify-self: flex-end;
+}
+
+.choose-action > a:hover {
+    color: #3567C1;
+}
+
+.patient-not-found{
+    color: red;
+}
+
+.new-meeting{
+    text-decoration: none;
+}
+
+.read-records{
+    text-decoration: none;
+}
+
+.schedule-container{
+    background: rgba(0,0,0,0.05);
+    margin: auto;
+    padding: 2rem;
+    width: 80rem;
+    min-height: 20rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.11);
+    border-left: 1px solid rgba(0, 0, 0, 0.11);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.schedule-item{
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.11);
+    border-top: 8px solid rgb(45, 97, 191);
+    height: 7rem;
+    width: 100%
 }

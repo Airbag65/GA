@@ -9,6 +9,12 @@ if(!isset($_SESSION['createAttempt'])){
 
 $data = [];
 
+$data["nav"] = <<<EOD
+<div class='small-grid-item small-grid-item1'></></div>
+<div class='small-grid-item small-grid-item2'></></div>
+<div class='small-grid-item small-grid-item3'><a href='/logout/' class='logout-link'>Logga ut</a></div>
+EOD;
+
 $pdo = initDb();
 $personellId = $_SESSION['id'];
 

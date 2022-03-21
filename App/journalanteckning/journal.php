@@ -1,9 +1,9 @@
 <?php
 
-if(!isset($_SESSION['isAdmin'])){
+if (!isset($_SESSION['isAdmin'])) {
     $_SESSION['isAdmin'] = 0;
 }
-if(!isset($_SESSION['createAttempt'])){
+if (!isset($_SESSION['createAttempt'])) {
     $_SESSION['createAttempt'] = false;
 }
 
@@ -28,55 +28,74 @@ $getMeetingsSql = <<<EOD
 select meetingId, patientId, diagnosis, comment, blodtryck, puls, mattnad, date, firstName, lastName
 from meetings m 
 join doctors d on d.doctorId = m.doctorId
-where patientId is ?;
+where patientId is ?
+order by date desc;
 EOD;
 $stmt = $pdo->prepare($getMeetingsSql);
 $stmt->execute([$id]);
 $meetings = $stmt->fetchAll();
 
 $formerDiagnoses = [];
-if(strtolower($patientData->diagnoses) === "inga diagnoser"){
+if (strtolower($patientData->diagnoses) === "inga diagnoser") {
     $formerDiagnoses[] = $patientData->diagnoses;
-}else{
+} else {
     $formerDiagnoses = explode(";", $patientData->diagnoses);
 }
 $data["formerDiagnoses"] = $formerDiagnoses;
 $data["patientFirstName"] = $patientData->firstName;
 $data["patientLastName"] = $patientData->lastName;
 
+$modnr = modPersonNrDash($patientData->personNr);
+
 $data["patientInfo"] = <<<patient
-<p>$patientData->firstName, $patientData->lastName</p>
-<p>Personnummer: $patientData->personNr</p>
+<div class="patient-info">
+<p><b>$patientData->lastName, $patientData->firstName</b></p>
+<p>Personnummer: $modnr</p>
 <p>Ålder: $patientData->age</p>
 patient;
 
 $patientId = $patientData->patientId;
-if(strtolower($patientData->bloodGroup) !== "okänd"){
-    $data["bloodGroup"] = "<p>Blodgrupp: $patientData->bloodGroup</p><br>";
-}else{
-    $data["bloodGroup"] = "<a href='/save-bloodgroup/$patientId'>Lägg till blodgrupp</a><br>";
+if (strtolower($patientData->bloodGroup) !== "okänd") {
+    $data["patientInfo"] .= "<p>Blodgrupp: $patientData->bloodGroup</p>";
+} else {
+    $data["patientInfo"] .= "<a href='/save-bloodgroup/$patientId'>Lägg till blodgrupp</a>";
 }
+$data["patientInfo"] .= "</div>";
+
 $data["vitals"] = <<<patient
-<p>Senaste Mätningar:</p>
+<div class="vitals">
+<p><b>Senaste Mätningar</b></p>
 <p>Blodtryck: $patientData->bloodPreasure</p>
 <p>Puls: $patientData->pulse</p>
 <p>Blodmättnad: $patientData->spO2</p>
-<p>Tidigare Diagnoser: </p><br>
+<p>Tidigare Diagnoser: $patientData->diagnoses</p>
+</div>
+
 patient;
 
-foreach ($meetings as $meeting){
+foreach ($meetings as $meeting) {
     $data["journalNote"][] = <<<eod
-    <div class='journal-anteckning'>
-        <h4>Journalanteckning</h4>
-        <p>Personal: $meeting->lastName, $meeting->firstName</p>
-        <p>Datum för journalanteckning: $meeting->date</p><br>
-        <p>Vitala parametrar vid besök:</p>
-        <p>Blodtryck: $meeting->blodtryck</p>
-        <p>Puls: $meeting->puls</p>
-        <p>Mättnad: $meeting->mattnad</p><br>
-        <p>Diagnos: $meeting->diagnosis</p>
-        <p>Läkarens Kommentar: $meeting->comment</p>
-    </div>
+        <div class="grid-container-record">
+            <div class="record-item">
+                <div class="small-record-item1">
+                    <h3>Journalanteckning</h3><br>
+                    <p>Antecknad av: $meeting->lastName, $meeting->firstName</p>
+                    <p>Datum för journalanteckning: $meeting->date</p><br>
+                </div>
+                <div class="small-record-item2">
+                    <p>Vitala parametrar vid besök:</p>
+                    <p>Blodtryck: $meeting->blodtryck</p>
+                    <p>Puls: $meeting->puls</p>
+                    <p>Mättnad: $meeting->mattnad</p><br>
+                </div>
+            </div>
+            <div class="record-item">
+                <p>Diagnos: $meeting->diagnosis</p>
+                <p class="comment">Läkarens Kommentar: $meeting->comment</p>
+            </div>
+        </div>
+        
+        
     eod;
 }
 rendering("views", "journal.twig", $data);
