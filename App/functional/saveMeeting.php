@@ -92,4 +92,4 @@ values (?,?,?,?,?,?,?);
 EOD;
 $stmt = $pdo->prepare($saveMeetingSql);
 $stmt->execute([$_SESSION['id'], $_POST['patientId'], $ICD->abbreviation, $_POST['comment'], $_POST['blodtryck'], $_POST['puls'], $_POST['mattnad']]);
-header('Location: /');
+header("Location: /journal/".$_POST["patientId"]);
