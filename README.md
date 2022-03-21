@@ -1,7 +1,10 @@
 # Gymnasiearbete
 Detta arbete är gjort av **Anton Norman**, **Elvira Ling** och **Vilgot Kihlberg**
 ## Idén
-> Tanken är att vi ska skapa ett *journalsystem för sjukvården*.
+> Tanken är att vi ska skapa ett *journalsystem för sjukvården*. 
+> Det ska kunna hantera läkarbesök och visa journal för en utvald patient.
+> Journalen ska visa alla bestämmelser från tidigare läkarbesök samt en sammanställning
+> av patientens tidigare vitala parametrar och tidigare diagnoser.
 
 ### Säkerhet
 Stor vikt kommer läggas på systemets säkerhet, då det i praktiken är menat att hantera personuppgifter och tidigare journaluppgifter 
@@ -18,24 +21,24 @@ användas en gång och kommer sedan raderas ur systemet. Vid nästa inloggning k
 - pecee/simple-router 4.3.7.2
 
 ## Endpoints
-|Endpoints          |Protokoll  |Beskrivning              |
-|-------------------|-----------|-------------------------|
-|/                  |GET        |Startsidan. Utgångspunkt för övriga funktioner|
-|/home              |GET        |Startsidan. Utgångspunkt för övriga funktioner|
-|/search            |POST       |Sök efter patient med personnummer. Skicka tillbaka patient data plus länkar om patient hittas|
-|/profile           |GET        |Profilsida för inloggad personal|
-|/admin             |GET        |Sida för att amninistrera systemet. Kräver behörighet|
-|/save-patient      |POST       |Spara en nyregistrerad patient till databasen|
-|/save-personell    |POST       |Spara nyregistrerad personal till databasen|
-|/logout            |GET        |Loggar ut det inloggade kontot. Rensar sessionen|
-|/login             |GET        |Logga in nytt konto, om inget konto är inloggat|
-|/auth              |POST       |Autentisera inloggningen och spara den i sessionen|
-|/addData           |GET        |Lägg in all ICD-10 data i databasen, vid behov|
-|/meeting/1         |GET        |Registrera nytt besök för patient med patientId 1. Samma för alla patientId i systemet|
-|/meeting           |POST       |Sparar det registerade mötet till databasen|
-|/journal/1          |GET        |Läs journal för patient med patientId 1. Samma för alla patientId|
-|/save-bloodgroup/1 |GET        |Registrera blodgrupp för patient med patientId 1. Samma för alla patientId|
-|/save-bloodgroup   |POST       |Spara den registrerade blodgruppen till databasen|
+|Endpoints          |Protokoll  | Beskrivning                                                                                    |
+|-------------------|-----------|------------------------------------------------------------------------------------------------|
+|/                  |GET        | Startsidan. Utgångspunkt för övriga funktioner. Om ej inloggad, skickas man till login sidan   |
+|/home              |GET        | Startsidan. Utgångspunkt för övriga funktioner                                                 |
+|/search            |POST       | Sök efter patient med personnummer. Skicka tillbaka patient data plus länkar om patient hittas |
+|/profile           |GET        | Profilsida för inloggad personal                                                               |
+|/admin             |GET        | Sida för att amninistrera systemet. Kräver behörighet                                          |
+|/save-patient      |POST       | Spara en nyregistrerad patient till databasen                                                  |
+|/save-personell    |POST       | Spara nyregistrerad personal till databasen                                                    |
+|/logout            |GET        | Loggar ut det inloggade kontot. Rensar sessionen                                               |
+|/login             |GET        | Logga in nytt konto, om inget konto är inloggat                                                |
+|/auth              |POST       | Autentisera inloggningen och spara den i sessionen                                             |
+|/addData           |GET        | Lägg in all ICD-10 data i databasen, vid behov                                                 |
+|/meeting/1         |GET        | Registrera nytt besök för patient med patientId 1. Samma för alla patientId i systemet         |
+|/meeting           |POST       | Sparar det registerade mötet till databasen                                                    |
+|/journal/1          |GET        | Läs journal för patient med patientId 1. Samma för alla patientId                              |
+|/save-bloodgroup/1 |GET        | Registrera blodgrupp för patient med patientId 1. Samma för alla patientId                     |
+|/save-bloodgroup   |POST       | Spara den registrerade blodgruppen till databasen                                              |
 
 
 
