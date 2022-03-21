@@ -97,11 +97,12 @@ body{
     padding: 1rem;
 }
 
-/*.admin-icon{
-    height: 10%;
-    right: 0;
+.admin-icon{
+    top: 2rem;
+    right: 3rem;
     position: absolute;
-}*/
+}
+
 
 .input-field {
     width: 40%;
