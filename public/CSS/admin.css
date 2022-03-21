@@ -97,6 +97,12 @@ body{
     padding: 1rem;
 }
 
+/*.admin-icon{
+    height: 10%;
+    right: 0;
+    position: absolute;
+}*/
+
 .input-field {
     width: 40%;
     height: 1.5rem;
@@ -126,6 +132,7 @@ body{
 
 .content-container {
     background: #ffffff;
+    position: relative;
     width: 80vw;
     min-height: 10rem;
     margin: 2rem auto;
