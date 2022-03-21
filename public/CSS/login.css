@@ -20,6 +20,8 @@
 
 .input-field{
     width: 16rem;
+    border-radius: 0;
+    border: solid #000000 1px;
 }
 
 .login-container{
@@ -34,7 +36,6 @@
     background-color: #3567C1;
     color: #ffffff;
     border: 1px none;
-    border-radius: 4px;
     margin-bottom: 0.5rem;
     cursor: pointer;
 }
