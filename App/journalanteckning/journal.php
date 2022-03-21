@@ -76,22 +76,22 @@ patient;
 foreach ($meetings as $meeting) {
     $data["journalNote"][] = <<<eod
         <div class="grid-container-record">
-            <div class="record-item child-1">
-                <h3>Journalanteckning</h3><br>
-                <p>Antecknad av: $meeting->lastName, $meeting->firstName</p>
-                <p>Datum för journalanteckning: $meeting->date</p><br>
+            <div class="record-item">
+                <div class="small-record-item1">
+                    <h3>Journalanteckning</h3><br>
+                    <p>Antecknad av: $meeting->lastName, $meeting->firstName</p>
+                    <p>Datum för journalanteckning: $meeting->date</p><br>
                 </div>
                 <div class="small-record-item2">
-                <p>Vitala parametrar vid besök:</p>
-                <p>Blodtryck: $meeting->blodtryck</p>
-                <p>Puls: $meeting->puls</p>
-                <p>Mättnad: $meeting->mattnad</p><br>
+                    <p>Vitala parametrar vid besök:</p>
+                    <p>Blodtryck: $meeting->blodtryck</p>
+                    <p>Puls: $meeting->puls</p>
+                    <p>Mättnad: $meeting->mattnad</p><br>
                 </div>
-            <div class="record-item child-2">
-                <div class="small-record-item3">
+            </div>
+            <div class="record-item">
                 <p>Diagnos: $meeting->diagnosis</p>
                 <p class="comment">Läkarens Kommentar: $meeting->comment</p>
-                </div>
             </div>
         </div>
         
