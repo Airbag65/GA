@@ -76,7 +76,6 @@ SQL inmatningar. Vi har även påbörjat det sista steget i att skapa systemet v
 systemets gränssnitt snyggt, använarvänligt och mer stilrent med css styling. 
 
 ## Färgkoder vi använder:
-#EA4C6C - Röd,
 #3567C1 - Blå
 
 
