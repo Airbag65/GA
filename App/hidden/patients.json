@@ -1,0 +1,26 @@
+[
+  {
+    "patientId": 1,
+    "firstName": "Göran",
+    "lastName": "Antersson",
+    "personNr": 192003041337,
+    "age": 102,
+    "diagnoses": "DÖD",
+    "bloodPreasure": 23.6,
+    "spO2": 86.9,
+    "pulse": 40.1,
+    "bloodGroup": "B-"
+  },
+  {
+    "patientId": 2,
+    "firstName": "Bengt",
+    "lastName": "Wallgren",
+    "personNr": 200301010000,
+    "age": 19,
+    "diagnoses": "K",
+    "bloodPreasure": 100000,
+    "spO2": 87,
+    "pulse": 64,
+    "bloodGroup": "AB+"
+  }
+]

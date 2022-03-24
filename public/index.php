@@ -104,6 +104,30 @@ SimpleRouter::post("/save-bloodgroup", function(){
     exit;
 });
 
+SimpleRouter::get("/images/", function (){
+    requireLogin();
+    header("Location: /");
+    exit;
+});
+
+SimpleRouter::get("/hidden", function () {
+   requireLogin();
+   require "../App/hidden/index.php";
+   exit;
+});
+
+SimpleRouter::get("/hidden/api", function (){
+   requireLogin();
+   require "../App/hidden/api.php";
+   exit;
+});
+
+SimpleRouter::get("/hidden/api/{id}", function ($id){
+    requireLogin();
+    require "../App/hidden/details.php";
+    exit;
+});
+
 SimpleRouter::error(function(Request $request, \Exception $exception) {
 
     switch($exception->getCode()) {
