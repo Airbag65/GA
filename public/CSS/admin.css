@@ -109,6 +109,12 @@ body{
     height: 1.5rem;
 }
 
+.admin-text{
+    justify-self: flex-end;
+}
+.check-box{
+}
+
 .add-button{
     width: 10rem;
     height: 2rem;
