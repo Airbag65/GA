@@ -51,7 +51,8 @@ $data["patientInfo"] = <<<patient
 <div class="patient-info">
 <p><b>$patientData->lastName, $patientData->firstName</b></p>
 <p>Personnummer: $modnr</p>
-<p>Ålder: $patientData->age</p>
+
+
 patient;
 
 $patientId = $patientData->patientId;
@@ -76,7 +77,7 @@ patient;
 foreach ($meetings as $meeting) {
     $data["journalNote"][] = <<<eod
         <div class="grid-container-record">
-            <div class="record-item">
+            <div class="record-item">            
                 <div class="small-record-item1">
                     <h3>Journalanteckning</h3><br>
                     <p>Antecknad av: $meeting->lastName, $meeting->firstName</p>
