@@ -36,7 +36,16 @@ SimpleRouter::get("/profile", function (){
 });
 
 SimpleRouter::get("/login", function (){
-    require "../App/login.php";
+    if(isset($_SESSION['loggedin'])){
+        if($_SESSION['loggedin'] == true){
+            header("Location: /");
+        }
+        else{
+            require "../App/login.php";
+        }
+    }else{
+        require "../App/login.php";
+    }
     exit;
 });
 
