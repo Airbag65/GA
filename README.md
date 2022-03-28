@@ -36,7 +36,7 @@ användas en gång och kommer sedan raderas ur systemet. Vid nästa inloggning k
 |/addData           |GET        | Lägg in all ICD-10 data i databasen, vid behov                                                 |
 |/meeting/1         |GET        | Registrera nytt besök för patient med patientId 1. Samma för alla patientId i systemet         |
 |/meeting           |POST       | Sparar det registerade mötet till databasen                                                    |
-|/journal/1          |GET        | Läs journal för patient med patientId 1. Samma för alla patientId                              |
+|/journal/1         |GET        | Läs journal för patient med patientId 1. Samma för alla patientId                              |
 |/save-bloodgroup/1 |GET        | Registrera blodgrupp för patient med patientId 1. Samma för alla patientId                     |
 |/save-bloodgroup   |POST       | Spara den registrerade blodgruppen till databasen                                              |
 

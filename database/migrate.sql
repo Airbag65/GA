@@ -159,7 +159,7 @@ values ('Administratör', 'admin'),
 
 insert into doctors
 (firstName, lastName, age, personNr, emailAddress, spec, nameAbbrev, password, isAdmin)
-values ('Anton', 'Norman', 18, 200304070000, 'normananton03@gmail.com', 2, 'antnor', 'f29444ed56b0ffeeadc2908a172e92f1', 1);
+values ('Anton', 'Norman', 18, 200304070000, 'normananton03@gmail.com', 2, 'antnor', 'db63c7e38ee64bdd02601002fb27eff5', 1);
 
 insert into doctors
 (firstName, lastName, age, personNr, emailAddress, spec, nameAbbrev, password, isAdmin)

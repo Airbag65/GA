@@ -109,6 +109,7 @@ body{
     height: 1.5rem;
 }
 
+
 .add-button{
     width: 10rem;
     height: 2rem;
@@ -147,7 +148,7 @@ body{
 .add-container{
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     width: 100%;
 }
 
@@ -172,4 +173,28 @@ body{
     to{
         color: #3567C1;
     }
+}
+
+.form-grid-contianer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+}
+
+.input-field {
+    width: 50%;
+}
+
+.section-2 {
+    position: relative;
+}
+
+.check-box {
+    position: absolute;
+    right: 27.5%;
+}
+
+.admin-text {
+    font-size: .9rem;
 }

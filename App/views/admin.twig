@@ -44,20 +44,24 @@
             <!--<br><br> -->
             <div class="add-personell add-item">
                 <h2>Lägg till Personal</h2>
-                <form action="/save-personell" method="post">
-                    <input class="input-field" type="text" placeholder="Förnamn" name="firstname"><br><br>
-                    <input class="input-field" type="text" placeholder="Efternamn" name="lastname"><br><br>
-                    <input class="input-field" type="number" name="spec" placeholder="Specialisering"><br><br>
-                    <input class="input-field" type="text" name="email" placeholder="E-mail"><br><br>
-                    <input class="input-field" type="text" placeholder="YYYYMMDDXXXX" name="personnr"><br><br>
-                     <div class="add-item">
-                    <input class="input-field" type="number" name="age" placeholder="Ålder"><br><br>
-                    <input class="input-field" type="number" name="isAdmin" placeholder="Admin?"><br><br>
-                    <input class="input-field" type="text" name="abbrev" placeholder="Namnförkortning/Användarnamn"><br><br>
-                    <input class="input-field" type="password" name="password" placeholder="Lösenord"><br><br>
-                    <input class="input-field" type="password" name="confpass" placeholder="Upprepa lösenord"><br><br>
-                    <input type="submit" value="Lägg till" class="add-button">
-                     </div>
+                <form action="/save-personell" method="post" class="form-grid-contianer">
+                    <div class="section-1 form-grid-item">
+                        <input class="input-field" type="text" placeholder="Förnamn" name="firstname"><br><br>
+                        <input class="input-field" type="text" placeholder="Efternamn" name="lastname"><br><br>
+                        <input class="input-field" type="number" name="spec" placeholder="Specialisering"><br><br>
+                        <input class="input-field" type="text" name="email" placeholder="E-mail"><br><br>
+                        <input class="input-field" type="text" placeholder="YYYYMMDDXXXX" name="personnr"><br><br>
+                    </div>
+                    <div class="section-2 form-grid-item">
+                        <input class="input-field" type="number" name="age" placeholder="Ålder"><br><br>
+                        <label for="admin" class="admin-text">Tilldela adminbehörighet:</label>
+                        <input class="input-field check-box" type="checkbox" id="admin" name="isAdmin" value="1"><br><br>
+                        <input class="input-field" type="text" name="abbrev" placeholder="Namnförkortning/Användarnamn"><br><br>
+                        <input class="input-field" type="password" name="password" placeholder="Lösenord"><br><br>
+                        <input class="input-field" type="password" name="confpass" placeholder="Upprepa lösenord"><br><br>
+                        <input type="submit" value="Lägg till" class="add-button">
+                    </div>
+
                 </form>
                 {{ createSuccess }}
             </div>
