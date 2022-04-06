@@ -30,12 +30,12 @@ if ($password === $confPassword){
     $stmt->execute([$firstname,$lastname, $personNr, $email, $spec, $abbrev, $password, $isAdmin]);
     $_SESSION['createAttempt'] = true;
     $_SESSION['createSuccess'] = true;
-    header("location: ../profile/admin.php");
+    header("Location: /admin");
 }
 else{
     $_SESSION['createAttempt'] = true;
     $_SESSION['createSuccess'] = false;
-    header("Location: ../profile/admin.php");
+    header("Location: /admin");
 }
 
 
