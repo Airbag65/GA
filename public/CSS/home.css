@@ -207,7 +207,7 @@ body{
     background: rgba(0,0,0,0.05);
     margin: auto;
     padding: 2rem;
-    width: 80rem;
+    width: 70vw;
     min-height: 20rem;
     border-right: 1px solid rgba(0, 0, 0, 0.11);
     border-left: 1px solid rgba(0, 0, 0, 0.11);

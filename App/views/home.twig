@@ -23,36 +23,56 @@
     <div class="search-patient search-container">
         <h1>Välkommen {{ firstname }}!</h1><br><br>
         <img src="/images/home.png" alt="profile picture" class="home-icon">
-        <h3>För att registrera ett patientbesök eller läsa en patients journal, använd sökfunktionen nedan.</h3><br><hr><br><br>
-    <form action="/search" method="post">
-        <label for="search-patient">Sök patient med personnummer (12 siffror):</label><br>
-        <div class="search-field">
-            <input type="text" id="search-patient" name="search-patient" placeholder="YYYYMMDDXXXX" class="search-box">
-            <input type="submit" class="search-button" value="Sök">
-        </div>
-    </form>
-            {{ chosen | raw }}
+        <h3>För att registrera ett patientbesök eller läsa en patients journal, använd sökfunktionen nedan.</h3><br>
+        <hr>
+        <br><br>
+        <form action="/search" method="post">
+            <label for="search-patient">Sök patient med personnummer (12 siffror):</label><br>
+            <div class="search-field">
+                <input type="text" id="search-patient" name="search-patient" placeholder="YYYYMMDDXXXX"
+                       class="search-box">
+                <input type="submit" class="search-button" value="Sök">
+            </div>
+        </form>
+        {{ chosen | raw }}
         <br><br><br><br>
         <br><br><br>
         <br><br><br>
         <h3>Dagens schema</h3><br>
-        <p>Här hittar du dagens schema. För att se mer information, klicka på en händelse i schemat. Om någonting inte stämmer, vänligen kontakta din arbetsgivare. OBS! Detta är endast ett förslag på hur ett schema kan se ut, och inga riktiga funktioner har hittils lagts till.</p>
-        <hr><br>
-    <div class="schedule-container">
-        <div class="schedule">
-            <h3>Måndag 14/4</h3><br>
-           <div class="schedule-item"><h4>08:30 - Patientbesök Bengt Wallgren</h4></div><br>
-            <div class="schedule-item"><h4>09:30 - Patientbesök Lotta Persson</h4></div><br>
-            <div class="schedule-item"><h4>10:30 - Rast</h4></div><br>
-            <div class="schedule-item"><h4>10:45 - Labratoriet </h4></div><br>
-            <div class="schedule-item"><h4>11:55 - Personalmöte</h4></div><br>
-            <div class="schedule-item"><h4>13:00 - Lunch</h4></div><br>
-            <div class="schedule-item"><h4>13:30 - Patientbesök Sven Karlsson</h4></div><br>
-            <div class="schedule-item"><h4>14:30 - Patientbesök Agneta Grävling</h4></div><br>
-            <div class="schedule-item"><h4>15:30 - Rast</h4></div><br>
-            <div class="schedule-item"><h4>15:45 - Labratoriet</h4></div><br>
+        <p>Här hittar du dagens schema. För att se mer information, klicka på en händelse i schemat. Om någonting inte
+            stämmer, vänligen kontakta din arbetsgivare. OBS! Detta är endast ett förslag på hur ett schema kan se ut,
+            och inga riktiga funktioner har hittils lagts till.</p>
+        <br>
+        <hr>
+        <br><br>
+        <!--
+        Schemat är endast ett förslag på hur gränsnittet kan se ut och har därmed inga programmerade funktioner
+        -->
+        <div class="schedule-container">
+            <div class="schedule">
+                <h3>Måndag 14/4</h3><br>
+                <div class="schedule-item"><h4>08:30 - Patientbesök Bengt Wallgren</h4></div>
+                <br>
+                <div class="schedule-item"><h4>09:30 - Patientbesök Lotta Persson</h4></div>
+                <br>
+                <div class="schedule-item"><h4>10:30 - Rast</h4></div>
+                <br>
+                <div class="schedule-item"><h4>10:45 - Labratoriet </h4></div>
+                <br>
+                <div class="schedule-item"><h4>11:55 - Personalmöte</h4></div>
+                <br>
+                <div class="schedule-item"><h4>13:00 - Lunch</h4></div>
+                <br>
+                <div class="schedule-item"><h4>13:30 - Patientbesök Sven Karlsson</h4></div>
+                <br>
+                <div class="schedule-item"><h4>14:30 - Patientbesök Agneta Svensson</h4></div>
+                <br>
+                <div class="schedule-item"><h4>15:30 - Rast</h4></div>
+                <br>
+                <div class="schedule-item"><h4>15:45 - Labratoriet</h4></div>
+                <br>
+            </div>
         </div>
-    </div>
     </div>
 </div>
 <br>

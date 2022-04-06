@@ -120,7 +120,8 @@ body{
     padding-right: 10rem;
 }
 
-.comment-area{
+textarea{
+    max-width: 10rem;
 }
 
 .save-button{
