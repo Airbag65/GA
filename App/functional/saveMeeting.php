@@ -37,7 +37,7 @@ if (strtolower($patientData->diagnoses) === "inga diagnoser"){
     set diagnoses = ?,
         bloodPreasure = ?,
         pulse = ?,
-        spO2 = ?
+        spO2 = ?    
     where patientId is ?;
     EOD;
     $stmt = $pdo->prepare($updateDiagnosesSql);
