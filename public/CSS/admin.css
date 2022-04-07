@@ -104,10 +104,21 @@ body{
 }
 
 .input-field {
-    width: 40%;
+    width: 50%;
     height: 1.5rem;
 }
 
+.form-container {
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.form-container>input {
+    width: 100%;
+}
 
 .add-button{
     width: 50%;
@@ -151,11 +162,6 @@ body{
     width: 100%;
 }
 
-.add-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
 
 .add-item > h2 {
     padding-bottom: 2rem;
@@ -174,13 +180,36 @@ body{
     }
 }
 
-.form-grid-container {
+.add-personell {
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+}
+
+.add-personell-title {
+    width: 100%;
+    grid-row: 1;
+    text-align: center;
+}
+
+.form-grid-container {
+    width: 100%;
+    display: flex;
+    grid-row: 2;
+}
+
+.section-1 {
     width: 100%;
 }
 
+.section-2 {
+    width: 100%;
+}
+
+.personell-added {
+    grid-row: 3;
+    text-align: center;
+}
 
 .add-patient{
     display: flex;
@@ -200,11 +229,7 @@ body{
     position: relative;
 }
 
-.check-box {
-    position: absolute;
-    right: 27.5%;
-}
-
 .admin-text {
     font-size: .9rem;
+    justify-self: left;
 }

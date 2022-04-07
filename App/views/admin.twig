@@ -33,7 +33,7 @@
         <div class="add-container">
             <div class="add-patient add-item">
                 <h2>Lägg till patient</h2>
-                <form action="/save-patient" method="post">
+                <form action="/save-patient" class="form-container" method="post">
                     <input class="input-field" name="firstname" type="text" placeholder="Förnamn"><br>
                     <input class="input-field" name="lastname" type="text" placeholder="Efternamn"><br>
                     <input class="input-field" name="personnr" type="text" placeholder="YYYYMMDDXXXX"><br><br>
@@ -41,7 +41,7 @@
                 </form>
             </div>
             <div class="add-personell add-item">
-                <h2>Lägg till Personal</h2>
+                <h2 class="add-personell-title">Lägg till Personal</h2>
                 <form action="/save-personell" method="post" class="form-grid-container">
                     <div class="section-1 form-grid-item">
                         <input class="input-field" type="text" placeholder="Förnamn" name="firstname"><br>

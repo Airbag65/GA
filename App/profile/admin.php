@@ -21,13 +21,11 @@ if ($_SESSION['isAdmin'] === 0) {
 }
 if ($_SESSION['createAttempt']) {
     if ($_SESSION['createSuccess']) {
-        $data["createSuccess"] = "<p>Personalen har lagts till!</p>";
-        //echo "<p>Personalen har lagts till!</p>";
+        $data["createSuccess"] = "<p class='personell-added'>Personalen har lagts till!</p>";
     } else {
-        $data["createSuccess"] = "<p>Lösenorden matchar inte!<br>Försök igen!</p>";
-        //echo "<p>Lösenorden matchar inte!<br>Försök igen!</p>";
+        $data["createSuccess"] = "<p class='personell-added'>Lösenorden matchar inte!<br>Försök igen!</p>";
     }
 } else {
-    $data["createSuccess"] = "";
+    $data["createSuccess"] = "<p class='personell-added'></p>";
 }
 rendering("views", "admin.twig", $data);
