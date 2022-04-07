@@ -11,16 +11,15 @@ $pdo->exec('PRAGMA foreign_keys = ON');
 $firstName = $_POST['firstname'];
 $lastName = $_POST['lastname'];
 $personNr = $_POST['personnr'];
-$age = $_POST['age'];
 
 $addPatient = <<<EOD
-insert into patients(firstName, lastName, personNr, age, diagnoses) 
+insert into patients(firstName, lastName, personNr, diagnoses) 
 values
 (
-    ?,?,?,?,'Inga diagnoser'
+    ?,?,?,'Inga diagnoser'
 );
 EOD;
 $stmt = $pdo->prepare($addPatient);
-$stmt->execute([$firstName,$lastName,$personNr,$age]);
+$stmt->execute([$firstName,$lastName,$personNr]);
 
 header("Location: ../profile/admin.php");

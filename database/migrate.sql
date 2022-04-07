@@ -24,7 +24,6 @@ create table patients
     firstName text not null default 'Greger',
     lastName text not null default 'Grön',
     personNr integer not null,
-    age integer not null default 0,
     diagnoses blob default 'Inga Diagnoser',
     bloodPreasure float default 0.0,
     spO2 float default 95.0,
@@ -37,7 +36,6 @@ create table doctors
     doctorId integer primary key autoincrement not null,
     firstName text not null default 'Göran',
     lastName text not null default 'Göransson',
-    age integer not null,
     personNr integer not null,
     emailAddress text not null,
     spec integer not null,
@@ -123,15 +121,14 @@ values (
            'uska'
        );
 
-insert into patients(firstName, lastName, personNr, age, diagnoses, bloodPreasure, spO2, pulse, bloodGroup)
-values ('Göran', 'Antersson', 192003041337, 102, 'DÖD', 23.6, 86.9, 40.1, 'B-');
+insert into patients(firstName, lastName, personNr, diagnoses, bloodPreasure, spO2, pulse, bloodGroup)
+values ('Göran', 'Antersson', 192003041337, 'DÖD', 23.6, 86.9, 40.1, 'B-');
 
-insert into doctors(firstName, lastName, age, personNr, emailAddress, spec, nameAbbrev, password)
+insert into doctors(firstName, lastName, personNr, emailAddress, spec, nameAbbrev, password)
 values
     (
         'Nils',
         'Nilsson',
-        30,
         199201012299,
         'nils.nilsson@nilsmail.com',
         1,
@@ -158,21 +155,21 @@ values ('Administratör', 'admin'),
        ('Optiker', 'opti');
 
 insert into doctors
-(firstName, lastName, age, personNr, emailAddress, spec, nameAbbrev, password, isAdmin)
-values ('Anton', 'Norman', 18, 200304070000, 'normananton03@gmail.com', 2, 'antnor', 'db63c7e38ee64bdd02601002fb27eff5', 1);
+(firstName, lastName, personNr, emailAddress, spec, nameAbbrev, password, isAdmin)
+values ('Anton', 'Norman', 200304070000, 'normananton03@gmail.com', 2, 'antnor', 'db63c7e38ee64bdd02601002fb27eff5', 1);
 
 insert into doctors
-(firstName, lastName, age, personNr, emailAddress, spec, nameAbbrev, password, isAdmin)
-values ('Elvira', 'Ling', 19, 200301080000, 'elviraling77@gmail.com', 2, 'elvlin', '85855b2978bd7857121527196cac2d9f', 1);
+(firstName, lastName, personNr, emailAddress, spec, nameAbbrev, password, isAdmin)
+values ('Elvira', 'Ling', 200301080000, 'elviraling77@gmail.com', 2, 'elvlin', '85855b2978bd7857121527196cac2d9f', 1);
 
 insert into
-    doctors(firstName, lastName, age, personNr, emailAddress, spec, nameAbbrev, password, isAdmin)
-values ('Vilgot','Kihlberg',18,200303250000,'vilgot.kihlberg@gmail.com', 2,'vilkih','50e930c4b066caaa769f07318ff81a37',1);
+    doctors(firstName, lastName, personNr, emailAddress, spec, nameAbbrev, password, isAdmin)
+values ('Vilgot','Kihlberg',200303250000,'vilgot.kihlberg@gmail.com', 2,'vilkih','50e930c4b066caaa769f07318ff81a37',1);
 
 insert into
-    doctors(firstName, lastName, age, personNr, emailAddress, spec, nameAbbrev, password, isAdmin)
-values ('Axel', 'Genar', 18, 200310130000, 'axel.genar@gmail.com', 5, 'axegen', '561785a33a9c5cc86ba1176df052e995', 0);
+    doctors(firstName, lastName, personNr, emailAddress, spec, nameAbbrev, password, isAdmin)
+values ('Axel', 'Genar', 200310130000, 'axel.genar@gmail.com', 5, 'axegen', '561785a33a9c5cc86ba1176df052e995', 0);
 
 insert into
-    patients(firstName, lastName, personNr, age, bloodPreasure, spO2, pulse, bloodGroup)
-values ('Bengt', 'Wallgren', 200301010000, 19, 0.0, 95.0, 99.0, 'Okänd');
+    patients(firstName, lastName, personNr, bloodPreasure, spO2, pulse, bloodGroup)
+values ('Bengt', 'Wallgren', 200301010000, 0.0, 95.0, 99.0, 'Okänd');

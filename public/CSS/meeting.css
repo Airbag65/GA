@@ -97,7 +97,7 @@ body{
     position: relative;
     background: #ffffff;
     width: 80vw;
-    height: 40rem;
+    height: 100%;
     margin: 2rem auto;
     padding: 2rem;
     border-right: 1px solid rgba(0, 0, 0, 0.11);
@@ -120,7 +120,8 @@ body{
     padding-right: 10rem;
 }
 
-.comment-area{
+textarea{
+    max-width: 10rem;
 }
 
 .save-button{

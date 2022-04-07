@@ -33,37 +33,33 @@
         <div class="add-container">
             <div class="add-patient add-item">
                 <h2>Lägg till patient</h2>
-                <form action="/save-patient" method="post">
-                    <input class="input-field" name="firstname" type="text" placeholder="Förnamn"><br><br>
-                    <input class="input-field" name="lastname" type="text" placeholder="Efternamn"><br><br>
+                <form action="/save-patient" class="form-container" method="post">
+                    <input class="input-field" name="firstname" type="text" placeholder="Förnamn"><br>
+                    <input class="input-field" name="lastname" type="text" placeholder="Efternamn"><br>
                     <input class="input-field" name="personnr" type="text" placeholder="YYYYMMDDXXXX"><br><br>
-                    <input class="input-field" name="age" type="number" placeholder="Ålder"><br><br>
                     <input type="submit" value="Lägg till" class="add-button">
                 </form>
             </div>
-            <!--<br><br> -->
             <div class="add-personell add-item">
-                <h2>Lägg till Personal</h2>
-                <form action="/save-personell" method="post" class="form-grid-contianer">
+                <h2 class="add-personell-title">Lägg till Personal</h2>
+                <form action="/save-personell" method="post" class="form-grid-container">
                     <div class="section-1 form-grid-item">
-                        <input class="input-field" type="text" placeholder="Förnamn" name="firstname"><br><br>
-                        <input class="input-field" type="text" placeholder="Efternamn" name="lastname"><br><br>
-                        <input class="input-field" type="number" name="spec" placeholder="Specialisering"><br><br>
-                        <input class="input-field" type="text" name="email" placeholder="E-mail"><br><br>
-                        <input class="input-field" type="text" placeholder="YYYYMMDDXXXX" name="personnr"><br><br>
+                        <input class="input-field" type="text" placeholder="Förnamn" name="firstname"><br>
+                        <input class="input-field" type="text" placeholder="Efternamn" name="lastname"><br>
+                        <input class="input-field" type="number" name="spec" placeholder="Specialisering"><br>
+                        <input class="input-field" type="text" name="email" placeholder="E-mail"><br>
+                        <input class="input-field" type="text" placeholder="YYYYMMDDXXXX" name="personnr"><br>
                     </div>
                     <div class="section-2 form-grid-item">
-                        <input class="input-field" type="number" name="age" placeholder="Ålder"><br><br>
                         <label for="admin" class="admin-text">Tilldela adminbehörighet:</label>
-                        <input class="input-field check-box" type="checkbox" id="admin" name="isAdmin" value="1"><br><br>
-                        <input class="input-field" type="text" name="abbrev" placeholder="Namnförkortning/Användarnamn"><br><br>
-                        <input class="input-field" type="password" name="password" placeholder="Lösenord"><br><br>
-                        <input class="input-field" type="password" name="confpass" placeholder="Upprepa lösenord"><br><br>
+                        <input class="input-field check-box" type="checkbox" id="admin" name="isAdmin" value="1"><br>
+                        <input class="input-field" type="text" name="abbrev" placeholder="Namnförkortning/Användarnamn"><br>
+                        <input class="input-field" type="password" name="password" placeholder="Lösenord"><br>
+                        <input class="input-field" type="password" name="confpass" placeholder="Upprepa lösenord"><br>
                         <input type="submit" value="Lägg till" class="add-button">
                     </div>
-
                 </form>
-                {{ createSuccess }}
+                {{ createSuccess | raw }}
             </div>
         </div>
     </div>

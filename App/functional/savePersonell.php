@@ -12,8 +12,7 @@ $pdo->exec('PRAGMA foreign_keys = ON');
 $firstname = $_POST['firstname'];
 $lastname = $_POST['lastname'];
 $personNr = $_POST['personnr'];
-$age = $_POST['age'];
-$isAdmin = $_POST['isAdmin'];
+$isAdmin = $_POST['isAdmin'] ?? 0;
 $abbrev = $_POST['abbrev'];
 $password = $_POST['password'];
 $confPassword = $_POST['confpass'];
@@ -24,19 +23,19 @@ if ($password === $confPassword){
     $password = md5($password);
     $sql = <<<EOD
     insert into
-    doctors(firstName, lastName, age, personNr, emailAddress, spec, nameAbbrev, password, isAdmin)
-    values (?,?,?,?,?,?,?,?,?);
+    doctors(firstName, lastName, personNr, emailAddress, spec, nameAbbrev, password, isAdmin)
+    values (?,?,?,?,?,?,?,?);
     EOD;
     $stmt = $pdo->prepare($sql);
-    $stmt->execute([$firstname,$lastname,$age, $personNr, $email, $spec, $abbrev, $password, $isAdmin]);
+    $stmt->execute([$firstname,$lastname, $personNr, $email, $spec, $abbrev, $password, $isAdmin]);
     $_SESSION['createAttempt'] = true;
     $_SESSION['createSuccess'] = true;
-    header("location: ../profile/admin.php");
+    header("Location: /admin");
 }
 else{
     $_SESSION['createAttempt'] = true;
     $_SESSION['createSuccess'] = false;
-    header("Location: ../profile/admin.php");
+    header("Location: /admin");
 }
 
 
