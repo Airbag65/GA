@@ -84,7 +84,7 @@ $checkForData = $stmt->fetchAll();
 if (empty($checkForData)){
     $data["data"] = "<a href='/addData'>Lägg till ICD 10 Data</a>";
 }else{
-    $data["data"] ="ICD 10 data finns i databasen!";
+    $data["data"] = "";
 }
 
 $data["firstname"] = $firstname;
