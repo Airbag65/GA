@@ -117,11 +117,6 @@ body{
     height: 100%;
     display: flex;
     justify-content: space-between;
-    padding-right: 10rem;
-}
-
-textarea{
-    max-width: 10rem;
 }
 
 .save-button{
