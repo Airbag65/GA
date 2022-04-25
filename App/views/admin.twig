@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -36,14 +36,14 @@
                 <form action="/save-patient" class="form-container" method="post">
                     <input class="input-field" name="firstname" type="text" placeholder="Förnamn"><br>
                     <input class="input-field" name="lastname" type="text" placeholder="Efternamn"><br>
-                    <input class="input-field" name="personnr" type="text" placeholder="YYYYMMDDXXXX"><br><br>
+                    <input class="input-field" name="personnr" type="text" placeholder="YYYYMMDDXXXX"><br><br><br>
                     <input type="submit" value="Lägg till" class="add-button">
                 </form>
             </div>
             <div class="add-personell add-item">
-                <h2 class="add-personell-title">Lägg till Personal</h2>
                 <form action="/save-personell" method="post" class="form-grid-container">
                     <div class="section-1 form-grid-item">
+                        <h2 class="add-personell-title">Lägg till Personal</h2>
                         <input class="input-field" type="text" placeholder="Förnamn" name="firstname"><br>
                         <input class="input-field" type="text" placeholder="Efternamn" name="lastname"><br>
                         <input class="input-field" type="number" name="spec" placeholder="Specialisering"><br>
@@ -55,7 +55,7 @@
                         <input class="input-field check-box" type="checkbox" id="admin" name="isAdmin" value="1"><br>
                         <input class="input-field" type="text" name="abbrev" placeholder="Namnförkortning/Användarnamn"><br>
                         <input class="input-field" type="password" name="password" placeholder="Lösenord"><br>
-                        <input class="input-field" type="password" name="confpass" placeholder="Upprepa lösenord"><br>
+                        <input class="input-field" type="password" name="confpass" placeholder="Upprepa lösenord"><br><br>
                         <input type="submit" value="Lägg till" class="add-button">
                     </div>
                 </form>
