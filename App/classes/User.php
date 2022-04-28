@@ -1,17 +1,28 @@
 <?php
 class User
 {
-    public $id;
-    public $firstName;
-    public $lastName;
-    public $personNr;
-    public $email;
-    public $username;
-    public $spec;
-    public $password;
-    public $isAdmin;
+    public int $id;
+    public string $firstName;
+    public string $lastName;
+    public string $personNr;
+    public string $email;
+    public string $username;
+    public string $spec;
+    public string $password;
+    public int $isAdmin;
+    public bool $loggedIn;
 
-    public function __construct($id, $firstName, $lastName, $personNr, $email, $username, $spec, $password, $isAdmin)
+    public function __construct(
+        $id,
+        $firstName,
+        $lastName,
+        $personNr,
+        $email,
+        $username,
+        $spec,
+        $password,
+        $isAdmin
+    )
     {
         $this->id = $id;
         $this->firstName = $firstName;
@@ -22,12 +33,37 @@ class User
         $this->spec = $spec;
         $this->password = $password;
         $this->isAdmin = $isAdmin;
+        $this->loggedIn = false;
+    }
+
+    /**
+     * Set login state to true if not true.
+     * Do nothing otherwise.
+     */
+    public function login()
+    {
+        if (!$this->loggedIn)
+        {
+            $this->loggedIn = true;
+        }
+    }
+
+    /**
+     * Set login state to false if true.
+     * Do nothing otherwise.
+     */
+    public function logout()
+    {
+        if ($this->loggedIn)
+        {
+            $this->loggedIn = false;
+        }
     }
 
     /**
      * @param string $username
      * @param string $newPassword
-     * Byter lösenord för vald profil
+     * Byter lösenord för valt konto
      * Ingen return
      */
     public function updatePassword(string $username,string $newPassword)

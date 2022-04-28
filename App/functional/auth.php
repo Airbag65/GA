@@ -17,14 +17,14 @@ $stmt->execute([$username]);
 $userInformation = $stmt->fetch();
 var_dump($userInformation);
 
-if(!$userInformation){
+if (!$userInformation) {
     $_SESSION['loginatempt'] = true;
     header("Location: /login/");
 }
 
 $_SESSION['loggedin'] = false;
 
-if($password === $userInformation->password){
+if ($password === $userInformation->password) {
     // TODO SKAPA instans av user klass
     $user = new User(
         $userInformation->doctorId,
@@ -37,6 +37,8 @@ if($password === $userInformation->password){
         $userInformation->password,
         $userInformation->isAdmin
     );
+    $user->login();
+
     $_SESSION['user'] = $user;
     $_SESSION['username'] = $userInformation->nameAbbrev;
     $_SESSION['password'] = $userInformation->password;
@@ -51,7 +53,8 @@ if($password === $userInformation->password){
     $_SESSION['loginatempt'] = true;
     var_dump("Logged In");
     header("location: /home/");
-}else{
+}
+else {
     $_SESSION['loginatempt'] = true;
     header("Location: /login/");
 }
