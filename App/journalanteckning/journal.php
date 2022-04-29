@@ -23,6 +23,18 @@ $stmt = $pdo->prepare($getPatientSql);
 $stmt->execute([$id]);
 $patientData = $stmt->fetch();
 
+$orderRecordsAscSql = <<<EOD
+select meetingId, patientId, diagnosis, comment, blodtryck, puls, mattnad, date, firstName, lastName
+from meetings m 
+join doctors d on d.doctorId = m.doctorId
+where patientId is ?
+order by date;
+EOD;
+$stmt = $pdo->prepare($orderRecordsAscSql);
+$stmt->execute([$id]);
+$meetings = $stmt->fetchAll();
+
+
 
 $getMeetingsSql = <<<EOD
 select meetingId, patientId, diagnosis, comment, blodtryck, puls, mattnad, date, firstName, lastName, d.doctorId
