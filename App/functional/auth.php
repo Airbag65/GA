@@ -37,7 +37,8 @@ if ($password === $userInformation->password) {
         $userInformation->password,
         $userInformation->isAdmin
     );
-    $user->login();
+    $_SESSION["user"] = $user;
+    $_SESSION["user"]->login();
 
     $_SESSION['user'] = $user;
     $_SESSION['username'] = $userInformation->nameAbbrev;

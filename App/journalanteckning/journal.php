@@ -25,7 +25,7 @@ $patientData = $stmt->fetch();
 
 
 $getMeetingsSql = <<<EOD
-select meetingId, patientId, diagnosis, comment, blodtryck, puls, mattnad, date, firstName, lastName
+select meetingId, patientId, diagnosis, comment, blodtryck, puls, mattnad, date, firstName, lastName, d.doctorId
 from meetings m 
 join doctors d on d.doctorId = m.doctorId
 where patientId is ?
@@ -52,7 +52,6 @@ $data["patientInfo"] = <<<patient
 <p><b>$patientData->lastName, $patientData->firstName</b></p>
 <p>Personnummer: $modnr</p>
 
-
 patient;
 
 $patientId = $patientData->patientId;
@@ -74,8 +73,18 @@ $data["vitals"] = <<<patient
 
 patient;
 
+$permisson = false;
 foreach ($meetings as $meeting) {
-    $data["journalNote"][] = <<<eod
+    if ($meeting->doctorId == $_SESSION["id"]) {
+        $permisson = true;
+        break;
+    }
+}
+
+
+foreach ($meetings as $meeting) {
+    if ($permisson){
+        $data["journalNote"][] = <<<eod
         <div class="grid-container-record">
             <div class="record-item">            
                 <div class="small-record-item1">
@@ -95,8 +104,10 @@ foreach ($meetings as $meeting) {
                 <p class="comment">Läkarens Kommentar: $meeting->comment</p>
             </div>
         </div>
-        
-        
     eod;
+    }
+    else {
+        $data["journalNote"][] = "Du är inte behörig till denna jounalanteckning!";
+    }
 }
 rendering("views", "journal.twig", $data);
