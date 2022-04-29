@@ -6,6 +6,11 @@ require_once "../vendor/pecee/simple-router/helpers.php";
 require_once "../App/functional/functions.php";
 require_once "../App/functional/twigFunctions.php";
 require_once "../App/classes/User.php";
+require_once "../vendor/ezyang/htmlpurifier/library/HTMLPurifier.auto.php";
+
+$config = HTMLPurifier_Config::createDefault();
+$purifier = new HTMLPurifier($config);
+
 
 $pdo = initDb();
 
