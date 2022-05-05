@@ -138,3 +138,7 @@ body {
     height: 100%;
     width: 100%;
 }
+
+.no-access {
+    color: red;
+}

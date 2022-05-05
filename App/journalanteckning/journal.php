@@ -107,7 +107,7 @@ foreach ($meetings as $meeting) {
     eod;
     }
     else {
-        $data["journalNote"][] = "Du är inte behörig till denna jounalanteckning!";
+        $data["journalNote"][] = "<abbr class='no-access'>Behöringhet för att läsa saknas.</abbr>";
     }
 }
 rendering("views", "journal.twig", $data);
