@@ -11,7 +11,8 @@ class User
     public string $password;
     public int $isAdmin;
     public bool $loggedIn;
-
+    public int $viewSetting;
+# SVETTIG PUNG
     public function __construct(
         $id,
         $firstName,

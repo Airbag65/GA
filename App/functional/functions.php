@@ -64,3 +64,7 @@ function requireLogin(){
         }
     }
 }
+
+function redirectURL ($path){
+    header("Location: $path");
+}

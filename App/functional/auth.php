@@ -37,9 +37,10 @@ if ($password === $userInformation->password) {
         $userInformation->password,
         $userInformation->isAdmin
     );
+
+    $user->viewSetting = intval($userInformation->viewSetting);
     $_SESSION["user"] = $user;
     $_SESSION["user"]->login();
-
     $_SESSION['user'] = $user;
     $_SESSION['username'] = $userInformation->nameAbbrev;
     $_SESSION['password'] = $userInformation->password;
@@ -50,6 +51,7 @@ if ($password === $userInformation->password) {
     $_SESSION['personNr'] = $userInformation->personNr;
     $_SESSION['id'] = $userInformation->doctorId;
     $_SESSION['isAdmin'] = intval($userInformation->isAdmin);
+    $_SESSION['setting'] = intval($userInformation->viewSetting);
     $_SESSION['loggedin'] = true;
     $_SESSION['loginatempt'] = true;
     var_dump("Logged In");

@@ -12,7 +12,10 @@ $data = [];
 $pdo = initDb();
 
 $personellId = intval($_SESSION['id']);
+$viewSettingId = $_SESSION["setting"];
 
+$data["patientId"] = $id;
+$data["personellId"] = $personellId;
 
 $getPatientSql = <<<EOD
 select *
@@ -23,29 +26,45 @@ $stmt = $pdo->prepare($getPatientSql);
 $stmt->execute([$id]);
 $patientData = $stmt->fetch();
 
-$orderRecordsAscSql = <<<EOD
-select meetingId, patientId, diagnosis, comment, blodtryck, puls, mattnad, date, firstName, lastName
-from meetings m 
-join doctors d on d.doctorId = m.doctorId
-where patientId is ?
-order by date;
-EOD;
-$stmt = $pdo->prepare($orderRecordsAscSql);
-$stmt->execute([$id]);
-$meetings = $stmt->fetchAll();
+if($viewSettingId == 1){
+    $getMeetingsDescSql = <<<EOD
+    select meetingId, patientId, diagnosis, comment, blodtryck, puls, mattnad, date, firstName, lastName, d.doctorId
+    from meetings m 
+    join doctors d on d.doctorId = m.doctorId
+    where patientId is ?
+    order by date desc;
+    EOD;
+    $stmt = $pdo->prepare($getMeetingsDescSql);
+    $stmt->execute([$id]);
+    $meetings = $stmt->fetchAll();
+}
 
+elseif ($viewSettingId == 2){
+    $getMeetingsAscSql = <<<EOD
+    select meetingId, patientId, diagnosis, comment, blodtryck, puls, mattnad, date, firstName, lastName, d.doctorId
+    from meetings m 
+    join doctors d on d.doctorId = m.doctorId
+    where patientId is ?
+    order by date asc;
+    EOD;
+    $stmt = $pdo->prepare($getMeetingsAscSql);
+    $stmt->execute([$id]);
+    $meetings = $stmt->fetchAll();
+}
 
+else{
+    $getMeetingsDescSql = <<<EOD
+    select meetingId, patientId, diagnosis, comment, blodtryck, puls, mattnad, date, firstName, lastName, d.doctorId
+    from meetings m 
+    join doctors d on d.doctorId = m.doctorId
+    where patientId is ?
+    order by date desc;
+    EOD;
+    $stmt = $pdo->prepare($getMeetingsDescSql);
+    $stmt->execute([$id]);
+    $meetings = $stmt->fetchAll();
+}
 
-$getMeetingsSql = <<<EOD
-select meetingId, patientId, diagnosis, comment, blodtryck, puls, mattnad, date, firstName, lastName, d.doctorId
-from meetings m 
-join doctors d on d.doctorId = m.doctorId
-where patientId is ?
-order by date desc;
-EOD;
-$stmt = $pdo->prepare($getMeetingsSql);
-$stmt->execute([$id]);
-$meetings = $stmt->fetchAll();
 
 $formerDiagnoses = [];
 if (strtolower($patientData->diagnoses) === "inga diagnoser") {

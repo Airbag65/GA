@@ -33,6 +33,22 @@
             <br>
             {{ vitals | raw }}
         </div>
+        <div class="select-view-setting">
+            <br>
+            <form method="post" action="/update-setting/" class="select-setting">
+                <label for="select-setting">Visningsalternativ</label>
+                <br>
+                <select name="settingId" id="select-setting-select">
+                    <option value="1">---Välj alternativ---</option>
+                    <option value="1">Nyast först</option>
+                    <option value="2">Äldst först</option>
+                </select>
+                <input type="hidden" name="patientId" value="{{ patientId }}">
+                <input type="hidden" name="personellId" value="{{ personellId }}">
+                <input type="submit" value="Uppdatera" class="update-button">
+            </form>
+
+        </div>
         <br>
         <hr>
         <br>

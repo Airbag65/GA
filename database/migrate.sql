@@ -42,6 +42,7 @@ create table doctors
     nameAbbrev text not null,
     password text not null,
     isAdmin integer not null default 0,
+    viewSetting integer not null default 1,
     foreign key (spec) references specialisations(specId)
 );
 

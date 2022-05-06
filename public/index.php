@@ -118,9 +118,9 @@ SimpleRouter::post("/save-bloodgroup", function(){
     exit;
 });
 
-SimpleRouter::get("/images/", function (){
+SimpleRouter::post("/update-setting", function (){
     requireLogin();
-    header("Location: /");
+    require "../App/functional/updateSetting.php";
     exit;
 });
 
